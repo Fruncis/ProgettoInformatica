@@ -1,0 +1,19 @@
+﻿<Window x:Class="ProgettoInformatica.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewmodels="clr-namespace:ProgettoInformatica.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="720">
+    <Grid>
+
+        <Button Content="Click Me!" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="64" Command="{Binding ClickCommandEvent}">
+            <Button.Effect>
+                <DropShadowEffect Color="#FFE4E2E2" BlurRadius="5" RenderingBias="Performance" ShadowDepth="4"/>
+            </Button.Effect>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="328,228,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
