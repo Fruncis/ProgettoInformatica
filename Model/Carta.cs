@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,26 +9,23 @@ namespace ProgettoInformatica.Model
 {
     public class Carta
     {
-        private string _titolo;
         public string Titolo { get; set; }
-        private string _quesito;
         public string Quesito { get; set; }
-        private string[] _risposte;
         public string[] Risposte { get; set; }
-        private string _ripostaCorretta;
         public string RipostaCorretta { get; set; }
 
 
-        public Carta(string titolo, string quesito, string rispostaCorretta, string[] risposte)
+        public Carta(string titolo, string quesito, string rispostaCorretta, string risposta1, string risposta2, string risposta3, string risposta4)
         {
-            _titolo = titolo;
-            _quesito = quesito;
-            _ripostaCorretta = rispostaCorretta;
-            _risposte = new string[4];
-            for(int i=0; i<4; i++)
-            {
-                _risposte[i] = risposte[i]; 
-            }
+            this.Titolo = titolo;
+            this.Quesito = quesito;
+            this.RipostaCorretta = rispostaCorretta;
+            this.Risposte = new string[4];
+            this.Risposte[0] = risposta1;
+            this.Risposte[1] = risposta2;
+            this.Risposte[2] = risposta3;
+            this.Risposte[3] = risposta4;
         }
+
     }
 }
