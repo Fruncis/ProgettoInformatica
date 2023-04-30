@@ -11,7 +11,7 @@ namespace ProgettoInformatica
         public MainWindow()
         {
             InitializeComponent();
-            Mazzo primoMazzo = new Mazzo("./Data/mazzo-geografia.xml");
+            Mazzo primoMazzo = new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
         }
 
     }

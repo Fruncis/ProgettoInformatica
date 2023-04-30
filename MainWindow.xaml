@@ -5,15 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewmodels="clr-namespace:ProgettoInformatica.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="720">
+        Title="MainWindow" Height="720" Width="720" ResizeMode="NoResize">
     <Grid>
+        <StackPanel>
+            <Button Content="Click Me!" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="64" Command="{Binding ClickCommandEvent}">
+                <Button.Effect>
+                    <DropShadowEffect Color="#FFE4E2E2" BlurRadius="5" RenderingBias="Performance" ShadowDepth="4"/>
+                </Button.Effect>
+            </Button>
+            <TextBlock HorizontalAlignment="Left" Margin="328,228,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top"/>
 
-        <Button Content="Click Me!" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="64" Command="{Binding ClickCommandEvent}">
-            <Button.Effect>
-                <DropShadowEffect Color="#FFE4E2E2" BlurRadius="5" RenderingBias="Performance" ShadowDepth="4"/>
-            </Button.Effect>
-        </Button>
-        <TextBlock HorizontalAlignment="Left" Margin="328,228,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top"/>
-
+        </StackPanel>
+        
     </Grid>
 </Window>
