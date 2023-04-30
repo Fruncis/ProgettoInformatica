@@ -25,16 +25,21 @@ namespace ProgettoInformatica.Model
 
             this.TipoMazzo = node.InnerText;
 
+            string[] domande = new string[4];
+
             for (int i = 0; i < 20; i++)
             {
+                for(int j = 0; j < 4; j++)
+                {
+                    domande[j] = doc.DocumentElement.SelectSingleNode("/root/Carte[" + (j + 1) + "]/Risposte[" + (j + 1) + "]").InnerText;
+                }
+
                 carte[i] = new Carta(doc.DocumentElement.SelectSingleNode("/root/Carte[" + (i + 1) +"]/Titolo").InnerText,
                                      doc.DocumentElement.SelectSingleNode("/root/Carte[" + (i + 1) +"]/Quesito").InnerText,
                                      doc.DocumentElement.SelectSingleNode("/root/Carte[" + (i + 1) +"]/RispostaCorretta").InnerText,
-                                     doc.DocumentElement.SelectSingleNode("/root/Carte[" + (i + 1) +"]/Risposte[1]").InnerText,
-                                     doc.DocumentElement.SelectSingleNode("/root/Carte[" + (i + 1) +"]/Risposte[2]").InnerText,
-                                     doc.DocumentElement.SelectSingleNode("/root/Carte[" + (i + 1) +"]/Risposte[3]").InnerText,
-                                     doc.DocumentElement.SelectSingleNode("/root/Carte[" + (i + 1) +"]/Risposte[4]").InnerText);
+                                     domande);
             }
+            System.Diagnostics.Debug.WriteLine(carte[0].Risposte[0]);
         }
     }
 }

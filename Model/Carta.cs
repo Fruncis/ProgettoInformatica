@@ -15,16 +15,16 @@ namespace ProgettoInformatica.Model
         public string RipostaCorretta { get; set; }
 
 
-        public Carta(string titolo, string quesito, string rispostaCorretta, string risposta1, string risposta2, string risposta3, string risposta4)
+        public Carta(string titolo, string quesito, string rispostaCorretta, string[] risposte)
         {
             this.Titolo = titolo;
             this.Quesito = quesito;
             this.RipostaCorretta = rispostaCorretta;
             this.Risposte = new string[4];
-            this.Risposte[0] = risposta1;
-            this.Risposte[1] = risposta2;
-            this.Risposte[2] = risposta3;
-            this.Risposte[3] = risposta4;
+            for(int i = 0; i < 4; i++)
+            {
+                this.Risposte[i] = risposte[i];
+            }
         }
 
     }
