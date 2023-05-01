@@ -14,7 +14,7 @@ namespace ProgettoInformatica.Model
     public class Mazzo
     {
         public string TipoMazzo { get; set; }
-        private Carta[] carte = new Carta[20];
+        public Carta[] Carte { get; set; } = new Carta[20];
 
 
         public Mazzo(string percorsoMazzo)
@@ -34,12 +34,11 @@ namespace ProgettoInformatica.Model
                     domande[j] = doc.DocumentElement.SelectSingleNode("/root/Carte[" + (j + 1) + "]/Risposte[" + (j + 1) + "]").InnerText;
                 }
 
-                carte[i] = new Carta(doc.DocumentElement.SelectSingleNode("/root/Carte[" + (i + 1) +"]/Titolo").InnerText,
+                Carte[i] = new Carta(doc.DocumentElement.SelectSingleNode("/root/Carte[" + (i + 1) +"]/Titolo").InnerText,
                                      doc.DocumentElement.SelectSingleNode("/root/Carte[" + (i + 1) +"]/Quesito").InnerText,
                                      doc.DocumentElement.SelectSingleNode("/root/Carte[" + (i + 1) +"]/RispostaCorretta").InnerText,
                                      domande);
             }
-            System.Diagnostics.Debug.WriteLine(carte[0].Risposte[0]);
         }
     }
 }

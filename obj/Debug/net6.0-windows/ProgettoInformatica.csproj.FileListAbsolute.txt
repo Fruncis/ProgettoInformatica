@@ -23,3 +23,11 @@ C:\Users\francesco\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ref
 C:\Users\francesco\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ProgettoInformatica.pdb
 C:\Users\francesco\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ProgettoInformatica.genruntimeconfig.cache
 C:\Users\francesco\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ref\ProgettoInformatica.dll
+C:\Users\francesco\source\repos\ProgettoInformatica\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\francesco\source\repos\ProgettoInformatica\obj\Debug\net6.0-windows\ProgettoInformatica_Content.g.cs
+C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\play.png
+C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\playFullBlack.png
+C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\shopping-cart.png
+C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\options-icon.png
+C:\Users\francesco\source\repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\GameWindow.g.cs
+C:\Users\francesco\source\repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\GameWindow.baml

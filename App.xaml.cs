@@ -1,4 +1,6 @@
-﻿using ProgettoInformatica.ViewModels;
+﻿using ProgettoInformatica.Commands;
+using ProgettoInformatica.ViewModels;
+using ProgettoInformatica.Views;
 using System;
 using System.Windows;
 
@@ -11,9 +13,13 @@ namespace ProgettoInformatica
     {
         protected override void OnStartup(StartupEventArgs e)
         {
+            NavigationStore  navigationStore = new NavigationStore();
+
+            navigationStore.CurrentViewModel = new MenuWindowViewModel(navigationStore);
+
             MainWindow = new MainWindow()
             {
-                DataContext = new MainWindowViewModel()
+                DataContext = new MainWindowViewModel(navigationStore)
             };
             MainWindow.Show();
             base.OnStartup(e);

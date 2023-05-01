@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProgettoInformatica.Commands;
+using ProgettoInformatica.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,30 +11,20 @@ namespace ProgettoInformatica.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        public RelayCommand ClickCommandEvent { get; set; }
+        private readonly NavigationStore _navigationStore;
+        public ViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;
 
-        public MainWindowViewModel()
+        public MainWindowViewModel(NavigationStore navigationStore)
         {
-            ClickCommandEvent = new RelayCommand(ClickExecute);
-            
+            _navigationStore = navigationStore;
+
+            _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
+
         }
 
-        public void ClickExecute(object param)
+        private void OnCurrentViewModelChanged()
         {
-            System.Diagnostics.Debug.WriteLine($"Clicked: Cacca");
-        }
-
-        public string _name = "cracrapu";
-        public string Name 
-        { 
-            get 
-            {
-                return _name;
-            }
-            set 
-            {
-                _name = value;
-            } 
+            OnPropertyChanged(nameof(CurrentViewModel));
         }
     }
 }
