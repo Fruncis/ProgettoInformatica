@@ -1,4 +1,5 @@
 ﻿using ProgettoInformatica.Commands;
+using ProgettoInformatica.Store;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace ProgettoInformatica.ViewModels
         public RelayCommand ClickCommandEvent { get; set; }
         public MenuWindowViewModel(NavigationStore navigationStore)
         {
-            NavigateGameCommand = new NavigateCommand<GameWindowViewModel>(navigationStore, () => new GameWindowViewModel(navigationStore));
+            NavigateGameCommand = new NavigateCommand<GameWindowViewModel>(navigationStore, () => new GameWindowViewModel(navigationStore, null));
             NavigateShopCommand = new NavigateCommand<ShopWindowViewModel>(navigationStore, () => new ShopWindowViewModel(navigationStore));
             MyName = "Menu";
             ClickCommandEvent = new RelayCommand(ClickExecute);

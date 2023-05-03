@@ -1,4 +1,5 @@
 ﻿using ProgettoInformatica.Commands;
+using ProgettoInformatica.Store;
 using ProgettoInformatica.Views;
 using System;
 using System.Collections.Generic;
