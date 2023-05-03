@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Button Content="Madonna Lercia" Command="{Binding NavigationMenuCommand}"/>
+        <Button Content="Menu" Command="{Binding NavigationMenuCommand}" />
         <CheckBox Content="{Binding CheckBoxName}" HorizontalAlignment="Left" Margin="525,157,0,0" VerticalAlignment="Top"/>
 
 

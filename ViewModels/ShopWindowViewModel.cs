@@ -11,7 +11,7 @@ namespace ProgettoInformatica.ViewModels
     class ShopWindowViewModel : ViewModelBase
     {
         public ICommand NavigationMenuCommand { get; }
-        public string CheckBoxName { get; set; } = "puppa";
+        public string CheckBoxName { get; set; } = "CheckBox";
 
         public ShopWindowViewModel(NavigationStore navigationStore)
         {

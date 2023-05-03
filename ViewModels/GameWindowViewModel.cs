@@ -17,7 +17,7 @@ namespace ProgettoInformatica.ViewModels
         public GameWindowViewModel(NavigationStore navigationStore)
         {
             NavigateAccountCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore, () => new MenuWindowViewModel(navigationStore));
-            Mazzo primoMazzo = new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
+            Mazzo primoMazzo = new Mazzo("C:\\Users\\francesco.santamaria\\Source\\Repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
             QuesitoCorrente = primoMazzo.Carte[0].Quesito;
 
 

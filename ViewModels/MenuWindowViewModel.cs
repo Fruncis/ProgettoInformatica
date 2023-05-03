@@ -21,13 +21,13 @@ namespace ProgettoInformatica.ViewModels
         {
             NavigateGameCommand = new NavigateCommand<GameWindowViewModel>(navigationStore, () => new GameWindowViewModel(navigationStore));
             NavigateShopCommand = new NavigateCommand<ShopWindowViewModel>(navigationStore, () => new ShopWindowViewModel(navigationStore));
-            MyName = "cacca";
+            MyName = "Menu";
             ClickCommandEvent = new RelayCommand(ClickExecute);
         }
 
         public void ClickExecute(object param)
         {
-            System.Diagnostics.Debug.WriteLine($"Clicked: Cacca");
+            System.Diagnostics.Debug.WriteLine($"Clicked: Button");
         }
     }
 }
