@@ -20,7 +20,7 @@ namespace ProgettoInformatica.ViewModels
         public RelayCommand ClickCommandEvent { get; set; }
         public MenuWindowViewModel(NavigationStore navigationStore)
         {
-            NavigateGameCommand = new NavigateCommand<GameWindowViewModel>(navigationStore, () => new GameWindowViewModel(navigationStore, null));
+            NavigateGameCommand = new NavigateCommand<GameWindowViewModel>(navigationStore, () => new GameWindowViewModel(navigationStore));
             NavigateShopCommand = new NavigateCommand<ShopWindowViewModel>(navigationStore, () => new ShopWindowViewModel(navigationStore));
             MyName = "Menu";
             ClickCommandEvent = new RelayCommand(ClickExecute);

@@ -9,8 +9,7 @@ namespace ProgettoInformatica.Model
     public class ClasseTemporanea
     {
         Mazzo Mazzo { get; set; }
-        public static List<Carta> MazzoCorrente = new Mazzo("C:\\Users\\simone.bertolini\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml").Carte.ToList();
-
+        public static List<Carta> MazzoCorrente = new Mazzo("C:\\Users\\francesco.santamaria\\Source\\Repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml").Carte.ToList();
         public ClasseTemporanea()
         {
         }
