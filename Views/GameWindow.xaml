@@ -7,6 +7,21 @@
              d:DataContext="{d:DesignInstance Type=viewmodels:GameWindowViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1280">
+
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="100 10"/>
+            <Setter Property="Visibility" Value="Visible"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+    </UserControl.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -15,25 +30,15 @@
         </Grid.RowDefinitions>
         <StackPanel DockPanel.Dock="Top" Grid.Row="0">
                 <Button Content="Menu" Command="{Binding NavigateAccountCommand}"/>
-           </StackPanel>
             
+        </StackPanel>
+
         <Border Margin="300 0" Padding="100,0" BorderBrush="LightGray" Background="#FFF0F5F9" BorderThickness="1" CornerRadius="50" Grid.Row="1">
             <TextBlock Text="{Binding QuesitoCorrente}" Foreground="#FF584848"  VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
         </Border>
-        
-        <Grid DockPanel.Dock="Bottom" Grid.Row="2" Margin="0 75 0 0">
-            <Grid.Resources>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Padding" Value="25"/>
-                    <Setter Property="Margin" Value="100 10"/>
-                    <Style.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="30"/>
-                        </Style>
-                    </Style.Resources>
 
-                </Style>
-            </Grid.Resources>
+
+        <Grid DockPanel.Dock="Bottom" Grid.Row="2" Margin="0 75 0 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -42,8 +47,8 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Content="{Binding RisposteCorrenti[0]}" Grid.Row="0"></Button>
-            <Button Content="{Binding RisposteCorrenti[1]}" Grid.Row="0" Grid.Column="1"></Button>
+            <Button Content="{Binding RisposteCorrenti[0]}" Grid.Row="0" ></Button>
+            <Button Content="{Binding RisposteCorrenti[1]}" Grid.Row="0" Grid.Column="1" ></Button>
             <Button Content="{Binding RisposteCorrenti[2]}" Grid.Row="1"></Button>
             <Button Content="{Binding RisposteCorrenti[3]}" Grid.Row="1" Grid.Column="1"></Button>
         </Grid>
