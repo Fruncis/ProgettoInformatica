@@ -8,19 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\francesco.santamaria\\.nuget\\packages\\": {}
+    "C:\\Users\\francesco\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\francesco.santamaria\\Source\\Repos\\ProgettoInformatica\\ProgettoInformatica.csproj",
+      "projectUniqueName": "C:\\Users\\francesco\\Source\\Repos\\ProgettoInformatica\\ProgettoInformatica.csproj",
       "projectName": "ProgettoInformatica",
-      "projectPath": "C:\\Users\\francesco.santamaria\\Source\\Repos\\ProgettoInformatica\\ProgettoInformatica.csproj",
-      "packagesPath": "C:\\Users\\francesco.santamaria\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\francesco.santamaria\\Source\\Repos\\ProgettoInformatica\\obj\\",
+      "projectPath": "C:\\Users\\francesco\\Source\\Repos\\ProgettoInformatica\\ProgettoInformatica.csproj",
+      "packagesPath": "C:\\Users\\francesco\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\francesco\\Source\\Repos\\ProgettoInformatica\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\francesco.santamaria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\francesco\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

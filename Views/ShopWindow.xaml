@@ -5,9 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:viewmodels="clr-namespace:ProgettoInformatica.ViewModels" 
              d:DataContext="{d:DesignInstance Type=viewmodels:ShopWindowViewModel}"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+             d:DesignHeight="720" d:DesignWidth="1280">
+
+    <Grid >
+
         <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -19,12 +23,51 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
+        <!--<Canvas Grid.ColumnSpan="7">
+            <Image Source="./Img/options-icon.png" Height="40" Width="40" Canvas.Left="1225" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </Canvas>-->
+        <TextBlock x:Name="TestoMain" Text="Deck Shop" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="60"/>
 
-        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Background="#ffebd6">
+        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" Grid.RowSpan="3" Background="#FFDAB9" ClipToBounds="False">
             <Grid.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                                    </ContentPresenter>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 0 10 10"/>
+                        </Style>
+                    </Style.Resources>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFA500 "/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Margin" Value="60 0"/>
+                    <Setter Property="Grid.RowSpan" Value="4"/>
+                    <Setter Property="Background" Value="#FFA500"/>
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
             </Grid.Resources>
             <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -33,27 +76,52 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            
 
-            <Button Grid.Row="1">
-                <Image></Image>
-            </Button>
-            <Button Grid.Row="1" Grid.Column="1">
-                <Image></Image>
-            </Button>
-            <Button Grid.Row="1" Grid.Column="2">
-                <Image></Image>
-            </Button>
-            <Button Grid.Row="1" Grid.Column="3">
-                <Image></Image>
-            </Button>
+            <Border Grid.Row="1" Grid.RowSpan="4" CornerRadius="10" Background="#FF8C00">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="215"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="Nome Mazzo" HorizontalAlignment="Center"/>
+                    <Image Grid.Row="1"/>
+                    <Button Grid.Row="2" Content="Compra!" Command="{Binding NavigationMenuCommand}"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Grid.Column="1" Grid.RowSpan="4" CornerRadius="10" Background="#FF8C00">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="215"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="Nome Mazzo" HorizontalAlignment="Center"/>
+                    <Image Grid.Row="1"/>
+                    <Button Grid.Row="2" Content="Compra!" Command=""/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Grid.Column="2" Grid.RowSpan="4" CornerRadius="10" Background="#FF8C00">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="215"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="Nome Mazzo" HorizontalAlignment="Center"/>
+                    <Image Grid.Row="1"/>
+                    <Button Grid.Row="2" Content="Compra!" Command=""/>
+                </Grid>
+            </Border>
+
         </Grid>
-        
-        
-        
-        
+
+
+
+
 
 
     </Grid>

@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/background.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/options-icon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/play.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/playfullblack.png")]

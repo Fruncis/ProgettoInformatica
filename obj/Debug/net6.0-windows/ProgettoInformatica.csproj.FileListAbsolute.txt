@@ -64,3 +64,4 @@ C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ProgettoInformatica.csproj.CoreCompileInputs.cache
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ProgettoInformatica.genruntimeconfig.cache
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ref\ProgettoInformatica.dll
+C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\background.png
