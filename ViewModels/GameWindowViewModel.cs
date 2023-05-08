@@ -20,9 +20,13 @@ namespace ProgettoInformatica.ViewModels
         {
             NavigateAccountCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore, () => new MenuWindowViewModel(navigationStore));
             //cardStore = new ClasseTemporanea();
-            Mazzo primoMazzo = new Mazzo("C:\\Users\\francesco\\Source\\Repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
+            Mazzo primoMazzo = new Mazzo("C:\\Users\\francesco.santamaria\\Source\\Repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
             QuesitoCorrente = primoMazzo.Carte[0].Quesito;
             RisposteCorrenti = primoMazzo.Carte[0].Risposte;
+            /*for(int i=0; i<4; i++)
+            {
+                System.Diagnostics.Debug.WriteLine(primoMazzo.Carte[0].Risposte[i]);
+            }*/
 
         }
     }

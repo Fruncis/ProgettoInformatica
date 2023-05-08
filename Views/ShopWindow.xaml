@@ -7,8 +7,23 @@
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1280">
 
-    <Grid >
-
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="./Img/background.png"
+                    Stretch="Fill" TileMode="Tile"
+                    ViewportUnits="Absolute" Viewport="0,0,1280,720"/>
+        </Grid.Background>
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="Loaded">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <RectAnimation Storyboard.TargetProperty="Background.Viewport"
+                                   To="1280,0,1280,720" Duration="0:1:0" 
+                                   RepeatBehavior="Forever"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Grid.Triggers>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -30,7 +45,7 @@
         </Canvas>-->
         <TextBlock x:Name="TestoMain" Text="Deck Shop" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="60"/>
 
-        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" Grid.RowSpan="3" Background="#FFDAB9" ClipToBounds="False">
+        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" Grid.RowSpan="3"  ClipToBounds="False">
             <Grid.Resources>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="Transparent"/>

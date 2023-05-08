@@ -31,7 +31,7 @@ namespace ProgettoInformatica.Model
             {
                 for(int j = 0; j < 4; j++)
                 {
-                    domande[j] = doc.DocumentElement.SelectSingleNode("/root/Carte[" + (j + 1) + "]/Risposte[" + (j + 1) + "]").InnerText;
+                    domande[j] = doc.DocumentElement.SelectSingleNode("/root/Carte[" + (i + 1) + "]/Risposte[" + (j + 1) + "]").InnerText;
                 }
 
                 Carte[i] = new Carta(doc.DocumentElement.SelectSingleNode("/root/Carte[" + (i + 1) +"]/Titolo").InnerText,
