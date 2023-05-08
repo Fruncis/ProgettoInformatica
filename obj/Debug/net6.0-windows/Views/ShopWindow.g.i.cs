@@ -61,7 +61,7 @@ namespace ProgettoInformatica.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ProgettoInformatica;component/views/shopwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ProgettoInformatica;V1.0.0.0;component/views/shopwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\ShopWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

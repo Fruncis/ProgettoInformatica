@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <root>
 	<TipoMazzo>Geografia</TipoMazzo>
-	<Carte>
+	<Carta>
 		<Titolo>Capitali</Titolo>
 		<Quesito>Qual è la capitale dell'Italia?</Quesito>
 		<Risposte>Roma</Risposte>
@@ -9,8 +9,8 @@
 		<Risposte>Napoli</Risposte>
 		<Risposte>Firenze</Risposte>
 		<RispostaCorretta>Roma</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Capitali</Titolo>
 		<Quesito>Qual è la capitale della Germania?</Quesito>
 		<Risposte>Amburgo</Risposte>
@@ -18,8 +18,8 @@
 		<Risposte>Monaco di Baviera</Risposte>
 		<Risposte>Francoforte</Risposte>
 		<RispostaCorretta>Berlino</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Capitali</Titolo>
 		<Quesito>Qual è la capitale della Russia?</Quesito>
 		<Risposte>Moscova</Risposte>
@@ -27,8 +27,8 @@
 		<Risposte>Novosibirsk</Risposte>
 		<Risposte>Ekaterinburg</Risposte>
 		<RispostaCorretta>Moscova</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Capitali</Titolo>
 		<Quesito>Qual è la capitale del Brasile?</Quesito>
 		<Risposte>Rio de Janeiro</Risposte>
@@ -36,8 +36,8 @@
 		<Risposte>Sao Paulo</Risposte>
 		<Risposte>Salvador</Risposte>
 		<RispostaCorretta>Brasilia</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Capitali</Titolo>
 		<Quesito>Qual è la capitale del Giappone?</Quesito>
 		<Risposte>Tokyo</Risposte>
@@ -45,8 +45,8 @@
 		<Risposte>Osaka</Risposte>
 		<Risposte>Hiroshima</Risposte>
 		<RispostaCorretta>Tokyo</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Capitali</Titolo>
 		<Quesito>Qual è la capitale della Cina?</Quesito>
 		<Risposte>Shanghai</Risposte>
@@ -54,8 +54,8 @@
 		<Risposte>Hong Kong</Risposte>
 		<Risposte>Chongqing</Risposte>
 		<RispostaCorretta>Pechino</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Capitali</Titolo>
 		<Quesito>Qual è la capitale dell'Australia?</Quesito>
 		<Risposte>Sydney</Risposte>
@@ -63,8 +63,8 @@
 		<Risposte>Canberra</Risposte>
 		<Risposte>Brisbane</Risposte>
 		<RispostaCorretta>Canberra</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Capitali</Titolo>
 		<Quesito>Qual è la capitale del Canada?</Quesito>
 		<Risposte>Toronto</Risposte>
@@ -72,8 +72,8 @@
 		<Risposte>Vancouver</Risposte>
 		<Risposte>Montreal</Risposte>
 		<RispostaCorretta>Ottawa</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Capitali</Titolo>
 		<Quesito>Qual è la capitale della Spagna?</Quesito>
 		<Risposte>Barcellona</Risposte>
@@ -81,8 +81,8 @@
 		<Risposte>Madrid</Risposte>
 		<Risposte>Valencia</Risposte>
 		<RispostaCorretta>Madrid</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Continenti</Titolo>
 		<Quesito>Qual è il continente più grande del mondo?</Quesito>
 		<Risposte>Europa</Risposte>
@@ -90,8 +90,8 @@
 		<Risposte>America</Risposte>
 		<Risposte>Africa</Risposte>
 		<RispostaCorretta>Asia</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Continenti</Titolo>
 		<Quesito>Qual è il continente più popoloso del mondo?</Quesito>
 		<Risposte>Europa</Risposte>
@@ -99,8 +99,8 @@
 		<Risposte>America</Risposte>
 		<Risposte>Africa</Risposte>
 		<RispostaCorretta>Asia</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Continenti</Titolo>
 		<Quesito>Qual è il continente più piccolo del mondo?</Quesito>
 		<Risposte>Europa</Risposte>
@@ -108,8 +108,8 @@
 		<Risposte>Oceania</Risposte>
 		<Risposte>Antartide</Risposte>
 		<RispostaCorretta>Oceania</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Paesi</Titolo>
 		<Quesito>In quale paese si trova il Taj Mahal?</Quesito>
 		<Risposte>India</Risposte>
@@ -117,8 +117,8 @@
 		<Risposte>Cambogia</Risposte>
 		<Risposte>Nepal</Risposte>
 		<RispostaCorretta>India</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Paesi</Titolo>
 		<Quesito>In quale paese si trova la Torre Eiffel?</Quesito>
 		<Risposte>Italia</Risposte>
@@ -126,8 +126,8 @@
 		<Risposte>Francia</Risposte>
 		<Risposte>Germania</Risposte>
 		<RispostaCorretta>Francia</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Paesi</Titolo>
 		<Quesito>In quale paese si trova il Colosseo?</Quesito>
 		<Risposte>Italia</Risposte>
@@ -135,8 +135,8 @@
 		<Risposte>Egitto</Risposte>
 		<Risposte>Turchia</Risposte>
 		<RispostaCorretta>Italia</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Paesi</Titolo>
 		<Quesito>In quale paese si trova Machu Picchu?</Quesito>
 		<Risposte>Argentina</Risposte>
@@ -144,8 +144,8 @@
 		<Risposte>Perù</Risposte>
 		<Risposte>Cile</Risposte>
 		<RispostaCorretta>Perù</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Paesi</Titolo>
 		<Quesito>In quale paese si trova la Grande Muraglia?</Quesito>
 		<Risposte>Cina</Risposte>
@@ -153,8 +153,8 @@
 		<Risposte>Corea del Sud</Risposte>
 		<Risposte>Taiwan</Risposte>
 		<RispostaCorretta>Cina</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Fiumi</Titolo>
 		<Quesito>Qual è il fiume più lungo d'Europa?</Quesito>
 		<Risposte>Danubio</Risposte>
@@ -162,8 +162,8 @@
 		<Risposte>Senna</Risposte>
 		<Risposte>Tamigi</Risposte>
 		<RispostaCorretta>Volga</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Fiumi</Titolo>
 		<Quesito>Qual è il fiume più lungo d'Africa?</Quesito>
 		<Risposte>Nilo</Risposte>
@@ -171,8 +171,8 @@
 		<Risposte>Zambesi</Risposte>
 		<Risposte>Orange</Risposte>
 		<RispostaCorretta>Nilo</RispostaCorretta>
-	</Carte>
-	<Carte>
+	</Carta>
+	<Carta>
 		<Titolo>Fiumi</Titolo>
 		<Quesito>Qual è il fiume più lungo dell'America del Sud?</Quesito>
 		<Risposte>Amazzoni</Risposte>
@@ -180,5 +180,5 @@
 		<Risposte>Paraguay</Risposte>
 		<Risposte>Magdalena</Risposte>
 		<RispostaCorretta>Amazzoni</RispostaCorretta>
-	</Carte>
+	</Carta>
 </root>
