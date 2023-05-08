@@ -17,12 +17,10 @@ namespace ProgettoInformatica.Model
 
         private Carta _cartaCorrente;
         public Carta CartaCorrente { get { return _cartaCorrente; } set { _cartaCorrente = value; CambioCartaCorrente(); } }
-
-
         public GestioneGioco(Mazzo mazzo)
         {
             this.mazzo = mazzo;
-            mazzoCorrente = new Mazzo("C:\\Users\\simone.bertolini\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml").Carte.ToList();
+            mazzoCorrente = mazzo.Carte.ToList();
         }
         public GestioneGioco(List<Carta> mazzoCorrente)
         {

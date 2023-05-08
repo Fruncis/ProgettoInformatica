@@ -17,6 +17,8 @@
             <Setter Property="BorderThickness" Value="3"/>
             <Setter Property="Foreground" Value="#FF7F50"/>
             <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Command" Value="{Binding ChangeButtonColor}"/>
+            <Setter Property="CommandParameter" Value="{Binding ElementName=button}"/>
             <Style.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30"/>
@@ -37,7 +39,7 @@
             
         </StackPanel>
 
-        <Border Margin="300 0" Padding="100,0" BorderBrush="LightGray" Background="#FFDAB9" BorderThickness="1" CornerRadius="50" Grid.Row="1" >
+        <Border HorizontalAlignment="Center" Padding="100,0" BorderBrush="LightGray" Background="#FFDAB9" BorderThickness="1" CornerRadius="50" Grid.Row="1" >
             <TextBlock Text="{Binding QuesitoCorrente}" Foreground="#FF584848"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"></TextBlock>
         </Border>
 
@@ -51,10 +53,10 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Content="{Binding RisposteCorrenti[0]}" Grid.Row="0" ></Button>
-            <Button Content="{Binding RisposteCorrenti[1]}" Grid.Row="0" Grid.Column="1" ></Button>
-            <Button Content="{Binding RisposteCorrenti[2]}" Grid.Row="1"></Button>
-            <Button Content="{Binding RisposteCorrenti[3]}" Grid.Row="1" Grid.Column="1"></Button>
+            <Button x:Name="button1" Content="{Binding RisposteCorrenti[0]}" Grid.Row="0" ></Button>
+            <Button x:Name="button2" Content="{Binding RisposteCorrenti[1]}" Grid.Row="0" Grid.Column="1" ></Button>
+            <Button x:Name="button3" Content="{Binding RisposteCorrenti[2]}" Grid.Row="1"></Button>
+            <Button x:Name="button4" Content="{Binding RisposteCorrenti[3]}" Grid.Row="1" Grid.Column="1"></Button>
         </Grid>
 
     </Grid>
