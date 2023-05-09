@@ -12,11 +12,11 @@ namespace ProgettoInformatica.Model
         Mazzo mazzo;
         public List<Carta> mazzoCorrente; //= new Mazzo("C:\\Users\\simone.bertolini\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml").Carte.ToList();
 
-        public event Action CartaCambiata;
+        //public event Action CartaCambiata;
         //public event PropertyChangedEventHandler? PropertyChanged;
 
-        private Carta _cartaCorrente;
-        public Carta CartaCorrente { get { return _cartaCorrente; } set { _cartaCorrente = value; CambioCartaCorrente(); } }
+        
+        /*public Carta CartaCorrente { get { return _cartaCorrente; } set { _cartaCorrente = value; CambioCartaCorrente(); } }*/
         public GestioneGioco(Mazzo mazzo)
         {
             this.mazzo = mazzo;
@@ -38,7 +38,7 @@ namespace ProgettoInformatica.Model
 
         }
 
-        public string RispostaAvversario(int difficolta)
+        /*public string RispostaAvversario(int difficolta)
         {
             List<string> risposte = CartaCorrente.Risposte.ToList();
 
@@ -60,7 +60,7 @@ namespace ProgettoInformatica.Model
         private void CambioCartaCorrente()
         {
             CartaCambiata?.Invoke();
-        }
+        }*/
 
     }
 }

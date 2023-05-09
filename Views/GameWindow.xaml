@@ -8,26 +8,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1280">
 
-    <UserControl.Resources>
-        <Style TargetType="{x:Type Button}">
-            <Setter Property="Padding" Value="10"/>
-            <Setter Property="Margin" Value="100 10"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="BorderBrush" Value="#FF7F50"/>
-            <Setter Property="BorderThickness" Value="3"/>
-            <Setter Property="Foreground" Value="#FF7F50"/>
-            <Setter Property="FontSize" Value="15"/>
-            <Setter Property="Command" Value="{Binding ChangeButtonColor}"/>
-            <Setter Property="CommandParameter" Value="{Binding ElementName=button}"/>
-            <Style.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="30"/>
-                </Style>
-            </Style.Resources>
-        </Style>
-
-    </UserControl.Resources>
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -45,6 +25,22 @@
 
 
         <Grid DockPanel.Dock="Bottom" Grid.Row="2" Margin="0 75 0 0">
+            <Grid.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="Margin" Value="100 10"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="#FF7F50"/>
+                    <Setter Property="BorderThickness" Value="3"/>
+                    <Setter Property="Foreground" Value="#FF7F50"/>
+                    <Setter Property="FontSize" Value="15"/>
+                    <Style.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="30"/>
+                        </Style>
+                    </Style.Resources>
+                </Style>
+            </Grid.Resources>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -53,10 +49,10 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button x:Name="button1" Content="{Binding RisposteCorrenti[0]}" Grid.Row="0" ></Button>
-            <Button x:Name="button2" Content="{Binding RisposteCorrenti[1]}" Grid.Row="0" Grid.Column="1" ></Button>
-            <Button x:Name="button3" Content="{Binding RisposteCorrenti[2]}" Grid.Row="1"></Button>
-            <Button x:Name="button4" Content="{Binding RisposteCorrenti[3]}" Grid.Row="1" Grid.Column="1"></Button>
+            <Button Content="{Binding RisposteCorrenti[0]}" Grid.Row="0" Command="{Binding ChangeButtonColor}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"></Button>
+            <Button Content="{Binding RisposteCorrenti[1]}" Grid.Row="0" Grid.Column="1" Command="{Binding ChangeButtonColor}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"></Button>
+            <Button Content="{Binding RisposteCorrenti[2]}" Grid.Row="1" Command="{Binding ChangeButtonColor}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"></Button>
+            <Button Content="{Binding RisposteCorrenti[3]}" Grid.Row="1" Grid.Column="1" Command="{Binding ChangeButtonColor}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"></Button>
         </Grid>
 
     </Grid>

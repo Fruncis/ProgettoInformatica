@@ -1,4 +1,5 @@
 ﻿using ProgettoInformatica.Model;
+using ProgettoInformatica.Store;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,11 +18,34 @@ namespace ProgettoInformatica.Commands
         {
             _gestioneGioco = gestioneGioco;
         }*/
+
+
+        private void checkResponse(Button button)
+        {
+            System.Diagnostics.Debug.WriteLine("1");
+            if (!button.Content.ToString().Equals(CartaCorrente.cartaCorrente.RipostaCorretta))
+            {
+                System.Diagnostics.Debug.WriteLine("2");
+                button.Background = Brushes.Red;
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("3");
+                button.Background = Brushes.Green;
+            }
+
+        }
+
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+
         public override void Execute(object parameter)
         {
             if (parameter is Button button)
             {
-                button.Background = Brushes.Red; // Change the background color to red
+                checkResponse(button);
             }
         }
     }
