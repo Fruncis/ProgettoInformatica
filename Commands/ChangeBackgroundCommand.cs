@@ -1,5 +1,6 @@
 ﻿using ProgettoInformatica.Model;
 using ProgettoInformatica.Store;
+using ProgettoInformatica.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +14,11 @@ namespace ProgettoInformatica.Commands
     class ChangeBackgroundCommand : CommandBase
     {
 
-        /*private readonly GestioneGioco _gestioneGioco;
-        public ChangeBackgroundCommand(GestioneGioco gestioneGioco)
+        private  GameWindowViewModel _gameWindowViewModel;
+        public ChangeBackgroundCommand(GameWindowViewModel gameWindowViewModel)
         {
-            _gestioneGioco = gestioneGioco;
-        }*/
+            _gameWindowViewModel = gameWindowViewModel;
+        }
 
 
         private void checkResponse(Button button)
@@ -32,6 +33,13 @@ namespace ProgettoInformatica.Commands
             {
                 System.Diagnostics.Debug.WriteLine("3");
                 button.Background = Brushes.Green;
+                /*CartaCorrente.cartaCorrente = _gameWindowViewModel.GestioneGioco.PescaCarta();
+
+                _gameWindowViewModel.QuesitoCorrente = CartaCorrente.cartaCorrente.Quesito;
+                _gameWindowViewModel.RisposteCorrenti = CartaCorrente.cartaCorrente.Risposte;*/
+                _gameWindowViewModel.isAnswered = true;
+
+
             }
 
         }

@@ -34,6 +34,11 @@
                     <Setter Property="BorderThickness" Value="3"/>
                     <Setter Property="Foreground" Value="#FF7F50"/>
                     <Setter Property="FontSize" Value="15"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=isAnswered}" Value="true">
+                            <Setter Property="Content" Value="Transparent"/>
+                        </DataTrigger>
+                    </Style.Triggers>
                     <Style.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="30"/>

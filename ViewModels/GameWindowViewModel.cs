@@ -15,12 +15,41 @@ namespace ProgettoInformatica.ViewModels
 {
     class GameWindowViewModel : ViewModelBase
     {
-        private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
+        private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
+        
+        private bool _isAnswered;
+        public bool isAnswered { get { return _isAnswered; } set { _isAnswered = value; OnPropertyChanged(nameof(isAnswered)); } }
+        
+        public GestioneGioco GestioneGioco { get; set; }
         /*public GestioneGioco _gestioneGioco = new GestioneGioco(mazzo);
         //public Carta cartaCorrente => _gestioneGioco.CartaCorrente; */
         //private CartaCorrente _cartaCorrente;
-        public string QuesitoCorrente { get; private set; }
-        public string[] RisposteCorrenti { get; set; } = new string[4];
+        private string _quesitoCorrente = "default";
+        public string QuesitoCorrente 
+        { 
+            get
+            {
+                return _quesitoCorrente;
+            }
+            set
+            {
+                _quesitoCorrente = value;
+                OnPropertyChanged(nameof(QuesitoCorrente));
+            } 
+        }
+        private string[] _risposteCorrenti;
+        public string[] RisposteCorrenti
+        {
+            get
+            {
+                return _risposteCorrenti;
+            }
+            set
+            {
+                _risposteCorrenti = value;
+                OnPropertyChanged(nameof(RisposteCorrenti));
+            }
+        }
 
 
         public ICommand ChangeButtonColor { get; set; }
@@ -29,12 +58,13 @@ namespace ProgettoInformatica.ViewModels
         public ICommand NavigateAccountCommand { get; }
         public GameWindowViewModel(NavigationStore navigationStore)
         {
+            isAnswered = false;
+            GestioneGioco = new GestioneGioco(mazzo);
             NavigateAccountCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore, () => new MenuWindowViewModel(navigationStore));
-            CartaCorrente.cartaCorrente = mazzo.Carte[0];
-            System.Diagnostics.Debug.WriteLine(CartaCorrente.cartaCorrente.RipostaCorretta);
-            QuesitoCorrente = mazzo.Carte[0].Quesito;
-            RisposteCorrenti = mazzo.Carte[0].Risposte;
-            ChangeButtonColor = new ChangeBackgroundCommand();
+            CartaCorrente.cartaCorrente = GestioneGioco.PescaCarta();
+            QuesitoCorrente = CartaCorrente.cartaCorrente.Quesito;
+            RisposteCorrenti = CartaCorrente.cartaCorrente.Risposte;
+            ChangeButtonColor = new ChangeBackgroundCommand(this);
         }
 
 
