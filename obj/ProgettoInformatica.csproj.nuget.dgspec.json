@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\francesco.santamaria\\Source\\Repos\\ProgettoInformatica\\ProgettoInformatica.csproj": {}
+    "C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\ProgettoInformatica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\francesco.santamaria\\Source\\Repos\\ProgettoInformatica\\ProgettoInformatica.csproj": {
+    "C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\ProgettoInformatica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\francesco.santamaria\\Source\\Repos\\ProgettoInformatica\\ProgettoInformatica.csproj",
+        "projectUniqueName": "C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\ProgettoInformatica.csproj",
         "projectName": "ProgettoInformatica",
-        "projectPath": "C:\\Users\\francesco.santamaria\\Source\\Repos\\ProgettoInformatica\\ProgettoInformatica.csproj",
-        "packagesPath": "C:\\Users\\francesco.santamaria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\francesco.santamaria\\Source\\Repos\\ProgettoInformatica\\obj\\",
+        "projectPath": "C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\ProgettoInformatica.csproj",
+        "packagesPath": "C:\\Users\\francesco\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\francesco.santamaria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\francesco\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

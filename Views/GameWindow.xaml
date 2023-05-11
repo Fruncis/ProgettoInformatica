@@ -8,6 +8,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1280">
 
+
+    
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -30,13 +33,29 @@
                     <Setter Property="Padding" Value="10"/>
                     <Setter Property="Margin" Value="100 10"/>
                     <Setter Property="Background" Value="Transparent"/>
-                    <Setter Property="BorderBrush" Value="#FF7F50"/>
-                    <Setter Property="BorderThickness" Value="3"/>
+                    
                     <Setter Property="Foreground" Value="#FF7F50"/>
                     <Setter Property="FontSize" Value="15"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border BorderBrush="#FF7F50" BorderThickness="3" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                                    </ContentPresenter>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding Path=isAnswered}" Value="true">
-                            <Setter Property="Content" Value="Transparent"/>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="ForceCursor" Value="True"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                        <DataTrigger Binding="{Binding isAnswered}" Value="true">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="#FF7F50"/>
                         </DataTrigger>
                     </Style.Triggers>
                     <Style.Resources>

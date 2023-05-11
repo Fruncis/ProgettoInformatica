@@ -13,6 +13,7 @@
     <None Remove="Views\Img\play.png" />
     <None Remove="Views\Img\playFullBlack.png" />
     <None Remove="Views\Img\shopping-cart.png" />
+    <None Remove="Views\Resources\SamuraiBlast.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +32,12 @@
     <Content Include="Views\Img\shopping-cart.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\Resources\SamuraiBlast.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

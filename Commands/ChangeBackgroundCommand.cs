@@ -28,26 +28,34 @@ namespace ProgettoInformatica.Commands
             {
                 System.Diagnostics.Debug.WriteLine("2");
                 button.Background = Brushes.Red;
+                /*button.Background = Brushes.Transparent;*/
             }
             else
             {
                 System.Diagnostics.Debug.WriteLine("3");
                 button.Background = Brushes.Green;
-                /*CartaCorrente.cartaCorrente = _gameWindowViewModel.GestioneGioco.PescaCarta();
-
-                _gameWindowViewModel.QuesitoCorrente = CartaCorrente.cartaCorrente.Quesito;
-                _gameWindowViewModel.RisposteCorrenti = CartaCorrente.cartaCorrente.Risposte;*/
-                _gameWindowViewModel.isAnswered = true;
+                
+                
+                /*button.Background = Brushes.Transparent;*/
+                
 
 
             }
-
+            button.Foreground = Brushes.White;
+            CartaCorrente.cartaCorrente = _gameWindowViewModel.GestioneGioco.PescaCarta();
+            _gameWindowViewModel.QuesitoCorrente = CartaCorrente.cartaCorrente.Quesito;
+            _gameWindowViewModel.RisposteCorrenti = CartaCorrente.cartaCorrente.Risposte;
+            button.Foreground = new SolidColorBrush(Color.FromRgb(255, 127, 80));
+            button.Background = Brushes.Transparent;
+            /*_gameWindowViewModel.isAnswered = true; 
+            //_gameWindowViewModel.isAnswered = false;*/
         }
 
         public bool CanExecute(object parameter)
         {
             return true;
         }
+
 
         public override void Execute(object parameter)
         {

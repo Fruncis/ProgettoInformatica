@@ -15,10 +15,10 @@ namespace ProgettoInformatica.ViewModels
 {
     class GameWindowViewModel : ViewModelBase
     {
-        private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
+        private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
         
         private bool _isAnswered;
-        public bool isAnswered { get { return _isAnswered; } set { _isAnswered = value; OnPropertyChanged(nameof(isAnswered)); } }
+        public bool isAnswered { get { return _isAnswered; } set { _isAnswered = value; OnPropertyChanged(nameof(isAnswered)); _isAnswered = false; } }
         
         public GestioneGioco GestioneGioco { get; set; }
         /*public GestioneGioco _gestioneGioco = new GestioneGioco(mazzo);
