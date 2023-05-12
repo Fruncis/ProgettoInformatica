@@ -29,12 +29,18 @@ namespace ProgettoInformatica.Model
 
         public Carta PescaCarta()
         {
-            Random random = new Random();
-            int carta = random.Next(0, mazzoCorrente.Count);
+            if (mazzoCorrente.Count > 0)
+            {
+                Random random = new Random();
+                int carta = random.Next(0, mazzoCorrente.Count);
 
-            mazzoCorrente.RemoveAt(carta);
+                Carta tmp = mazzoCorrente[carta];
+                mazzoCorrente.RemoveAt(carta);
 
-            return mazzoCorrente[carta];
+                return tmp;
+            }
+            else
+                return null;
 
         }
 

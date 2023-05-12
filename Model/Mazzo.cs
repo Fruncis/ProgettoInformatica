@@ -21,9 +21,8 @@ namespace ProgettoInformatica.Model
         {
             XmlDocument doc = new XmlDocument();
             doc.Load(percorsoMazzo);
-            XmlNode node = doc.DocumentElement.SelectSingleNode("/root/TipoMazzo");
-
-            this.TipoMazzo = node.InnerText;
+            
+            this.TipoMazzo = doc.DocumentElement.SelectSingleNode("/root/TipoMazzo").InnerText;
 
             string[] domande = new string[4];
 
