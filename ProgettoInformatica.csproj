@@ -35,9 +35,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Views\Resources\SamuraiBlast.ttf">
+    <Content Include="Views\Resources\SamuraiBlast.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    </Content>
   </ItemGroup>
 
 </Project>

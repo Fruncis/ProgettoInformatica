@@ -12,13 +12,15 @@
     
     
     <Grid>
+        
+        
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel DockPanel.Dock="Top" Grid.Row="0">
-                <Button Content="Menu" Command="{Binding NavigateAccountCommand}"/>
+                <Button Content="Menu" Command="{Binding NavigateAccountCommand}" Click="Button_Click"/>
             
         </StackPanel>
 
@@ -32,9 +34,8 @@
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Padding" Value="10"/>
                     <Setter Property="Margin" Value="100 10"/>
-                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Background" Value="#FF7F50"/>
                     
-                    <Setter Property="Foreground" Value="#FF7F50"/>
                     <Setter Property="FontSize" Value="15"/>
                     <Setter Property="Template">
                         <Setter.Value>

@@ -66,3 +66,4 @@ C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ref\ProgettoInformatica.dll
 C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\background.png
 C:\Users\francesco.santamaria\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\background.png
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Resources\SamuraiBlast.ttf

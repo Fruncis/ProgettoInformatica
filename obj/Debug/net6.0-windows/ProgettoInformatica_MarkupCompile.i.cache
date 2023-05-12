@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\francesco\source\repos\ProgettoInformatica\obj\Debug\net6.0-windows\
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\
 ProgettoInformatica
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\francesco\source\repos\ProgettoInformatica\App.xaml
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\App.xaml
 4286047083
-5-1584741027
-23-396232242
-1941709816142
+6266002923
+251197366534
+194-1617825143
 MainWindow.xaml;Views\GameWindow.xaml;Views\MenuWindow.xaml;Views\ShopWindow.xaml;
 
-True
+False
 

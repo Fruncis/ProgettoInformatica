@@ -13,5 +13,6 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/play.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/playfullblack.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/shopping-cart.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/resources/samuraiblast.ttf")]
 
 

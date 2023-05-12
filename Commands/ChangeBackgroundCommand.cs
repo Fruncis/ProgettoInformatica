@@ -6,8 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 
 namespace ProgettoInformatica.Commands
 {
@@ -23,30 +25,35 @@ namespace ProgettoInformatica.Commands
 
         private void checkResponse(Button button)
         {
+            SolidColorBrush foregroundColor = new SolidColorBrush(Color.FromRgb(255, 127, 80));
+            Duration animationDuration = new Duration(TimeSpan.FromSeconds(2));
+            ColorAnimation backgroundAnimation = new ColorAnimation(Colors.Green, Colors.Transparent, animationDuration);
+            ColorAnimation foregroundAnimation = new ColorAnimation(Colors.White, foregroundColor.Color, animationDuration);
             System.Diagnostics.Debug.WriteLine("1");
             if (!button.Content.ToString().Equals(CartaCorrente.cartaCorrente.RipostaCorretta))
             {
                 System.Diagnostics.Debug.WriteLine("2");
-                button.Background = Brushes.Red;
+                button.Background = new SolidColorBrush(Color.FromRgb(255, 0, 0)); 
+                button.Background.BeginAnimation(SolidColorBrush.ColorProperty, backgroundAnimation);
                 /*button.Background = Brushes.Transparent;*/
             }
             else
             {
                 System.Diagnostics.Debug.WriteLine("3");
-                button.Background = Brushes.Green;
-                
-                
+                button.Background = new SolidColorBrush(Color.FromRgb(0, 255, 0));
+                button.Background.BeginAnimation(SolidColorBrush.ColorProperty, backgroundAnimation);
+
                 /*button.Background = Brushes.Transparent;*/
-                
+
 
 
             }
-            button.Foreground = Brushes.White;
+            //button.Foreground = Brushes.White;
             CartaCorrente.cartaCorrente = _gameWindowViewModel.GestioneGioco.PescaCarta();
             _gameWindowViewModel.QuesitoCorrente = CartaCorrente.cartaCorrente.Quesito;
             _gameWindowViewModel.RisposteCorrenti = CartaCorrente.cartaCorrente.Risposte;
-            button.Foreground = new SolidColorBrush(Color.FromRgb(255, 127, 80));
-            button.Background = Brushes.Transparent;
+            
+
             /*_gameWindowViewModel.isAnswered = true; 
             //_gameWindowViewModel.isAnswered = false;*/
         }
