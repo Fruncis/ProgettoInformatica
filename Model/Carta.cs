@@ -20,11 +20,7 @@ namespace ProgettoInformatica.Model
             this.Titolo = titolo;
             this.Quesito = quesito;
             this.RipostaCorretta = rispostaCorretta;
-            this.Risposte = new string[4];
-            for(int i = 0; i < 4; i++)
-            {
-                this.Risposte[i] = risposte[i];
-            }
+            this.Risposte = risposte;
         }
 
     }

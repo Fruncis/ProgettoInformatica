@@ -1,4 +1,4 @@
-﻿using ProgettoInformatica.Store;
+using ProgettoInformatica.Store;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,13 +10,6 @@ namespace ProgettoInformatica.Model
 {
     class GestioneGiocatore
     {
-        /*public GestioneGiocatore(int livello, int esperienza, List<Mazzo> mazziPosseduti, int gettoni)
-        {
-            Giocatore.Livello = livello;
-            Giocatore.Esperienza = esperienza;
-            Giocatore.MazziPosseduti = mazziPosseduti;
-            Giocatore.Gettoni = gettoni;
-        }*/
 
         public void Salva(int livello, int esperienza, List<Mazzo> mazziPosseduti, int gettoni)
         {
@@ -41,12 +34,36 @@ namespace ProgettoInformatica.Model
         {
             XmlDocument doc = new XmlDocument();
             doc.Load("saves.xml");
-            
 
             Giocatore.Livello = int.Parse(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/livello").InnerText);
             Giocatore.Esperienza = int.Parse(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/esperienza").InnerText);
-            // da fare: inserimento mazzi posseduti
+            
+            for (int i = 1; i < doc.SelectNodes("/root/giocatore[" + giocatore + "]/mazzi-posseduti/mazzo").Count; i++)
+            {
+                Giocatore.MazziPosseduti.Add(new Mazzo(TypeToPath(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/mazzi-posseduti/mazzo[" + i + "]").InnerText)));
+            }
+
             Giocatore.Gettoni = int.Parse(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/gettoni").InnerText);
+        }
+        
+        private string TypeToPath(string tipoMazzo)
+        {
+            string path;
+            
+            switch(tipoMazzo)
+            {
+                case "Geografia":
+                    path = "mazzo-geografia.xml";
+                    break;
+                case "Storia":
+                    path = "mazzo-storia.xml";
+                    break;
+                default:
+                    path = null;
+                    break;
+            }
+            
+            return path;
         }
 
 
