@@ -25,23 +25,20 @@ namespace ProgettoInformatica.Commands
 
         private void checkResponse(Button button)
         {
-            SolidColorBrush foregroundColor = new SolidColorBrush(Color.FromRgb(255, 127, 80));
+            /*SolidColorBrush foregroundColor = new SolidColorBrush(Color.FromRgb(255, 127, 80));
             Duration animationDuration = new Duration(TimeSpan.FromSeconds(2));
             ColorAnimation backgroundAnimation = new ColorAnimation(Colors.Green, Colors.Transparent, animationDuration);
-            ColorAnimation foregroundAnimation = new ColorAnimation(Colors.White, foregroundColor.Color, animationDuration);
-            System.Diagnostics.Debug.WriteLine("1");
+            ColorAnimation foregroundAnimation = new ColorAnimation(Colors.White, foregroundColor.Color, animationDuration);*/
             if (!button.Content.ToString().Equals(CartaCorrente.cartaCorrente.RipostaCorretta))
             {
-                System.Diagnostics.Debug.WriteLine("2");
                 button.Background = new SolidColorBrush(Color.FromRgb(255, 0, 0)); 
-                button.Background.BeginAnimation(SolidColorBrush.ColorProperty, backgroundAnimation);
+                //button.Background.BeginAnimation(SolidColorBrush.ColorProperty, backgroundAnimation);
                 /*button.Background = Brushes.Transparent;*/
             }
             else
             {
-                System.Diagnostics.Debug.WriteLine("3");
                 button.Background = new SolidColorBrush(Color.FromRgb(0, 255, 0));
-                button.Background.BeginAnimation(SolidColorBrush.ColorProperty, backgroundAnimation);
+                //button.Background.BeginAnimation(SolidColorBrush.ColorProperty, backgroundAnimation);
 
                 /*button.Background = Brushes.Transparent;*/
 

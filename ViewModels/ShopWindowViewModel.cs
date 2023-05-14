@@ -1,4 +1,5 @@
 ﻿using ProgettoInformatica.Commands;
+using ProgettoInformatica.Model;
 using ProgettoInformatica.Store;
 using System;
 using System.Collections.Generic;
@@ -11,12 +12,12 @@ namespace ProgettoInformatica.ViewModels
 {
     public class ShopWindowViewModel : ViewModelBase
     {
-        public ICommand NavigationMenuCommand { get; }
+        public ICommand NavigateMenuCommand { get; }
         public string CheckBoxName { get; set; } = "CheckBox";
 
         public ShopWindowViewModel(NavigationStore navigationStore)
         {
-            NavigationMenuCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore, () => new MenuWindowViewModel(navigationStore));
+            NavigateMenuCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore,() => IstanziaViewModel<MenuWindowViewModel>.Istanzia(navigationStore));
         }
     }
 }

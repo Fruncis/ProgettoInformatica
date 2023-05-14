@@ -13,14 +13,17 @@ using System.Windows.Media;
 
 namespace ProgettoInformatica.ViewModels
 {
-    class GameWindowViewModel : ViewModelBase
+    public class GameWindowViewModel : ViewModelBase
     {
-        private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
+        private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
         
         private bool _isAnswered;
         public bool isAnswered { get { return _isAnswered; } set { _isAnswered = value; OnPropertyChanged(nameof(isAnswered)); _isAnswered = false; } }
         
         public GestioneGioco GestioneGioco { get; set; }
+
+        //public NavigationStore navigationStore { get; set; }
+
         /*public GestioneGioco _gestioneGioco = new GestioneGioco(mazzo);
         //public Carta cartaCorrente => _gestioneGioco.CartaCorrente; */
         //private CartaCorrente _cartaCorrente;
@@ -55,12 +58,13 @@ namespace ProgettoInformatica.ViewModels
         public ICommand ChangeButtonColor { get; set; }
 
 
-        public ICommand NavigateAccountCommand { get; }
+        public ICommand NavigateMenuCommand { get; }
         public GameWindowViewModel(NavigationStore navigationStore)
         {
+            //System.Diagnostics.Debug.WriteLine(IstanziaViewModel.Istanza);
             isAnswered = false;
             GestioneGioco = new GestioneGioco(mazzo);
-            NavigateAccountCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore, () => new MenuWindowViewModel(navigationStore));
+            NavigateMenuCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore, () => IstanziaViewModel<MenuWindowViewModel>.Istanzia(navigationStore));
             CartaCorrente.cartaCorrente = GestioneGioco.PescaCarta();
             QuesitoCorrente = CartaCorrente.cartaCorrente.Quesito;
             RisposteCorrenti = CartaCorrente.cartaCorrente.Risposte;

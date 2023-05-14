@@ -9,10 +9,13 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/background.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/left-arrow.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/options-icon-white.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/options-icon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/play.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/playfullblack.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/shopping-cart.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/resources/diloworld.ttf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/resources/samuraiblast.ttf")]
 
 

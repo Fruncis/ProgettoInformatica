@@ -1,4 +1,5 @@
-﻿using ProgettoInformatica.Store;
+﻿using ProgettoInformatica.Model;
+using ProgettoInformatica.Store;
 using ProgettoInformatica.ViewModels;
 using System;
 using System.Collections.Generic;

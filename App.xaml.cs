@@ -1,4 +1,5 @@
 ﻿using ProgettoInformatica.Commands;
+using ProgettoInformatica.Model;
 using ProgettoInformatica.Store;
 using ProgettoInformatica.ViewModels;
 using ProgettoInformatica.Views;
@@ -14,15 +15,21 @@ namespace ProgettoInformatica
     public partial class App : Application
     {
         private static Mutex _mutex = null;
+
+        private static readonly Lazy<IstanziaViewModel<MenuWindowViewModel>> _istanziaViewModel = new Lazy<IstanziaViewModel<MenuWindowViewModel>>(() => new IstanziaViewModel<MenuWindowViewModel> { });
+
+        public IstanziaViewModel<MenuWindowViewModel> Istanza { get; } = _istanziaViewModel.Value;
         protected override void OnStartup(StartupEventArgs e)
         {
-            const string appName = "MyAppName";
+            const string appName = "Quiz";
 
             bool createdNew;
 
+            
+
             NavigationStore  navigationStore = new NavigationStore();
 
-            navigationStore.CurrentViewModel = new MenuWindowViewModel(navigationStore);
+            navigationStore.CurrentViewModel = IstanziaViewModel<MenuWindowViewModel>.Istanzia(navigationStore);
 
             MainWindow = new MainWindow()
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProgettoInformatica.Store;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -13,6 +14,7 @@ namespace ProgettoInformatica.ViewModels
         private readonly bool ThrowOnInvalidPropertyName;
 
         public event PropertyChangedEventHandler? PropertyChanged;
+
         protected virtual void OnPropertyChanged(string propertyName)
         {
             this.VerifyPropertyName(propertyName);

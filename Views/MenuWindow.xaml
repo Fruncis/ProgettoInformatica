@@ -54,7 +54,7 @@
                 <BeginStoryboard>
                     <Storyboard>
                         <RectAnimation Storyboard.TargetProperty="Background.Viewport"
-                                   To="1280,0,1280,720" Duration="0:1:0" 
+                                   To="1280,-360,1280,720" Duration="0:1:0" 
                                    RepeatBehavior="Forever"/>
                     </Storyboard>
                 </BeginStoryboard>
