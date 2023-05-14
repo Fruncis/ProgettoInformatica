@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProgettoInformatica.Views"
         xmlns:viewmodels="clr-namespace:ProgettoInformatica.ViewModels" 
         mc:Ignorable="d"
-        Title="SaveWindow" Height="450" Width="800">
+        Title="SaveWindow" Height="720" Width="1280">
     
     <Grid>
         <Grid.ColumnDefinitions>

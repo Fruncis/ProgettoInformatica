@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\francesco\source\repos\ProgettoInformatica\App.xaml
-4286047083
-91053594003
-26-108708127
+6-742277178
+111943896961
+32-289458088
 1941709816142
-MainWindow.xaml;Views\GameWindow.xaml;Views\MenuWindow.xaml;Views\ShopWindow.xaml;
+MainWindow.xaml;Views\GameWindow.xaml;Views\MenuWindow.xaml;Views\SaveWindow.xaml;Views\ShopWindow.xaml;Views\SoundWindow.xaml;
 
-False
+True
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProgettoInformatica.ViewModels
 {
-    class SaveWindowViewModel : ViewModelBase
+    public class SaveWindowViewModel : ViewModelBase
     {
         public SaveWindowViewModel()
         {

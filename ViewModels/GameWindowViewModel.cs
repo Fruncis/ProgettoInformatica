@@ -18,7 +18,8 @@ namespace ProgettoInformatica.ViewModels
         //private readonly Mazzo mazzo = new Mazzo("C:\\Users\\Simone\\Downloads\\ProgettoInformatica-main\\Data\\mazzo-geografia.xml");
         private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
         
-        private bool _isAnswered;
+        //public Brush
+        public bool _isAnswered { get; set; }
         public bool isAnswered { get { return _isAnswered; } set { _isAnswered = value; OnPropertyChanged(nameof(isAnswered)); _isAnswered = false; } }
         
         public GestioneGioco GestioneGioco { get; set; }

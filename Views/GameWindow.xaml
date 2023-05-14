@@ -9,6 +9,27 @@
              d:DesignHeight="720" d:DesignWidth="1280">
 
     <Grid>
+        <Grid.Resources>
+            <Style TargetType="{x:Type Canvas}" x:Key="animation">
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding Path=isAnswered}" Value="true">
+                        <DataTrigger.EnterActions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)" Duration="0:0:5">
+                                        <EasingDoubleKeyFrame KeyTime="0:0:2" Value="200"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:3" Value="200"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </DataTrigger.EnterActions>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+            
+        </Grid.Resources>
         <Grid.Background>
             <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                 <GradientStop Color="#3194F4" Offset="0.1"/>
@@ -21,12 +42,30 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Canvas Grid.Row="1" Style="{StaticResource animation}" Panel.ZIndex="3">
+            <Canvas.RenderTransform>
+                <TranslateTransform X="0" Y="0"/>
+            </Canvas.RenderTransform>
+            <Grid Canvas.Left="-181" Canvas.Top="78">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="20"/>
+                </Grid.RowDefinitions>
+                <Rectangle Fill="White" Stroke="Transparent" RadiusX="8" RadiusY="10"/>
+                <Path Fill="White" Stretch="Fill" Stroke="Transparent" HorizontalAlignment="Left" Margin="8.3,-1.597,0,0" Width="25" Grid.Row="1" Data="M0,10.45381 L0,187.66699 100.791059,10.54395"/>
+                <Rectangle Fill="White" RadiusX="10" RadiusY="10" Margin="1"/>
+                <TextBlock Foreground="#5D70D1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Testo Prova" TextWrapping="Wrap" Padding="5" />
+            </Grid>
+            <Image x:Name="robot" VerticalAlignment="Top"  Source="./Img/default-robot.png" Canvas.Left="-252" Height="110" Width="130" HorizontalAlignment="Left" Canvas.Top="132"/>
+        </Canvas>
+
+
         <Grid>
             <Grid.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                     <Setter Property="Background" Value="White"/>
-                    
+
                 </Style>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Foreground" Value="#5D70D1"/>
@@ -41,9 +80,9 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="340"/>
-                <ColumnDefinition Width="600"/>
-                <ColumnDefinition Width="340"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Orientation="Horizontal">
                 <StackPanel.Resources>
@@ -86,21 +125,31 @@
 
 
             <Border Grid.Column="2" Width="80" Height="25" HorizontalAlignment="Center">
-                <TextBlock  x:Name="coins" Text="1000" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Image/>
-                </TextBlock>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock  x:Name="coins" Text="1000"  />
+                    <Image Source="./Img/coin.png" Height="15" Margin="5 0 0 0"/>
+                </StackPanel>
+
             </Border>
 
             <Image Grid.Column="2" HorizontalAlignment="Right" Source=".\Img\options-icon-white.png" Margin="0 0 15 0" Height="40"/>
         </Grid>
 
-        <Border HorizontalAlignment="Center" Padding="100,0"  CornerRadius="50" Grid.Row="1" >
-            
-            <TextBlock Text="{Binding QuesitoCorrente}" Foreground="white" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40"></TextBlock>
-        </Border>
+        <!--<Border HorizontalAlignment="Center" Padding="100,0"  CornerRadius="50" Grid.Row="1" >-->
+        <Grid Grid.Row="1" Margin="200 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Path Fill="White" Stretch="Fill" Stroke="Transparent" HorizontalAlignment="Right" Margin="8.3,-1.597,18,0" Width="50" Grid.Row="1" Data="M0,10.45381 L100,187.66699 100.791059,10.54395"/>
+            <Rectangle Fill="White" RadiusX="20" RadiusY="20" Margin="1"/>
+            <TextBlock Text="{Binding QuesitoCorrente}" Foreground="#5D70D1" FontWeight="SemiBold" FontFamily="Roboto" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40"/>
+        </Grid>
 
 
-        <Grid DockPanel.Dock="Bottom" Grid.Row="2" Margin="0 75 0 0">
+
+        <Grid  Grid.Row="2" Margin="0 75 0 0">
             <Grid.Resources>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Padding" Value="10"/>
@@ -123,7 +172,35 @@
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="Button">
-                                <Border BorderBrush="Transparent" BorderThickness="3" Background="{TemplateBinding Background}">
+                                <Border BorderBrush="Transparent" BorderThickness="3" CornerRadius="10" Background="{TemplateBinding Background}">
+                                    <Border.Style>
+                                        <Style>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Path=isAnswered}" Value="true">
+                                                    <DataTrigger.EnterActions>
+                                                        <BeginStoryboard>
+                                                            <Storyboard>
+                                                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Button.BorderBrush).(SolidColorBrush.Color)" Duration="0:0:6">
+                                                                    <LinearColorKeyFrame KeyTime="0:0:1" Value="LightGray"/>
+                                                                    <LinearColorKeyFrame KeyTime="0:0:1.5" Value="Transparent"/>
+                                                                    <LinearColorKeyFrame KeyTime="0:0:2" Value="LightGray"/>
+                                                                    <LinearColorKeyFrame KeyTime="0:0:2.5" Value="Transparent"/>
+                                                                    <LinearColorKeyFrame KeyTime="0:0:3" Value="LightGray"/>
+                                                                    <LinearColorKeyFrame KeyTime="0:0:3.5" Value="Transparent"/>
+                                                                    <LinearColorKeyFrame KeyTime="0:0:4" Value="LightGray"/>
+                                                                    <LinearColorKeyFrame KeyTime="0:0:4.5" Value="Transparent"/>
+                                                                    <LinearColorKeyFrame KeyTime="0:0:5" Value="LightGray"/>
+                                                                    <LinearColorKeyFrame KeyTime="0:0:5.5" Value="Transparent"/>
+                                                                    <LinearColorKeyFrame KeyTime="0:0:6" Value="Green"/>
+                                                                </ColorAnimationUsingKeyFrames>
+                                                            </Storyboard>
+                                                        </BeginStoryboard>
+                                                    </DataTrigger.EnterActions>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+                                    
                                     <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
 
                                     </ContentPresenter>
@@ -131,22 +208,19 @@
                             </ControlTemplate>
                         </Setter.Value>
                     </Setter>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="ForceCursor" Value="True"/>
-                            <Setter Property="Cursor" Value="Hand"/>
-                        </Trigger>
-                        <DataTrigger Binding="{Binding isAnswered}" Value="true">
-                            <Setter Property="Background" Value="Transparent"/>
-                            <Setter Property="Foreground" Value="#FF7F50"/>
-                        </DataTrigger>
-                    </Style.Triggers>
                     <Style.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="15"/>
                         </Style>
                     </Style.Resources>
-                    
+
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="ForceCursor" Value="True"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                            
+                    </Style.Triggers>
                 </Style>
             </Grid.Resources>
             <Grid.ColumnDefinitions>

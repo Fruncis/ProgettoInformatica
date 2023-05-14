@@ -8,7 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/default-robot.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/background.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/coin.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/left-arrow.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/options-icon-white.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/options-icon.png")]

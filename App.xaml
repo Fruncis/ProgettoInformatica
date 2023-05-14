@@ -3,5 +3,4 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:ProgettoInformatica.ViewModels"
              xmlns:command="clr-namespace:ProgettoInformatica.Commands">
-    <Application.Resources/>
 </Application>

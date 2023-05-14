@@ -4,7 +4,9 @@ using ProgettoInformatica.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,19 +27,20 @@ namespace ProgettoInformatica.Commands
 
         private void checkResponse(Button button)
         {
+            SolidColorBrush backgroundColor;
             /*SolidColorBrush foregroundColor = new SolidColorBrush(Color.FromRgb(255, 127, 80));
             Duration animationDuration = new Duration(TimeSpan.FromSeconds(2));
             ColorAnimation backgroundAnimation = new ColorAnimation(Colors.Green, Colors.Transparent, animationDuration);
             ColorAnimation foregroundAnimation = new ColorAnimation(Colors.White, foregroundColor.Color, animationDuration);*/
             if (!button.Content.ToString().Equals(CartaCorrente.cartaCorrente.RipostaCorretta))
             {
-                button.Background = new SolidColorBrush(Color.FromRgb(255, 0, 0)); 
+                backgroundColor = new SolidColorBrush(Color.FromRgb(255, 0, 0)); 
                 //button.Background.BeginAnimation(SolidColorBrush.ColorProperty, backgroundAnimation);
                 /*button.Background = Brushes.Transparent;*/
             }
             else
             {
-                button.Background = new SolidColorBrush(Color.FromRgb(0, 255, 0));
+                backgroundColor = new SolidColorBrush(Color.FromRgb(0, 255, 0));
                 //button.Background.BeginAnimation(SolidColorBrush.ColorProperty, backgroundAnimation);
 
                 /*button.Background = Brushes.Transparent;*/
@@ -46,14 +49,40 @@ namespace ProgettoInformatica.Commands
 
             }
             //button.Foreground = Brushes.White;
+            _gameWindowViewModel.isAnswered = true;
+            //AnswerAnimation(backgroundColor, button);
+            /*TimeSpan ts = new TimeSpan(0, 0, 5);
+            Thread.Sleep(ts);*/
             CartaCorrente.cartaCorrente = _gameWindowViewModel.GestioneGioco.PescaCarta();
             _gameWindowViewModel.QuesitoCorrente = CartaCorrente.cartaCorrente.Quesito;
             _gameWindowViewModel.RisposteCorrenti = CartaCorrente.cartaCorrente.Risposte;
             
 
-            /*_gameWindowViewModel.isAnswered = true; 
-            //_gameWindowViewModel.isAnswered = false;*/
+
+            _gameWindowViewModel.isAnswered = false;
         }
+
+
+        /*private void AnswerAnimation(SolidColorBrush bordercolor, Button button)
+        {
+            SolidColorBrush brush = new SolidColorBrush();
+
+
+            ColorAnimation answerAnimation1 = new ColorAnimation();
+            answerAnimation1.Duration = new Duration(TimeSpan.FromSeconds(6));
+            answerAnimation1.From = Colors.Transparent;
+            answerAnimation1.To = Colors.LightGray;
+            answerAnimation1.AutoReverse = true;
+            answerAnimation1.RepeatBehavior = RepeatBehavior.Forever;
+
+            // Set the animations on the border's BorderBrush property
+            brush.BeginAnimation(SolidColorBrush.ColorProperty, answerAnimation1);
+
+            // Set the border's BorderBrush property to the animated brush
+            button.BorderThickness = new Thickness(10);
+            button.BorderBrush = brush;
+
+        }*/
 
         public bool CanExecute(object parameter)
         {
