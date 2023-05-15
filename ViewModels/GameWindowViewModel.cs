@@ -20,7 +20,7 @@ namespace ProgettoInformatica.ViewModels
         
         //public Brush
         public bool _isAnswered { get; set; }
-        public bool isAnswered { get { return _isAnswered; } set { _isAnswered = value; OnPropertyChanged(nameof(isAnswered)); _isAnswered = false; } }
+        public bool isAnswered { get { return _isAnswered; } set { _isAnswered = value; OnPropertyChanged(nameof(isAnswered)); } }
         
         public GestioneGioco GestioneGioco { get; set; }
 
@@ -68,12 +68,26 @@ namespace ProgettoInformatica.ViewModels
             GestioneGioco = new GestioneGioco(mazzo);
             NavigateMenuCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore, () => IstanziaViewModel<MenuWindowViewModel>.Istanzia(navigationStore));
             CartaCorrente.cartaCorrente = GestioneGioco.PescaCarta();
+            
             QuesitoCorrente = CartaCorrente.cartaCorrente.Quesito;
             RisposteCorrenti = CartaCorrente.cartaCorrente.Risposte;
+            System.Diagnostics.Debug.WriteLine(QuesitoCorrente);
+
             ChangeButtonColor = new ChangeBackgroundCommand(this);
         }
 
 
+
+        public async void DelayedCodeExecution(int animationTime)
+        {
+            // Delay the execution by 2 seconds (2000 milliseconds)
+            await Task.Delay(TimeSpan.FromSeconds(animationTime));
+
+            CartaCorrente.cartaCorrente = GestioneGioco.PescaCarta();
+            QuesitoCorrente = CartaCorrente.cartaCorrente.Quesito;
+            RisposteCorrenti = CartaCorrente.cartaCorrente.Risposte;
+            isAnswered = false;
+        }
 
         /*public GameWindowViewModel(GestioneGioco gestioneGioco)
         {

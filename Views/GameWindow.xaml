@@ -10,13 +10,15 @@
 
     <Grid>
         <Grid.Resources>
-            <Style TargetType="{x:Type Canvas}" x:Key="animation">
+            <Style TargetType="{x:Type Canvas}" x:Key="RobotAnimation">
+                <Setter Property="Visibility" Value="Collapsed"/>
                 <Style.Triggers>
                     <DataTrigger Binding="{Binding Path=isAnswered}" Value="true">
+                        <Setter Property="Visibility" Value="Hidden"/>
                         <DataTrigger.EnterActions>
                             <BeginStoryboard>
                                 <Storyboard>
-                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)" Duration="0:0:5">
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)" Duration="0:0:5" >
                                         <EasingDoubleKeyFrame KeyTime="0:0:2" Value="200"/>
                                         <EasingDoubleKeyFrame KeyTime="0:0:3" Value="200"/>
                                         <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
@@ -26,6 +28,23 @@
                             </BeginStoryboard>
                         </DataTrigger.EnterActions>
                     </DataTrigger>
+                </Style.Triggers>
+            </Style>
+            <Style TargetType="{x:Type Grid}" x:Key="QuestionAnimation">
+                <Style.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)" Duration="0:0:2">
+                                    <LinearDoubleKeyFrame KeyTime="0:0:0" Value="1080"/>
+                                    <LinearDoubleKeyFrame KeyTime="0:0:1.5" Value="-40"/>
+                                    <LinearDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    
                 </Style.Triggers>
             </Style>
             
@@ -42,11 +61,11 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Canvas Grid.Row="1" Style="{StaticResource animation}" Panel.ZIndex="3">
+        <Canvas Grid.Row="1" Style="{StaticResource RobotAnimation}" Panel.ZIndex="3">
             <Canvas.RenderTransform>
                 <TranslateTransform X="0" Y="0"/>
             </Canvas.RenderTransform>
-            <Grid Canvas.Left="-181" Canvas.Top="78">
+            <Grid Canvas.Left="-181" Canvas.Top="78" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="20"/>
@@ -61,6 +80,7 @@
 
 
         <Grid>
+            
             <Grid.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -84,6 +104,7 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            <TextBlock FontSize="30" Foreground="white" Grid.Column="1" Text="0:0:40" />
             <StackPanel Orientation="Horizontal">
                 <StackPanel.Resources>
                     <Style TargetType="{x:Type Button}">
@@ -110,9 +131,9 @@
 
                     <Image Source="./Img/left-arrow.png" Margin="0 5"/>
                 </Button>
-                <TextBlock Text="Menu" VerticalAlignment="Center" FontSize="25" Foreground="White" FontFamily="Dilo World"/>
+                <TextBlock Text="Quiz" VerticalAlignment="Center" FontSize="25" Foreground="White" FontFamily="Dilo World"/>
             </StackPanel>
-            <Border Width="100" Height="20" HorizontalAlignment="Center" Margin="5 0 0 0">
+            <Border Width="100" Height="20" HorizontalAlignment="Center" Margin="10 0 0 0">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock x:Name="level" Text="1" Padding="5 0">
 
@@ -123,26 +144,31 @@
                 </StackPanel>
             </Border>
 
+            <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Border Grid.Column="2" Width="80" Height="25" Margin="0 0 15 0" >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock  x:Name="coins" Text="1000"  />
+                        <Image Source="./Img/coin.png" Height="15" Margin="5 0 0 0"/>
+                    </StackPanel>
 
-            <Border Grid.Column="2" Width="80" Height="25" HorizontalAlignment="Center">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock  x:Name="coins" Text="1000"  />
-                    <Image Source="./Img/coin.png" Height="15" Margin="5 0 0 0"/>
-                </StackPanel>
+                </Border>
 
-            </Border>
-
-            <Image Grid.Column="2" HorizontalAlignment="Right" Source=".\Img\options-icon-white.png" Margin="0 0 15 0" Height="40"/>
+                <Image Grid.Column="2" HorizontalAlignment="Right" Source=".\Img\options-icon-white.png" Margin="0 0 15 0" Height="40" />
+            </StackPanel>
+            
         </Grid>
 
         <!--<Border HorizontalAlignment="Center" Padding="100,0"  CornerRadius="50" Grid.Row="1" >-->
-        <Grid Grid.Row="1" Margin="200 0">
+        <Grid Grid.Row="1" Margin="200 0" Style="{StaticResource QuestionAnimation}">
+            <Grid.RenderTransform>
+                <TranslateTransform X="0" Y="0"/>
+            </Grid.RenderTransform>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
 
-            <Path Fill="White" Stretch="Fill" Stroke="Transparent" HorizontalAlignment="Right" Margin="8.3,-1.597,18,0" Width="50" Grid.Row="1" Data="M0,10.45381 L100,187.66699 100.791059,10.54395"/>
+            <Path Fill="White" Stretch="Fill" Stroke="Transparent" HorizontalAlignment="Right" Margin="8.3,-1.7,18,0" Width="50" Grid.Row="1" Data="M0,10.2438 L100,187.66699 100.791059,9.54395"/>
             <Rectangle Fill="White" RadiusX="20" RadiusY="20" Margin="1"/>
             <TextBlock Text="{Binding QuesitoCorrente}" Foreground="#5D70D1" FontWeight="SemiBold" FontFamily="Roboto" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40"/>
         </Grid>
@@ -169,37 +195,11 @@
                                  BlurRadius="10"/>
                         </Setter.Value>
                     </Setter>
-                    <Setter Property="Template">
+                    <Setter Property="Template" >
                         <Setter.Value>
                             <ControlTemplate TargetType="Button">
-                                <Border BorderBrush="Transparent" BorderThickness="3" CornerRadius="10" Background="{TemplateBinding Background}">
-                                    <Border.Style>
-                                        <Style>
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding Path=isAnswered}" Value="true">
-                                                    <DataTrigger.EnterActions>
-                                                        <BeginStoryboard>
-                                                            <Storyboard>
-                                                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Button.BorderBrush).(SolidColorBrush.Color)" Duration="0:0:6">
-                                                                    <LinearColorKeyFrame KeyTime="0:0:1" Value="LightGray"/>
-                                                                    <LinearColorKeyFrame KeyTime="0:0:1.5" Value="Transparent"/>
-                                                                    <LinearColorKeyFrame KeyTime="0:0:2" Value="LightGray"/>
-                                                                    <LinearColorKeyFrame KeyTime="0:0:2.5" Value="Transparent"/>
-                                                                    <LinearColorKeyFrame KeyTime="0:0:3" Value="LightGray"/>
-                                                                    <LinearColorKeyFrame KeyTime="0:0:3.5" Value="Transparent"/>
-                                                                    <LinearColorKeyFrame KeyTime="0:0:4" Value="LightGray"/>
-                                                                    <LinearColorKeyFrame KeyTime="0:0:4.5" Value="Transparent"/>
-                                                                    <LinearColorKeyFrame KeyTime="0:0:5" Value="LightGray"/>
-                                                                    <LinearColorKeyFrame KeyTime="0:0:5.5" Value="Transparent"/>
-                                                                    <LinearColorKeyFrame KeyTime="0:0:6" Value="Green"/>
-                                                                </ColorAnimationUsingKeyFrames>
-                                                            </Storyboard>
-                                                        </BeginStoryboard>
-                                                    </DataTrigger.EnterActions>
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </Border.Style>
+                                <Border x:Name="ButtonBorder" BorderBrush="Transparent" BorderThickness="3" CornerRadius="10" Background="{TemplateBinding Background}">
+                                    
                                     
                                     <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
 

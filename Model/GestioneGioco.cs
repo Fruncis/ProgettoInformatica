@@ -27,7 +27,7 @@ namespace ProgettoInformatica.Model
             this.mazzoCorrente = mazzoCorrente;
         }
 
-        public Carta PescaCarta()
+        public Carta? PescaCarta()
         {
             if (mazzoCorrente.Count > 0)
             {
@@ -35,6 +35,7 @@ namespace ProgettoInformatica.Model
                 int carta = random.Next(0, mazzoCorrente.Count);
 
                 Carta tmp = mazzoCorrente[carta];
+                System.Diagnostics.Debug.WriteLine(tmp.RipostaCorretta);
                 mazzoCorrente.RemoveAt(carta);
 
                 return tmp;

@@ -14,6 +14,23 @@
                 <GradientStop x:Name="GradientStop2" Color="#5571EC" Offset="0.7"/>
             </LinearGradientBrush>
         </Grid.Background>
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="Loaded">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation
+                            Storyboard.TargetName="GradientStop1"
+                            Storyboard.TargetProperty="Color"
+                            To="#5571EC" Duration="0:0:10" RepeatBehavior="Forever"  AutoReverse="True"/>
+                        <ColorAnimation
+                            Storyboard.TargetName="GradientStop2"
+                            Storyboard.TargetProperty="Color"
+                            To="#3194F4" Duration="0:0:10" RepeatBehavior="Forever" AutoReverse="True"/>
+                    </Storyboard>
+                </BeginStoryboard>
+               
+            </EventTrigger>
+        </Grid.Triggers>
         <Grid.Resources>
             <Style TargetType="{x:Type Border}">
                 <Setter Property="CornerRadius" Value="5"/>
@@ -70,7 +87,6 @@
                     <Setter Property="FontWeight" Value="Bold"/>
                     <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="HorizontalAlignment" Value="Center"/>
-                    <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
                 </Style>
             </Grid.Resources>
             <Grid.RowDefinitions>
@@ -110,26 +126,26 @@
                 </Button>
                 <TextBlock Text="Shop" VerticalAlignment="Center" FontSize="25" Foreground="White" FontFamily="Dilo World"/>
             </StackPanel>
-            <Border Width="100" Height="20" HorizontalAlignment="Center" Margin="5 0 0 0">
+            <Border Width="100" Height="20" HorizontalAlignment="Center" Margin="15 0 0 0">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock x:Name="level" Text="1" Padding="5 0">
-
-                    </TextBlock>
+                    <TextBlock x:Name="level" Text="1" Padding="5 0"/>
                     <Border CornerRadius="0 6 6 0" Width="84" Background="LightGray">
                         <TextBlock x:Name="experience" Text="1/100"  Width="36"/>
                     </Border>
                 </StackPanel>
             </Border>
 
+            <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Border Grid.Column="2" Width="80" Height="25" Margin="0 0 15 0" >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock  x:Name="coins" Text="1000"  />
+                        <Image Source="./Img/coin.png" Height="15" Margin="5 0 0 0"/>
+                    </StackPanel>
 
-            <Border Grid.Column="2" Width="80" Height="25" HorizontalAlignment="Center">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock  x:Name="coins" Text="1000"  />
-                    <Image Source="./Img/coin.png" Height="15" Margin="5 0 0 0"/>
-                </StackPanel>
-            </Border>
+                </Border>
 
-            <Image Grid.Column="2" HorizontalAlignment="Right" Source=".\Img\options-icon-white.png" Margin="0 0 15 0" Height="40"/>
+                <Image Grid.Column="2" HorizontalAlignment="Right" Source=".\Img\options-icon-white.png" Margin="0 0 15 0" Height="40" />
+            </StackPanel>
         </Grid>
         <Grid Grid.Row="2" Grid.Column="1"  ClipToBounds="False">
             <Grid.Resources>

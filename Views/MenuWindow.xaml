@@ -89,7 +89,7 @@
         <Button Grid.Row="1" Grid.ColumnSpan="2" FontSize="100" HorizontalContentAlignment="Center" Background="Transparent" BorderThickness="0" Command="{Binding NavigateGameCommand}" FontFamily="Samurai Blast">
             <Button.Content>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Gioca"/>
+                    <TextBlock Text="Gioca" FontFamily="Samurai Blast"/>
                     <Image HorizontalAlignment="Center" Source="./Img/play.png" Width="110" Height="88"/>
                 </StackPanel>
             </Button.Content>
