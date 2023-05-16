@@ -17,10 +17,15 @@ namespace ProgettoInformatica.Model
 
         public Carta(string titolo, string quesito, string rispostaCorretta, string[] risposte)
         {
-            this.Titolo = titolo;
-            this.Quesito = quesito;
-            this.RipostaCorretta = rispostaCorretta;
-            this.Risposte = risposte;
+            Titolo = titolo;
+            Quesito = quesito;
+            RipostaCorretta = rispostaCorretta;
+            Risposte = new string[4];
+            for (int i = 0; i < 4; i++)
+            {
+                Risposte[i] = risposte[i];
+            }
+            
         }
 
     }
