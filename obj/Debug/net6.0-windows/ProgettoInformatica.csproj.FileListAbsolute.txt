@@ -78,3 +78,15 @@ C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Vie
 C:\Users\francesco\source\repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\SoundWindow.g.cs
 C:\Users\francesco\source\repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\SoundWindow.baml
 C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\default-robot.png
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\default-robot.png
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\coin.png
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\left-arrow.png
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\options-icon-white.png
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Resources\DiloWorld.ttf
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\ViewModels\SoundWindowViewModel.cs
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\SaveWindow.g.cs
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\SoundWindow.g.cs
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\SaveWindow.baml
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\SoundWindow.baml
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\ScoreWindow.g.cs
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\ScoreWindow.baml

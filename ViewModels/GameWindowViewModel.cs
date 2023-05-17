@@ -15,9 +15,9 @@ namespace ProgettoInformatica.ViewModels
 {
     public class GameWindowViewModel : ViewModelBase
     {
-        private readonly Mazzo mazzo = new Mazzo("C:\\Users\\Simone\\Downloads\\ProgettoInformatica-main\\Data\\mazzo-geografia.xml");
+        //private readonly Mazzo mazzo = new Mazzo("C:\\Users\\Simone\\Downloads\\ProgettoInformatica-main\\Data\\mazzo-geografia.xml");
         //private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
-        
+        private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
         //public Brush
         public bool _isAnswered { get; set; }
         public bool isAnswered { get { return _isAnswered; } set { _isAnswered = value; OnPropertyChanged(nameof(isAnswered)); } }
@@ -84,9 +84,13 @@ namespace ProgettoInformatica.ViewModels
             await Task.Delay(TimeSpan.FromSeconds(animationTime));
 
             CartaCorrente.cartaCorrente = GestioneGioco.PescaCarta();
-            QuesitoCorrente = CartaCorrente.cartaCorrente.Quesito;
-            RisposteCorrenti = CartaCorrente.cartaCorrente.Risposte;
-            isAnswered = false;
+            if(CartaCorrente.cartaCorrente != null)
+            {
+                QuesitoCorrente = CartaCorrente.cartaCorrente.Quesito;
+                RisposteCorrenti = CartaCorrente.cartaCorrente.Risposte;
+                isAnswered = false;
+            }
+            
         }
 
         /*public GameWindowViewModel(GestioneGioco gestioneGioco)

@@ -11,7 +11,7 @@
     <Grid>
         <Grid.Resources>
             <Style TargetType="{x:Type Canvas}" x:Key="RobotAnimation">
-                <Setter Property="Visibility" Value="Collapsed"/>
+                <Setter Property="Visibility" Value="Visible"/>
                 <Style.Triggers>
                     <DataTrigger Binding="{Binding Path=isAnswered}" Value="true">
                         <Setter Property="Visibility" Value="Hidden"/>
@@ -61,6 +61,11 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+
+        <Canvas Grid.RowSpan="3" Panel.ZIndex="100" VerticalAlignment="Center" >
+            <local:ScoreWindow Width="800" Height="400"/>
+        </Canvas>
+        
         <Canvas Grid.Row="1" Style="{StaticResource RobotAnimation}" Panel.ZIndex="3">
             <Canvas.RenderTransform>
                 <TranslateTransform X="0" Y="0"/>
