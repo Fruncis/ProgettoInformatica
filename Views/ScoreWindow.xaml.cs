@@ -24,5 +24,7 @@ namespace ProgettoInformatica.Views
         {
             InitializeComponent();
         }
+
+
     }
 }

@@ -45,6 +45,12 @@ namespace ProgettoInformatica.Model
 
         }
 
+        public void ConvertPuntiEsperienzaGettoni(int punti)
+        {
+            Giocatore.Gettoni += punti * 3;
+            Giocatore.Esperienza += punti * 2;
+        }
+
         /*public string RispostaAvversario(int difficolta)
         {
             List<string> risposte = CartaCorrente.Risposte.ToList();

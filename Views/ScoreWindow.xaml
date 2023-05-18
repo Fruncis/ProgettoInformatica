@@ -10,55 +10,118 @@
              d:DesignHeight="450" d:DesignWidth="800">
 
     <UserControl.Resources>
-        <Style TargetType="{x:Type Border}">
+        <Style TargetType="{x:Type Border}" x:Key="shadowBorder">
             <Setter Property="Background" Value="white"/>
-            <Setter Property="Opacity" Value="0.9"/>
+            <Setter Property="Opacity" Value="1"/>
             <Setter Property="CornerRadius" Value="40"/>
             <Setter Property="Effect">
                 <Setter.Value>
                     <DropShadowEffect
                                     ShadowDepth="10"
-                                    Direction="-120"
-                                    Color="LightGray"
-                                    Opacity="0.5"
-                                    BlurRadius="10"
-                                    RenderingBias="Quality"/>
+                                    Direction="270"
+                                    Color="Gray"
+                                    Opacity="0.3"
+                                    BlurRadius="80"/>
                 </Setter.Value>
             </Setter>
         </Style>
     </UserControl.Resources>
-    <Border>
-        <Grid>
-            <Grid.Resources>
-                <Style TargetType="{x:Type TextBlock}">
-                    <Setter Property="Foreground" Value="#5D70D1"/>
-                    <Setter Property="FontFamily" Value="Roboto"/>
-                    <Setter Property="FontWeight" Value="Bold"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
-                </Style>
-            </Grid.Resources>
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="Margin" Value="100 10"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Foreground" Value="#5D70D1"/>
+                <Setter Property="FontFamily" Value="Roboto"/>
+                <!--<Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect
+                                  ShadowDepth="5"
+                                  Direction="275"
+                                  Color="Gray"
+                                  Opacity="0.3"
+                                 BlurRadius="10"/>
+                    </Setter.Value>
+                </Setter>-->
+                <Setter Property="Template" >
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="ButtonBorder" BorderBrush="Transparent" BorderThickness="3" CornerRadius="10" Background="{TemplateBinding Background}">
 
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition Width="4*"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                                </ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Style.Resources>
+
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="ForceCursor" Value="True"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <!--<Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0:0:2" Storyboard.TargetProperty="Width" From="400" To="500" />
+                                        <DoubleAnimation Duration="0:0:2" Storyboard.TargetProperty="Height" From="50" To="80" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>-->
+                    </Trigger>
+
+                </Style.Triggers>
+            </Style>
+            <Style TargetType="{x:Type TextBlock}">
+                <Setter Property="Foreground" Value="#5D70D1"/>
+                <Setter Property="FontFamily" Value="Roboto"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+        </Grid.Resources>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.RowSpan="2" Grid.ColumnSpan="3" Style="{StaticResource shadowBorder}"/>
+        <TextBlock Grid.Column="1" Text="{Binding IsAnswered, StringFormat='Punteggio Totale {0}'}" FontSize="50" VerticalAlignment="Center"/>
+        <Grid Grid.Row="2" Grid.Column="1" >
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="3*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="80"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Column="1" Text="{Binding isAnswered, StringFormat='Punteggio Totale {0}'}" FontSize="50" VerticalAlignment="Center"/>
-            <Grid Grid.Row="2" Grid.Column="1" >
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <TextBlock Text="Esperienza" FontSize="30"/>
-                <TextBlock Grid.Row="1" Text="Gettoni" FontSize="30"/>
-            </Grid>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Esperienza:" FontSize="30"/>
+                <TextBlock Text="1200" FontSize="30"  Margin="20 0 0 0"/><!-- Animazione da fare-->
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+                <TextBlock  Text="Gettoni:" FontSize="30"/>
+                <TextBlock Text="60" FontSize="30"  Margin="20 0 0 0"/>
+                <!-- Animazione da fare-->
+
+            </StackPanel>
+            
+
+
         </Grid>
-    </Border>
-    
+    </Grid>
+
 </UserControl>

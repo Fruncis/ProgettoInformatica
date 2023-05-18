@@ -30,7 +30,7 @@ namespace ProgettoInformatica.Commands
         private void checkResponse(Button button)
         {
             Color backgroundColor;
-            const int animationTime = 7;
+            const int animationTime = 2;
             /*SolidColorBrush foregroundColor = new SolidColorBrush(Color.FromRgb(255, 127, 80));
             Duration animationDuration = new Duration(TimeSpan.FromSeconds(2));
             ColorAnimation backgroundAnimation = new ColorAnimation(Colors.Green, Colors.Transparent, animationDuration);
@@ -52,8 +52,8 @@ namespace ProgettoInformatica.Commands
 
             }
             //button.Foreground = Brushes.White;
-            _gameWindowViewModel.isAnswered = true;
-            AnswerAnimation(backgroundColor, button, animationTime);
+            _gameWindowViewModel.IsAnswered = true;
+            //AnswerAnimation(backgroundColor, button, animationTime);
             _gameWindowViewModel.DelayedCodeExecution(animationTime);
             /*TimeSpan ts = new TimeSpan(0, 0, 5);
             Thread.Sleep(ts);*/
@@ -94,7 +94,7 @@ namespace ProgettoInformatica.Commands
                     Colors.LightGray,
                     KeyTime.FromTimeSpan(TimeSpan.FromSeconds(3)))
                 );
-            answerAnimation1.KeyFrames.Add(
+            /*answerAnimation1.KeyFrames.Add(
                 new LinearColorKeyFrame(
                     Colors.Transparent,
                     KeyTime.FromTimeSpan(TimeSpan.FromSeconds(3.5)))
@@ -114,7 +114,7 @@ namespace ProgettoInformatica.Commands
                     Colors.LightGray,
                     KeyTime.FromTimeSpan(TimeSpan.FromSeconds(5)))
                 );
-            /*answerAnimation1.KeyFrames.Add(
+            answerAnimation1.KeyFrames.Add(
                 new LinearColorKeyFrame(
                     Colors.Transparent,
                     KeyTime.FromTimeSpan(TimeSpan.FromSeconds(5.5)))
@@ -122,18 +122,18 @@ namespace ProgettoInformatica.Commands
             answerAnimation1.KeyFrames.Add(
                 new LinearColorKeyFrame(
                     bordercolor,
-                    KeyTime.FromTimeSpan(TimeSpan.FromSeconds(5.5)))
+                    KeyTime.FromTimeSpan(TimeSpan.FromSeconds(4)))
                 );
             answerAnimation1.KeyFrames.Add(
                 new LinearColorKeyFrame(
                     bordercolor,
-                    KeyTime.FromTimeSpan(TimeSpan.FromSeconds(6.75)))
+                    KeyTime.FromTimeSpan(TimeSpan.FromSeconds(4.75)))
                 );
             answerAnimation1.KeyFrames.Add(
                 new LinearColorKeyFrame(
                     Colors.Transparent,
-                    KeyTime.FromTimeSpan(TimeSpan.FromSeconds(7)))
-                );
+                    KeyTime.FromTimeSpan(TimeSpan.FromSeconds(5)))
+                ); 
 
             brush.BeginAnimation(SolidColorBrush.ColorProperty, answerAnimation1);
 
@@ -151,7 +151,7 @@ namespace ProgettoInformatica.Commands
 
         public bool CanExecute(object parameter)
         {
-            return _gameWindowViewModel.isAnswered;
+            return _gameWindowViewModel.IsAnswered;
         }
 
 
