@@ -10,12 +10,13 @@ namespace ProgettoInformatica.Model
     public class GestioneGioco// : INotifyPropertyChanged
     {
         Mazzo mazzo;
-        public List<Carta> mazzoCorrente; //= new Mazzo("C:\\Users\\simone.bertolini\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml").Carte.ToList();
+        public List<Carta> mazzoCorrente { get; set; } //= new Mazzo("C:\\Users\\simone.bertolini\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml").Carte.ToList();
+        public int MaxEsperienza { get; set; } = 100;
 
         //public event Action CartaCambiata;
         //public event PropertyChangedEventHandler? PropertyChanged;
 
-        
+
         /*public Carta CartaCorrente { get { return _cartaCorrente; } set { _cartaCorrente = value; CambioCartaCorrente(); } }*/
         public GestioneGioco(Mazzo mazzo)
         {
@@ -51,26 +52,26 @@ namespace ProgettoInformatica.Model
             Giocatore.Esperienza += punti * 2;
         }
 
-        /*public string RispostaAvversario(int difficolta)
+        public string RispostaAvversario(int difficolta, Carta cartaCorrente)
         {
-            List<string> risposte = CartaCorrente.Risposte.ToList();
+            List<string> risposte = cartaCorrente.Risposte.ToList();
 
             Random random = new Random();
             int risposta = random.Next(0, 3);
 
             if (risposta < 7 + difficolta)
             {
-                return CartaCorrente.RipostaCorretta;
+                return cartaCorrente.RipostaCorretta;
             }
             else
             {
-                risposte.Remove(CartaCorrente.RipostaCorretta);
+                risposte.Remove(cartaCorrente.RipostaCorretta);
                 risposta = random.Next(0, 2);
                 return risposte[risposta];
             }
         }
 
-        private void CambioCartaCorrente()
+        /*private void CambioCartaCorrente()
         {
             CartaCambiata?.Invoke();
         }*/

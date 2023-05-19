@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProgettoInformatica.Model
 {
-    public static class Giocatore
+    public class Giocatore
     {
-        public static int Livello { get; set; }
-        public static int Esperienza { get; set; }
+        public static int Livello { get; set; } = 1;
+        public static int Esperienza { get; set; } = 0;
         public static List<Mazzo> MazziPosseduti { get; set; }
-        public static int Gettoni { get; set; }
-
+        public static int Gettoni { get; set; } = 0;
+    
 
     }
 }

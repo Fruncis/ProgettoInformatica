@@ -1,4 +1,4 @@
-﻿using ProgettoInformatica.Model;
+﻿/*using ProgettoInformatica.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,4 +11,4 @@ namespace ProgettoInformatica.Store
     {
         public static Carta cartaCorrente { get; set; }
     }
-}
+}*/

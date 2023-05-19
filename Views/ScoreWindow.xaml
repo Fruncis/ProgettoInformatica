@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProgettoInformatica.Views" 
-             xmlns:viewmodels="clr-namespace:ProgettoInformatica.ViewModels" 
+             xmlns:viewmodels="clr-namespace:ProgettoInformatica.ViewModels" xmlns:model="clr-namespace:ProgettoInformatica.Model"
              d:DataContext="{d:DesignInstance Type=viewmodels:GameWindowViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
@@ -101,7 +101,7 @@
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
         <Border Grid.RowSpan="2" Grid.ColumnSpan="3" Style="{StaticResource shadowBorder}"/>
-        <TextBlock Grid.Column="1" Text="{Binding IsAnswered, StringFormat='Punteggio Totale {0}'}" FontSize="50" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Text="{Binding Punteggio, StringFormat='Punteggio Totale {0}'}" FontSize="50" VerticalAlignment="Center"/>
         <Grid Grid.Row="2" Grid.Column="1" >
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -110,12 +110,12 @@
             </Grid.RowDefinitions>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Esperienza:" FontSize="30"/>
-                <TextBlock Text="1200" FontSize="30"  Margin="20 0 0 0"/><!-- Animazione da fare-->
+                <TextBlock Text="{Binding Giocatore1.Esperienza, StringFormat=' {0}'}" FontSize="30"  Margin="20 0 0 0"/><!-- Animazione da fare-->
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Row="1">
                 <TextBlock  Text="Gettoni:" FontSize="30"/>
-                <TextBlock Text="60" FontSize="30"  Margin="20 0 0 0"/>
-                <!-- Animazione da fare-->
+                <TextBlock Text="{Binding Giocatore1.Gettoni, StringFormat=' {0}'}" FontSize="30"  Margin="20 0 0 0"/>
+                 <!--Animazione da fare-->
 
             </StackPanel>
             

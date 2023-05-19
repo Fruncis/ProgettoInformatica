@@ -25,12 +25,26 @@ namespace ProgettoInformatica.ViewModels
 
         private bool _isGameTeriminated;
         public bool IsGameTerminated { get { return _isGameTeriminated; } set { _isGameTeriminated = value; OnPropertyChanged(nameof(IsGameTerminated)); } }
-        
+
+        private string _rispostaRobot;
+        public string RispostaRobot { get { return _rispostaRobot; } set { _rispostaRobot = value; OnPropertyChanged(nameof(RispostaRobot)); } }
+
+
         public GestioneGioco GestioneGioco { get; set; }
 
-        public int Punti { get; set; } = 0;
+        public Carta CartaCorrente { get; set; }
 
-        public Timer timer = new Timer();
+        private Giocatore _giocatore;
+        public Giocatore Giocatore1
+        {
+            get { return _giocatore; }
+            set { _giocatore = value; OnPropertyChanged(nameof(Giocatore1)); }
+        }
+
+        private int _punteggio;
+        public int Punteggio { get { return _punteggio; } set { _punteggio = value; OnPropertyChanged(nameof(Punteggio)); } }
+
+        public Timer timer = new Timer();//Da spostare in Gestione Gioco
 
         //public NavigationStore navigationStore { get; set; }
 
@@ -72,14 +86,16 @@ namespace ProgettoInformatica.ViewModels
         public GameWindowViewModel(NavigationStore navigationStore)
         {
             //System.Diagnostics.Debug.WriteLine(IstanziaViewModel.Istanza);
+            //System.Diagnostics.Debug.WriteLine(Giocatore.Gettoni);
+            Punteggio = 0;
             IsAnswered = false;
             IsGameTerminated = false;
             GestioneGioco = new GestioneGioco(mazzo);
             NavigateMenuCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore, () => IstanziaViewModel<MenuWindowViewModel>.Istanzia(navigationStore));
-            CartaCorrente.cartaCorrente = GestioneGioco.PescaCarta();
+            CartaCorrente = GestioneGioco.PescaCarta();
             
-            QuesitoCorrente = CartaCorrente.cartaCorrente.Quesito;
-            RisposteCorrenti = CartaCorrente.cartaCorrente.Risposte;
+            QuesitoCorrente = CartaCorrente.Quesito;
+            RisposteCorrenti = CartaCorrente.Risposte;
             System.Diagnostics.Debug.WriteLine(QuesitoCorrente);
 
             ChangeButtonColor = new ChangeBackgroundCommand(this);
@@ -96,14 +112,17 @@ namespace ProgettoInformatica.ViewModels
         public async void DelayedCodeExecution(int animationTime)
         {
             // Delay the execution by 2 seconds (2000 milliseconds)
-            await Task.Delay(TimeSpan.FromSeconds(animationTime));
 
-            CartaCorrente.cartaCorrente = GestioneGioco.PescaCarta();
-            if(CartaCorrente.cartaCorrente != null)
+            RispostaRobot = GestioneGioco.RispostaAvversario(1, CartaCorrente);
+
+            await Task.Delay(TimeSpan.FromSeconds(animationTime));
+            CartaCorrente = GestioneGioco.PescaCarta();
+            if(CartaCorrente != null)
             {
+                GestioneGioco.ConvertPuntiEsperienzaGettoni(Punteggio);
                 IsGameTerminated = true;
-                QuesitoCorrente = CartaCorrente.cartaCorrente.Quesito;
-                RisposteCorrenti = CartaCorrente.cartaCorrente.Risposte;
+                QuesitoCorrente = CartaCorrente.Quesito;
+                RisposteCorrenti = CartaCorrente.Risposte;
                 IsAnswered = false;
             }
             else

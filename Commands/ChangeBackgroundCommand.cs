@@ -30,20 +30,22 @@ namespace ProgettoInformatica.Commands
         private void checkResponse(Button button)
         {
             Color backgroundColor;
-            const int animationTime = 2;
+            const int animationTime = 5;
             /*SolidColorBrush foregroundColor = new SolidColorBrush(Color.FromRgb(255, 127, 80));
             Duration animationDuration = new Duration(TimeSpan.FromSeconds(2));
             ColorAnimation backgroundAnimation = new ColorAnimation(Colors.Green, Colors.Transparent, animationDuration);
             ColorAnimation foregroundAnimation = new ColorAnimation(Colors.White, foregroundColor.Color, animationDuration);*/
-            if (!button.Content.ToString().Equals(CartaCorrente.cartaCorrente.RipostaCorretta))
+            if (!button.Content.ToString().Equals(_gameWindowViewModel.CartaCorrente.RipostaCorretta))
             {
-                backgroundColor = Color.FromRgb(255, 0, 0); 
+                backgroundColor = Color.FromRgb(255, 0, 0);//rosso
+
                 //button.Background.BeginAnimation(SolidColorBrush.ColorProperty, backgroundAnimation);
                 /*button.Background = Brushes.Transparent;*/
             }
             else
             {
-                backgroundColor = Color.FromRgb(0, 255, 0);
+                backgroundColor = Color.FromRgb(0, 255, 0);//verde
+                _gameWindowViewModel.Punteggio += 1;
                 //button.Background.BeginAnimation(SolidColorBrush.ColorProperty, backgroundAnimation);
 
                 /*button.Background = Brushes.Transparent;*/
@@ -53,7 +55,7 @@ namespace ProgettoInformatica.Commands
             }
             //button.Foreground = Brushes.White;
             _gameWindowViewModel.IsAnswered = true;
-            //AnswerAnimation(backgroundColor, button, animationTime);
+            AnswerAnimation(backgroundColor, button, animationTime);
             _gameWindowViewModel.DelayedCodeExecution(animationTime);
             /*TimeSpan ts = new TimeSpan(0, 0, 5);
             Thread.Sleep(ts);*/

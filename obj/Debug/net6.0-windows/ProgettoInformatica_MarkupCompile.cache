@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\francesco\source\repos\ProgettoInformatica\App.xaml
 7763466780
 111943896961
-31292310259
+30-1186574996
 1941709816142
 MainWindow.xaml;Views\GameWindow.xaml;Views\MenuWindow.xaml;Views\SaveWindow.xaml;Views\ScoreWindow.xaml;Views\ShopWindow.xaml;Views\SoundWindow.xaml;
 
-False
+True
 

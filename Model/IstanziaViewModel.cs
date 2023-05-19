@@ -23,47 +23,7 @@ namespace ProgettoInformatica.Model
 
         public static T Istanzia(NavigationStore navigationStore)
         {
-            //System.Diagnostics.Debug.WriteLine(typeof(T).Name);
-            /*foreach (KeyValuePair<string, bool> chiave in viewModelInstance)
-                {
-                    System.Diagnostics.Debug.WriteLine("1" + chiave.Value + " " + typeof(T).Name);
-                    if (typeof(T).Name.Equals(chiave.Key) && !chiave.Value)
-                    {
-                        System.Diagnostics.Debug.WriteLine("cicci");
-                        switch (typeof(T).Name)
-                        {
-                            case "GameWindowViewModel":
-                                
-                                gameWindowViewModel = (T)Activator.CreateInstance(typeof(T), new object[] { navigationStore });
-                                viewModelInstance[chiave.Key] = true;
-                                return gameWindowViewModel;
-                            case "MenuWindowViewModel":
-                                menuWindowViewModel = (T)Activator.CreateInstance(typeof(T), new object[] { navigationStore });
-                                viewModelInstance[chiave.Key] = true;
-                                return menuWindowViewModel;
-                            case "ShopWindowViewModel":
-                                shopWindowViewModel = (T)Activator.CreateInstance(typeof(T), new object[] { navigationStore });
-                                viewModelInstance[chiave.Key] = true;
-                                return shopWindowViewModel;
-                                //throw new NotImplementedException();
-                        }
-                        System.Diagnostics.Debug.WriteLine("2" + chiave.Value + " " + typeof(T).Name);
-                    }
-                    if (typeof(T).Name.Equals(chiave.Key) && chiave.Value)
-                    {
-                        System.Diagnostics.Debug.WriteLine("kratos");
-                        switch (typeof(T).Name)
-                        {
-                            case "GameWindowViewModel":
-                                return gameWindowViewModel;
-                            /*case "MenuWindowViewModel":
-                                return menuWindowViewModel;
-                            case "ShopWindowViewModel":
-                                return shopWindowViewModel;
-                                //throw new NotImplementedException();
-                        }
-                    }
-                }*/
+            
 
             if(typeof(T).Name.Equals("GameWindowViewModel") && gameWindowViewModel != null)
             {

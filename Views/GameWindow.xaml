@@ -11,7 +11,7 @@
     <Grid>
         <Grid.Resources>
             <Style TargetType="{x:Type Canvas}" x:Key="ScoreViewShowUp">
-                <Setter Property="Visibility" Value="Visible"/>
+                <Setter Property="Visibility" Value="Hidden"/>
                 <Style.Triggers>
                     <DataTrigger Binding="{Binding Path=IsGameTerminated}" Value="true">
                         <Setter Property="Visibility" Value="Visible"/>
@@ -84,7 +84,7 @@
                 <Rectangle Fill="White" Stroke="Transparent" RadiusX="8" RadiusY="10"/>
                 <Path Fill="White" Stretch="Fill" Stroke="Transparent" HorizontalAlignment="Left" Margin="8.3,-1.597,0,0" Width="25" Grid.Row="1" Data="M0,10.45381 L0,187.66699 100.791059,10.54395"/>
                 <Rectangle Fill="White" RadiusX="10" RadiusY="10" Margin="1"/>
-                <TextBlock Foreground="#5D70D1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Testo Prova" TextWrapping="Wrap" Padding="5" />
+                <TextBlock Foreground="#5D70D1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="{Binding RispostaRobot}" TextWrapping="Wrap" Padding="5" />
             </Grid>
             <Image x:Name="robot" VerticalAlignment="Top"  Source="./Img/default-robot.png" Canvas.Left="-252" Height="110" Width="130" HorizontalAlignment="Left" Canvas.Top="132"/>
         </Canvas>
@@ -146,11 +146,18 @@
             </StackPanel>
             <Border Width="100" Height="20" HorizontalAlignment="Center" Margin="10 0 0 0">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock x:Name="level" Text="1" Padding="5 0">
+                    <TextBlock x:Name="level" Text="{Binding Path=Giocatore1.Livello}" Padding="5 0">
 
                     </TextBlock>
                     <Border CornerRadius="0 6 6 0" Width="84" Background="LightGray">
-                        <TextBlock x:Name="experience" Text="1/100"  Width="36"/>
+                        <TextBlock x:Name="experience"  Width="36">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}{0}/{1}">
+                                    <Binding Path="Giocatore1.Esperienza" />
+                                    <Binding Path="GestioneGioco.MaxEsperienza" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
                     </Border>
                 </StackPanel>
             </Border>
@@ -158,7 +165,7 @@
             <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
                 <Border Grid.Column="2" Width="80" Height="25" Margin="0 0 15 0" >
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <TextBlock  x:Name="coins" Text="1000"  />
+                        <TextBlock  x:Name="coins" Text="{Binding Giocatore1.Gettoni}"  />
                         <Image Source="./Img/coin.png" Height="15" Margin="5 0 0 0"/>
                     </StackPanel>
 
