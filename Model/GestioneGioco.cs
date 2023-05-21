@@ -14,10 +14,10 @@ namespace ProgettoInformatica.Model
         private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
         // private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
         public List<Carta> mazzoCorrente { get; set; } //= new Mazzo("C:\\Users\\simone.bertolini\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml").Carte.ToList();
-        public int MaxEsperienza { get; set; } = 100;
+        
 
 
-        private Giocatore giocatore;
+        private Giocatore Giocatore;
         //public event Action CartaCambiata;
         //public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -25,14 +25,14 @@ namespace ProgettoInformatica.Model
         /*public Carta CartaCorrente { get { return _cartaCorrente; } set { _cartaCorrente = value; CambioCartaCorrente(); } }*/
         public GestioneGioco( Giocatore giocatore)
         {
-            this.giocatore = giocatore;
-            this.giocatore.PropertyChanged += OnGiocatoreChanged;
+            Giocatore = giocatore;
+            Giocatore.PropertyChanged += OnGiocatoreChanged;
             mazzoCorrente = mazzo.Carte.ToList();
         }
 
         public void OnGiocatoreChanged(object source, EventArgs args)
         {
-            this.giocatore = (Giocatore)source;
+            Giocatore = (Giocatore)source;
         }
 
         public GestioneGioco(List<Carta> mazzoCorrente)
@@ -42,7 +42,7 @@ namespace ProgettoInformatica.Model
 
         public Carta? PescaCarta()
         {
-            if (mazzoCorrente.Count > 15)
+            if (mazzoCorrente.Count > 0)
             {
                 Random random = new Random();
                 int carta = random.Next(0, mazzoCorrente.Count);
@@ -58,10 +58,10 @@ namespace ProgettoInformatica.Model
 
         }
 
-        public void ConvertPuntiEsperienzaGettoni(int punti)
+        public void ConvertPuntiEsperienzaGettoni(int punti)//Aggiustare la proporzione dei gettoni e dell'esperienza
         {
-            giocatore.Gettoni += punti * 3;
-            giocatore.Esperienza += punti * 2;
+            Giocatore.Gettoni += punti * 3;
+            Giocatore.Esperienza += punti * 2;
         }
 
         public string RispostaAvversario(int difficolta, Carta cartaCorrente)

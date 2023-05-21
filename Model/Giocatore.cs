@@ -9,7 +9,23 @@ namespace ProgettoInformatica.Model
 {
     public class Giocatore : ObservableObject
     {
+        private int _maxEsperienza;
+        public int MaxEsperienza
+        {
+            get
+            {
+                return _maxEsperienza;
+            }
+            set
+            {
+                if (_maxEsperienza != value)
+                {
+                    _maxEsperienza = value;
+                    OnPropertyChanged();
+                }
 
+            }
+        }
 
         private int _livello;
         public int Livello
@@ -85,6 +101,7 @@ namespace ProgettoInformatica.Model
 
         public Giocatore()
         {
+            MaxEsperienza = 100;
             Livello = 1;
             Esperienza = 0;
             Gettoni = 0;

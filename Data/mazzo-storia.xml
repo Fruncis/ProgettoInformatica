@@ -1,4 +1,167 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <root>
-
+	<!-- Domande sugli Eventi storici -->
+	<TipoMazzo>Storia</TipoMazzo>
+	<Carta>
+		<Titolo>Eventi storici</Titolo>
+		<Quesito>Quando è iniziata la Prima Guerra Mondiale?</Quesito>
+		<Risposte>1914</Risposte>
+		<Risposte>1917</Risposte>
+		<Risposte>1919</Risposte>
+		<Risposte>1939</Risposte>
+		<RispostaCorretta>1914</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Personaggi storici</Titolo>
+		<Quesito>Chi è stato il fondatore dell'impero mongolo?</Quesito>
+		<Risposte>Genghis Khan</Risposte>
+		<Risposte>Attila</Risposte>
+		<Risposte>Marco Polo</Risposte>
+		<Risposte>Cleopatra</Risposte>
+		<RispostaCorretta>Genghis Khan</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Civiltà</Titolo>
+		<Quesito>In quale civiltà è nata la democrazia ateniese?</Quesito>
+		<Risposte>Antico Egitto</Risposte>
+		<Risposte>Antica Roma</Risposte>
+		<Risposte>Antica Grecia</Risposte>
+		<Risposte>Mesopotamia</Risposte>
+		<RispostaCorretta>Antica Grecia</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Eventi storici</Titolo>
+		<Quesito>In che anno è avvenuta la caduta del muro di Berlino?</Quesito>
+		<Risposte>1987</Risposte>
+		<Risposte>1989</Risposte>
+		<Risposte>1991</Risposte>
+		<Risposte>1993</Risposte>
+		<RispostaCorretta>1989</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Personaggi storici</Titolo>
+		<Quesito>Chi è stato il primo presidente degli Stati Uniti d'America?</Quesito>
+		<Risposte>George Washington</Risposte>
+		<Risposte>Thomas Jefferson</Risposte>
+		<Risposte>Abraham Lincoln</Risposte>
+		<Risposte>John F. Kennedy</Risposte>
+		<RispostaCorretta>George Washington</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Civiltà</Titolo>
+		<Quesito>Chi ha costruito la Grande Muraglia cinese?</Quesito>
+		<Risposte>Antica Grecia</Risposte>
+		<Risposte>Antico Egitto</Risposte>
+		<Risposte>Antica Roma</Risposte>
+		<Risposte>Cina imperiale</Risposte>
+		<RispostaCorretta>Cina imperiale</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Eventi storici</Titolo>
+		<Quesito>Quando è stata firmata la Dichiarazione d'Indipendenza degli Stati Uniti d'America?</Quesito>
+		<Risposte>1773</Risposte>
+		<Risposte>1776</Risposte>
+		<Risposte>1781</Risposte>
+		<Risposte>1791</Risposte>
+		<RispostaCorretta>1776</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Personaggi storici</Titolo>
+		<Quesito>Chi è stato il primo imperatore romano?</Quesito>
+		<Risposte>Augusto</Risposte>
+		<Risposte>Julio-Claudiani</Risposte>
+		<Risposte>Traiano</Risposte>
+		<Risposte>Costantino</Risposte>
+		<RispostaCorretta>Augusto</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Civiltà</Titolo>
+		<Quesito>Qual è stata la civiltà che ha costruito le piramidi di Giza?</Quesito>
+		<Risposte>Antica Grecia</Risposte>
+		<Risposte>Antico Egitto</Risposte>
+		<Risposte>Antica Roma</Risposte>
+		<Risposte>Mesopotamia</Risposte>
+		<RispostaCorretta>Antico Egitto</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Eventi storici</Titolo>
+		<Quesito>In che anno è stata firmata la Pace di Westfalia?</Quesito>
+		<Risposte>1618</Risposte>
+		<Risposte>1648</Risposte>
+		<Risposte>1683</Risposte>
+		<Risposte>1707</Risposte>
+		<RispostaCorretta>1648</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Personaggi storici</Titolo>
+		<Quesito>Chi è stato il comandante delle forze alleate durante la Seconda Guerra Mondiale?</Quesito>
+		<Risposte>Dwight D. Eisenhower</Risposte>
+		<Risposte>Winston Churchill</Risposte>
+		<Risposte>Franklin D. Roosevelt</Risposte>
+		<Risposte>Charles de Gaulle</Risposte>
+		<RispostaCorretta>Dwight D. Eisenhower</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Civiltà</Titolo>
+		<Quesito>In quale civiltà è stato scritto l'Epico di Gilgamesh?</Quesito>
+		<Risposte>Antico Egitto</Risposte>
+		<Risposte>Antica Grecia</Risposte>
+		<Risposte>Mesopotamia</Risposte>
+		<Risposte>Antica Roma</Risposte>
+		<RispostaCorretta>Mesopotamia</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Eventi storici</Titolo>
+		<Quesito>Quando è avvenuta la Rivoluzione francese?</Quesito>
+		<Risposte>1776</Risposte>
+		<Risposte>1781</Risposte>
+		<Risposte>1789</Risposte>
+		<Risposte>1793</Risposte>
+		<RispostaCorretta>1789</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Personaggi storici</Titolo>
+		<Quesito>Chi è stato il fondatore dell'Impero carolingio?</Quesito>
+		<Risposte>Carlo Magno</Risposte>
+		<Risposte>Carlo Martello</Risposte>
+		<Risposte>Carlo V</Risposte>
+		<Risposte>Carlo il Grosso</Risposte>
+		<RispostaCorretta>Carlo Magno</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Civiltà</Titolo>
+		<Quesito>Quale civiltà ha creato il sistema di scrittura geroglifico?</Quesito>
+		<Risposte>Antico Egitto</Risposte>
+		<Risposte>Antica Grecia</Risposte>
+		<Risposte>Antica Roma</Risposte>
+		<Risposte>Mesopotamia</Risposte>
+		<RispostaCorretta>Antico Egitto</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Eventi storici</Titolo>
+		<Quesito>In che anno è avvenuta la Battaglia di Waterloo?</Quesito>
+		<Risposte>1805</Risposte>
+		<Risposte>1810</Risposte>
+		<Risposte>1815</Risposte>
+		<Risposte>1820</Risposte>
+		<RispostaCorretta>1815</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Personaggi storici</Titolo>
+		<Quesito>Chi è stato il primo imperatore cinese?</Quesito>
+		<Risposte>Qin Shi Huang</Risposte>
+		<Risposte>Confucio</Risposte>
+		<Risposte>Laozi</Risposte>
+		<Risposte>Sun Tzu</Risposte>
+		<RispostaCorretta>Qin Shi Huang</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Civiltà</Titolo>
+		<Quesito>Qual è stata la capitale dell'Impero romano d'Occidente?</Quesito>
+		<Risposte>Atene</Risposte>
+		<Risposte>Costantinopoli</Risposte>
+		<Risposte>Roma</Risposte>
+		<Risposte>Alessandria</Risposte>
+		<RispostaCorretta>Roma</RispostaCorretta>
+	</Carta>
 </root>

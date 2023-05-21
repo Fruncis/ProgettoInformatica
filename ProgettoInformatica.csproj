@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <None Remove="Views\Img\background.png" />
+    <None Remove="Views\Img\background1.png" />
+    <None Remove="Views\Img\backgroundProva.png" />
     <None Remove="Views\Img\coin.png" />
     <None Remove="Views\Img\default-robot.png" />
     <None Remove="Views\Img\left-arrow.png" />
@@ -16,21 +18,26 @@
     <None Remove="Views\Img\options-icon.png" />
     <None Remove="Views\Img\play.png" />
     <None Remove="Views\Img\playFullBlack.png" />
+    <None Remove="Views\Img\playIcon.png" />
     <None Remove="Views\Img\shopping-cart.png" />
+    <None Remove="Views\Img\sparkBack.png" />
     <None Remove="Views\Resources\DiloWorld.ttf" />
     <None Remove="Views\Resources\SamuraiBlast.ttf" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Views\Img\background1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Img\backgroundProva.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Views\Img\default-robot.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Views\Img\background.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Views\Img\coin.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -49,7 +56,13 @@
     <Content Include="Views\Img\playFullBlack.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\Img\playIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Views\Img\shopping-cart.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Img\sparkBack.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Resources\DiloWorld.ttf">

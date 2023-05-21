@@ -9,6 +9,29 @@
              d:DesignHeight="720" d:DesignWidth="1280">
 
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush x:Name="Gradient" StartPoint="1,1" EndPoint="0,0">
+                <GradientStop x:Name="GradientStop1" Color="#3194F4" Offset="0.7"/>
+                <GradientStop x:Name="GradientStop2" Color="#5571EC" Offset="0.1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="Loaded">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation
+                            Storyboard.TargetName="GradientStop1"
+                            Storyboard.TargetProperty="Color"
+                            To="#5571EC" Duration="0:0:10" RepeatBehavior="Forever"  AutoReverse="True"/>
+                        <ColorAnimation
+                            Storyboard.TargetName="GradientStop2"
+                            Storyboard.TargetProperty="Color"
+                            To="#3194F4" Duration="0:0:10" RepeatBehavior="Forever" AutoReverse="True"/>
+                    </Storyboard>
+                </BeginStoryboard>
+
+            </EventTrigger>
+        </Grid.Triggers>
         <Grid.Resources>
             <Style TargetType="{x:Type Canvas}" x:Key="ScoreViewShowUp">
                 <Setter Property="Visibility" Value="Hidden"/>
@@ -55,12 +78,6 @@
             </Style>
 
         </Grid.Resources>
-        <Grid.Background>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                <GradientStop Color="#3194F4" Offset="0.1"/>
-                <GradientStop Color="#5571EC" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
 
         <Grid.RowDefinitions>
             <RowDefinition/>

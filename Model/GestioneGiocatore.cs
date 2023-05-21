@@ -13,7 +13,12 @@ namespace ProgettoInformatica.Model
         private Giocatore Giocatore;
         public GestioneGiocatore(Giocatore giocatore)
         {
-            this.Giocatore = giocatore;
+            Giocatore = giocatore;
+            Giocatore.PropertyChanged += OnGiocatoreChanged;
+        }
+        public void OnGiocatoreChanged(object source, EventArgs args)
+        {
+            Giocatore = (Giocatore)source;
         }
         public void Salva(int livello, int esperienza, List<Mazzo> mazziPosseduti, int gettoni)
         {

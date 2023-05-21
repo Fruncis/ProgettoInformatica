@@ -197,7 +197,7 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Border/>
-                <TextBlock Grid.Row="0" Text="Nome Mazzo"/>
+                <TextBlock Grid.Row="0" Text="{Binding DeckCard[0].TipoMazzo}"/>
                 <Image Grid.Row="1"/>
                 <Button Grid.Row="2" Content="Compra!"/>
             </Grid>

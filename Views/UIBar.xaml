@@ -26,7 +26,7 @@
                         <TextBlock.Text>
                             <MultiBinding StringFormat="{}{0}/{1}">
                                 <Binding Path="Giocatore.Esperienza" />
-                                <Binding Path="Giocatore.Gettoni" />
+                                <Binding Path="Giocatore.MaxEsperienza" />
                                 <!--<Binding Path="GestioneGioco.MaxEsperienza" />-->
                             </MultiBinding>
                         </TextBlock.Text>

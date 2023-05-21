@@ -89,7 +89,7 @@ namespace ProgettoInformatica.ViewModels
             //System.Diagnostics.Debug.WriteLine(IstanziaViewModel.Istanza);
             //System.Diagnostics.Debug.WriteLine(Giocatore.Gettoni);
             Giocatore = giocatore;
-            giocatore.PropertyChanged += OnGiocatoreChanged;
+            Giocatore.PropertyChanged += OnGiocatoreChanged;
             Punteggio = 0;
             IsAnswered = false;
             IsGameTerminated = false;
@@ -107,10 +107,7 @@ namespace ProgettoInformatica.ViewModels
             timer.Start();
         }
 
-        public void OnGiocatoreChanged(object source, EventArgs args)
-        {
-            Giocatore = (Giocatore)source;
-        }
+        
         void TimerElapsed(object sender, ElapsedEventArgs e)
         {
             Console.WriteLine("Hello, world!");
@@ -128,7 +125,7 @@ namespace ProgettoInformatica.ViewModels
             
             if (CartaCorrente != null)
             {
-                GestioneGioco.ConvertPuntiEsperienzaGettoni(Punteggio);
+                GestioneGioco.ConvertPuntiEsperienzaGettoni(Punteggio);//da spostare nel'else
                 IsGameTerminated = true;
                 QuesitoCorrente = CartaCorrente.Quesito;
                 RisposteCorrenti = CartaCorrente.Risposte;
@@ -141,7 +138,10 @@ namespace ProgettoInformatica.ViewModels
             }
             
         }
-
+        public void OnGiocatoreChanged(object source, EventArgs args)
+        {
+            Giocatore = (Giocatore)source;
+        }
         /*public GameWindowViewModel(GestioneGioco gestioneGioco)
         {
             _gestioneGioco = gestioneGioco;
