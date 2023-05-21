@@ -92,3 +92,5 @@ C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\ScoreWindow.baml
 C:\Users\francesco\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\ScoreWindow.g.cs
 C:\Users\francesco\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\ScoreWindow.baml
+C:\Users\francesco\source\repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\UIBar.g.cs
+C:\Users\francesco\source\repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\UIBar.baml

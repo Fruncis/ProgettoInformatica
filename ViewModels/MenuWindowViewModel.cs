@@ -21,10 +21,10 @@ namespace ProgettoInformatica.ViewModels
         public string MyName { get; set; }
 
         public RelayCommand ClickCommandEvent { get; set; }
-        public MenuWindowViewModel(NavigationStore navigationStore)
+        public MenuWindowViewModel(NavigationStore navigationStore, Giocatore giocatore)
         {
-            NavigateGameCommand = new NavigateCommand<GameWindowViewModel>(navigationStore, () => IstanziaViewModel<GameWindowViewModel>.Istanzia(navigationStore));
-            NavigateShopCommand = new NavigateCommand<ShopWindowViewModel>(navigationStore, () => IstanziaViewModel<ShopWindowViewModel>.Istanzia(navigationStore));
+            NavigateGameCommand = new NavigateCommand<GameWindowViewModel>(navigationStore, () => IstanziaViewModel<GameWindowViewModel>.Istanzia(navigationStore, giocatore));
+            NavigateShopCommand = new NavigateCommand<ShopWindowViewModel>(navigationStore, () => IstanziaViewModel<ShopWindowViewModel>.Istanzia(navigationStore, giocatore));
             MyName = "Menu";
             ClickCommandEvent = new RelayCommand(ClickExecute);
         }

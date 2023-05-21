@@ -13,11 +13,32 @@ namespace ProgettoInformatica.ViewModels
     public class ShopWindowViewModel : ViewModelBase
     {
         public ICommand NavigateMenuCommand { get; }
+
+
+        private Giocatore _giocatore;
+        public Giocatore Giocatore
+        {
+            get
+            {
+                return _giocatore;
+            }
+            set
+            {
+                _giocatore = value;
+                OnPropertyChanged(nameof(Giocatore));
+            }
+        }
         public string CheckBoxName { get; set; } = "CheckBox";
 
-        public ShopWindowViewModel(NavigationStore navigationStore)
+        public ShopWindowViewModel(NavigationStore navigationStore, Giocatore giocatore)
         {
-            NavigateMenuCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore,() => IstanziaViewModel<MenuWindowViewModel>.Istanzia(navigationStore));
+            this.Giocatore = giocatore;
+            giocatore.PropertyChanged += OnGiocatoreChanged;
+            NavigateMenuCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore,() => IstanziaViewModel<MenuWindowViewModel>.Istanzia(navigationStore, giocatore));
+        }
+        public void OnGiocatoreChanged(object source, EventArgs args)
+        {
+            Giocatore = (Giocatore)source;
         }
     }
 }

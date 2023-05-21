@@ -111,11 +111,11 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width=".2*"/>
                 <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width=".2*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock FontSize="30" Foreground="white" Grid.Column="1" Text="0:0:40" />
+            <TextBlock FontSize="30" Foreground="white" Grid.Column="1" Text="0:0:40"/>
             <StackPanel Orientation="Horizontal">
                 <StackPanel.Resources>
                     <Style TargetType="{x:Type Button}">
@@ -144,35 +144,7 @@
                 </Button>
                 <TextBlock Text="Quiz" VerticalAlignment="Center" FontSize="25" Foreground="White" FontFamily="Dilo World"/>
             </StackPanel>
-            <Border Width="100" Height="20" HorizontalAlignment="Center" Margin="10 0 0 0">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock x:Name="level" Text="{Binding Path=Giocatore1.Livello}" Padding="5 0">
-
-                    </TextBlock>
-                    <Border CornerRadius="0 6 6 0" Width="84" Background="LightGray">
-                        <TextBlock x:Name="experience"  Width="36">
-                            <TextBlock.Text>
-                                <MultiBinding StringFormat="{}{0}/{1}">
-                                    <Binding Path="Giocatore1.Esperienza" />
-                                    <Binding Path="GestioneGioco.MaxEsperienza" />
-                                </MultiBinding>
-                            </TextBlock.Text>
-                        </TextBlock>
-                    </Border>
-                </StackPanel>
-            </Border>
-
-            <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
-                <Border Grid.Column="2" Width="80" Height="25" Margin="0 0 15 0" >
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <TextBlock  x:Name="coins" Text="{Binding Giocatore1.Gettoni}"  />
-                        <Image Source="./Img/coin.png" Height="15" Margin="5 0 0 0"/>
-                    </StackPanel>
-
-                </Border>
-
-                <Image Grid.Column="2" HorizontalAlignment="Right" Source=".\Img\options-icon-white.png" Margin="0 0 15 0" Height="40" />
-            </StackPanel>
+            <local:UIBar Grid.Column="1" Grid.ColumnSpan="2"/>
 
         </Grid>
 

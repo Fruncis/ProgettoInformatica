@@ -110,11 +110,30 @@
             </Grid.RowDefinitions>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Esperienza:" FontSize="30"/>
-                <TextBlock Text="{Binding Giocatore1.Esperienza, StringFormat=' {0}'}" FontSize="30"  Margin="20 0 0 0"/><!-- Animazione da fare-->
+                <TextBlock Text="{Binding Giocatore.Esperienza}" FontSize="30"  Margin="20 0 0 0">
+                    <!--<TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Style.Triggers>
+                                <EventTrigger RoutedEvent="MouseEnter">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation
+                                                    Storyboard.TargetProperty="(TextBlock.Text)"
+                                                    From="0"
+                                                    To="100"
+                                                    Duration="0:0:4">
+                                            </DoubleAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style> Animazione da fare-->
+                </TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Row="1">
                 <TextBlock  Text="Gettoni:" FontSize="30"/>
-                <TextBlock Text="{Binding Giocatore1.Gettoni, StringFormat=' {0}'}" FontSize="30"  Margin="20 0 0 0"/>
+                <TextBlock Text="{Binding Giocatore.Gettoni, StringFormat=' {0}'}" FontSize="30"  Margin="20 0 0 0"/>
                  <!--Animazione da fare-->
 
             </StackPanel>

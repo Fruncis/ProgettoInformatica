@@ -21,7 +21,7 @@ namespace ProgettoInformatica.Model
 
         public static T menuWindowViewModel { get; set; }
 
-        public static T Istanzia(NavigationStore navigationStore)
+        public static T Istanzia(NavigationStore navigationStore,Giocatore giocatore)
         {
             
 
@@ -40,7 +40,7 @@ namespace ProgettoInformatica.Model
 
 
             System.Diagnostics.Debug.WriteLine("cippiciappi");
-            CurrentWindowViewModel = (T)Activator.CreateInstance(typeof(T), new object[] { navigationStore });
+            CurrentWindowViewModel = (T)Activator.CreateInstance(typeof(T), new object[] { navigationStore, giocatore });
 
             if (typeof(T).Name.Equals("GameWindowViewModel") && gameWindowViewModel == null)
             {

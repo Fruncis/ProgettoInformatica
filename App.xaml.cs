@@ -28,8 +28,9 @@ namespace ProgettoInformatica
             
 
             NavigationStore  navigationStore = new NavigationStore();
+            Giocatore giocatore = new Giocatore();
 
-            navigationStore.CurrentViewModel = IstanziaViewModel<MenuWindowViewModel>.Istanzia(navigationStore);
+            navigationStore.CurrentViewModel = IstanziaViewModel<MenuWindowViewModel>.Istanzia(navigationStore, giocatore);
 
             MainWindow = new MainWindow()
             {

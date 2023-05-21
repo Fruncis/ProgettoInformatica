@@ -2,27 +2,39 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ProgettoInformatica.Model
 {
-    public class GestioneGioco// : INotifyPropertyChanged
+    public class GestioneGioco
     {
-        Mazzo mazzo;
+        //private readonly Mazzo mazzo = new Mazzo("C:\\Users\\Simone\\Downloads\\ProgettoInformatica-main\\Data\\mazzo-geografia.xml");
+        private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
+        // private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
         public List<Carta> mazzoCorrente { get; set; } //= new Mazzo("C:\\Users\\simone.bertolini\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml").Carte.ToList();
         public int MaxEsperienza { get; set; } = 100;
 
+
+        private Giocatore giocatore;
         //public event Action CartaCambiata;
         //public event PropertyChangedEventHandler? PropertyChanged;
 
 
         /*public Carta CartaCorrente { get { return _cartaCorrente; } set { _cartaCorrente = value; CambioCartaCorrente(); } }*/
-        public GestioneGioco(Mazzo mazzo)
+        public GestioneGioco( Giocatore giocatore)
         {
-            this.mazzo = mazzo;
+            this.giocatore = giocatore;
+            this.giocatore.PropertyChanged += OnGiocatoreChanged;
             mazzoCorrente = mazzo.Carte.ToList();
         }
+
+        public void OnGiocatoreChanged(object source, EventArgs args)
+        {
+            this.giocatore = (Giocatore)source;
+        }
+
         public GestioneGioco(List<Carta> mazzoCorrente)
         {
             this.mazzoCorrente = mazzoCorrente;
@@ -30,7 +42,7 @@ namespace ProgettoInformatica.Model
 
         public Carta? PescaCarta()
         {
-            if (mazzoCorrente.Count > 0)
+            if (mazzoCorrente.Count > 15)
             {
                 Random random = new Random();
                 int carta = random.Next(0, mazzoCorrente.Count);
@@ -48,8 +60,8 @@ namespace ProgettoInformatica.Model
 
         public void ConvertPuntiEsperienzaGettoni(int punti)
         {
-            Giocatore.Gettoni += punti * 3;
-            Giocatore.Esperienza += punti * 2;
+            giocatore.Gettoni += punti * 3;
+            giocatore.Esperienza += punti * 2;
         }
 
         public string RispostaAvversario(int difficolta, Carta cartaCorrente)
@@ -71,10 +83,6 @@ namespace ProgettoInformatica.Model
             }
         }
 
-        /*private void CambioCartaCorrente()
-        {
-            CartaCambiata?.Invoke();
-        }*/
 
     }
 }

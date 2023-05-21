@@ -16,9 +16,7 @@ namespace ProgettoInformatica.ViewModels
 {
     public class GameWindowViewModel : ViewModelBase
     {
-        //private readonly Mazzo mazzo = new Mazzo("C:\\Users\\Simone\\Downloads\\ProgettoInformatica-main\\Data\\mazzo-geografia.xml");
-        private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
-        // private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
+        
         //public Brushs
         private bool _isAnswered;
         public bool IsAnswered { get { return _isAnswered; } set { _isAnswered = value; OnPropertyChanged(nameof(IsAnswered)); } }
@@ -35,10 +33,17 @@ namespace ProgettoInformatica.ViewModels
         public Carta CartaCorrente { get; set; }
 
         private Giocatore _giocatore;
-        public Giocatore Giocatore1
+        public Giocatore Giocatore
         {
-            get { return _giocatore; }
-            set { _giocatore = value; OnPropertyChanged(nameof(Giocatore1)); }
+            get
+            {
+                return _giocatore;
+            }
+            set
+            {
+                _giocatore = value;
+                OnPropertyChanged(nameof(Giocatore));
+            }
         }
 
         private int _punteggio;
@@ -46,11 +51,7 @@ namespace ProgettoInformatica.ViewModels
 
         public Timer timer = new Timer();//Da spostare in Gestione Gioco
 
-        //public NavigationStore navigationStore { get; set; }
-
-        /*public GestioneGioco _gestioneGioco = new GestioneGioco(mazzo);
-        //public Carta cartaCorrente => _gestioneGioco.CartaCorrente; */
-        //private CartaCorrente _cartaCorrente;
+        
         private string _quesitoCorrente = "default";
         public string QuesitoCorrente 
         { 
@@ -83,26 +84,32 @@ namespace ProgettoInformatica.ViewModels
 
 
         public ICommand NavigateMenuCommand { get; }
-        public GameWindowViewModel(NavigationStore navigationStore)
+        public GameWindowViewModel(NavigationStore navigationStore, Giocatore giocatore)
         {
             //System.Diagnostics.Debug.WriteLine(IstanziaViewModel.Istanza);
             //System.Diagnostics.Debug.WriteLine(Giocatore.Gettoni);
+            Giocatore = giocatore;
+            giocatore.PropertyChanged += OnGiocatoreChanged;
             Punteggio = 0;
             IsAnswered = false;
             IsGameTerminated = false;
-            GestioneGioco = new GestioneGioco(mazzo);
-            NavigateMenuCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore, () => IstanziaViewModel<MenuWindowViewModel>.Istanzia(navigationStore));
+            GestioneGioco = new GestioneGioco(this.Giocatore);
+            NavigateMenuCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore, () => IstanziaViewModel<MenuWindowViewModel>.Istanzia(navigationStore, giocatore));
             CartaCorrente = GestioneGioco.PescaCarta();
             
             QuesitoCorrente = CartaCorrente.Quesito;
             RisposteCorrenti = CartaCorrente.Risposte;
-            System.Diagnostics.Debug.WriteLine(QuesitoCorrente);
 
             ChangeButtonColor = new ChangeBackgroundCommand(this);
             timer.Interval = 500; // In milliseconds
             timer.AutoReset = false; // Stops it from repeating
             timer.Elapsed += new ElapsedEventHandler(TimerElapsed);
             timer.Start();
+        }
+
+        public void OnGiocatoreChanged(object source, EventArgs args)
+        {
+            Giocatore = (Giocatore)source;
         }
         void TimerElapsed(object sender, ElapsedEventArgs e)
         {
@@ -114,10 +121,12 @@ namespace ProgettoInformatica.ViewModels
             // Delay the execution by 2 seconds (2000 milliseconds)
 
             RispostaRobot = GestioneGioco.RispostaAvversario(1, CartaCorrente);
+            
 
             await Task.Delay(TimeSpan.FromSeconds(animationTime));
             CartaCorrente = GestioneGioco.PescaCarta();
-            if(CartaCorrente != null)
+            
+            if (CartaCorrente != null)
             {
                 GestioneGioco.ConvertPuntiEsperienzaGettoni(Punteggio);
                 IsGameTerminated = true;
@@ -127,6 +136,7 @@ namespace ProgettoInformatica.ViewModels
             }
             else
             {
+                
                 
             }
             

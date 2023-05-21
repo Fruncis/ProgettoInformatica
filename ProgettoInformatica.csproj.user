@@ -16,6 +16,9 @@
     <Compile Update="Views\SoundWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\UIBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -34,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\SoundWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UIBar.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

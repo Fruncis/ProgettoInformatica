@@ -10,7 +10,11 @@ namespace ProgettoInformatica.Model
 {
     class GestioneGiocatore
     {
-
+        private Giocatore Giocatore;
+        public GestioneGiocatore(Giocatore giocatore)
+        {
+            this.Giocatore = giocatore;
+        }
         public void Salva(int livello, int esperienza, List<Mazzo> mazziPosseduti, int gettoni)
         {
             string formattazione = "<giocatore>" +
@@ -35,15 +39,15 @@ namespace ProgettoInformatica.Model
             XmlDocument doc = new XmlDocument();
             doc.Load("saves.xml");
 
-            Giocatore.Livello = int.Parse(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/livello").InnerText);
-            Giocatore.Esperienza = int.Parse(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/esperienza").InnerText);
+            this.Giocatore.Livello = int.Parse(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/livello").InnerText);
+            this.Giocatore.Esperienza = int.Parse(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/esperienza").InnerText);
             
             for (int i = 1; i < doc.SelectNodes("/root/giocatore[" + giocatore + "]/mazzi-posseduti/mazzo").Count; i++)
             {
-                Giocatore.MazziPosseduti.Add(new Mazzo(TypeToPath(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/mazzi-posseduti/mazzo[" + i + "]").InnerText)));
+                this.Giocatore.MazziPosseduti.Add(new Mazzo(TypeToPath(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/mazzi-posseduti/mazzo[" + i + "]").InnerText)));
             }
 
-            Giocatore.Gettoni = int.Parse(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/gettoni").InnerText);
+            this.Giocatore.Gettoni = int.Parse(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/gettoni").InnerText);
         }
         
         private string TypeToPath(string tipoMazzo)

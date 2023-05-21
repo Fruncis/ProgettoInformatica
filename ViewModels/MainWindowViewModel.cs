@@ -1,4 +1,5 @@
 ﻿using ProgettoInformatica.Commands;
+using ProgettoInformatica.Model;
 using ProgettoInformatica.Store;
 using ProgettoInformatica.Views;
 using System;
