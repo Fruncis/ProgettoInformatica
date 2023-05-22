@@ -8,14 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/background1.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/backgroundprova.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/backgroundefinitivo.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/default-robot.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/coin.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/left-arrow.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/options-icon-white.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/options-icon.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/play.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/playfullblack.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/playicon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/shopping-cart.png")]

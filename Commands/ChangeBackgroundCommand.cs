@@ -25,7 +25,21 @@ namespace ProgettoInformatica.Commands
         {
             _gameWindowViewModel = gameWindowViewModel;
         }
+        public bool CanExecute(object parameter)
+        {
+            return _gameWindowViewModel.IsAnswered;
+        }
 
+
+        public override void Execute(object parameter)
+        {
+            System.Diagnostics.Debug.WriteLine(parameter);
+            if (parameter is Button button && !CanExecute(parameter))
+            {
+                checkResponse(button);
+                
+            }
+        }
 
         private void checkResponse(Button button)
         {
@@ -96,31 +110,6 @@ namespace ProgettoInformatica.Commands
                     Colors.LightGray,
                     KeyTime.FromTimeSpan(TimeSpan.FromSeconds(3)))
                 );
-            /*answerAnimation1.KeyFrames.Add(
-                new LinearColorKeyFrame(
-                    Colors.Transparent,
-                    KeyTime.FromTimeSpan(TimeSpan.FromSeconds(3.5)))
-                );
-            answerAnimation1.KeyFrames.Add(
-                new LinearColorKeyFrame(
-                    Colors.LightGray,
-                    KeyTime.FromTimeSpan(TimeSpan.FromSeconds(4)))
-                );
-            answerAnimation1.KeyFrames.Add(
-                new LinearColorKeyFrame(
-                    Colors.Transparent,
-                    KeyTime.FromTimeSpan(TimeSpan.FromSeconds(4.5)))
-                );
-            answerAnimation1.KeyFrames.Add(
-                new LinearColorKeyFrame(
-                    Colors.LightGray,
-                    KeyTime.FromTimeSpan(TimeSpan.FromSeconds(5)))
-                );
-            answerAnimation1.KeyFrames.Add(
-                new LinearColorKeyFrame(
-                    Colors.Transparent,
-                    KeyTime.FromTimeSpan(TimeSpan.FromSeconds(5.5)))
-                );*/
             answerAnimation1.KeyFrames.Add(
                 new LinearColorKeyFrame(
                     bordercolor,
@@ -135,7 +124,7 @@ namespace ProgettoInformatica.Commands
                 new LinearColorKeyFrame(
                     Colors.Transparent,
                     KeyTime.FromTimeSpan(TimeSpan.FromSeconds(5)))
-                ); 
+                );
 
             brush.BeginAnimation(SolidColorBrush.ColorProperty, answerAnimation1);
 
@@ -146,25 +135,9 @@ namespace ProgettoInformatica.Commands
 
             border.BorderThickness = new Thickness(borderThickness);
             border.BorderBrush = brush;
-            
+
 
         }
-        
 
-        public bool CanExecute(object parameter)
-        {
-            return _gameWindowViewModel.IsAnswered;
-        }
-
-
-        public override void Execute(object parameter)
-        {
-            
-            if (parameter is Button button && !CanExecute(parameter))
-            {
-                checkResponse(button);
-                
-            }
-        }
     }
 }

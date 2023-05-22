@@ -70,7 +70,7 @@ namespace ProgettoInformatica.Model
 
             Random random = new Random();
             int risposta = random.Next(0, 3);
-
+ 
             if (risposta < 7 + difficolta)
             {
                 return cartaCorrente.RipostaCorretta;

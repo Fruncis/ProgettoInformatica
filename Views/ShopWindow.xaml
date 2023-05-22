@@ -3,20 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:viewmodels="clr-namespace:ProgettoInformatica.ViewModels" 
+             xmlns:viewmodels="clr-namespace:ProgettoInformatica.ViewModels"
              xmlns:local="clr-namespace:ProgettoInformatica.Views"
+             xmlns:view="clr-namespace:ProgettoInformatica.Views"
              d:DataContext="{d:DesignInstance Type=viewmodels:ShopWindowViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1280">
 
     <Grid>
         <Grid.Background>
-            <LinearGradientBrush x:Name="Gradient" StartPoint="1,1" EndPoint="0,0">
+            <LinearGradientBrush  StartPoint="1,1" EndPoint="0,0">
                 <GradientStop x:Name="GradientStop1" Color="#3194F4" Offset="0.1"/>
                 <GradientStop x:Name="GradientStop2" Color="#5571EC" Offset="0.7"/>
             </LinearGradientBrush>
         </Grid.Background>
         <Grid.Triggers>
+            
             <EventTrigger RoutedEvent="Loaded">
                 <BeginStoryboard>
                     <Storyboard>
@@ -34,10 +36,6 @@
             </EventTrigger>
         </Grid.Triggers>
         <Grid.Resources>
-            <Style TargetType="{x:Type Border}">
-                <Setter Property="CornerRadius" Value="5"/>
-                <Setter Property="Background" Value="White"/>
-            </Style>
             <Style TargetType="{x:Type TextBlock}">
                 <Setter Property="Foreground" Value="#5D70D1"/>
                 <Setter Property="FontFamily" Value="Roboto"/>
@@ -46,22 +44,7 @@
                 <Setter Property="HorizontalAlignment" Value="Center"/>
             </Style>
         </Grid.Resources>
-        <!--<Grid.Triggers>
-            <EventTrigger RoutedEvent="Loaded">
-                <BeginStoryboard>
-                    <Storyboard >
-                        <DoubleAnimationUsingKeyFrames BeginTime="0:0:0" Duration="0:0:6" Storyboard.TargetName="Gradient" RepeatBehavior="Forever" AutoReverse="True">
-                            <LinearDoubleKeyFrame KeyTime="0:0:3" Storyboard.TargetProperty="(Grid.Background).(LinearGradientBrush.GradientStop)[0].(GradientStop.Offset)" Value="0.7">
-                                
-                            </LinearDoubleKeyFrame>
-                            <LinearDoubleKeyFrame KeyTime="0:0:6" Storyboard.TargetName="GradientStop2" Value="0.1"></LinearDoubleKeyFrame>
-                             
-                        </DoubleAnimationUsingKeyFrames>
-                    </Storyboard>
-                </BeginStoryboard>
-            </EventTrigger>
-        </Grid.Triggers>-->
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="6*"/>
@@ -73,16 +56,9 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <!--<Canvas Grid.ColumnSpan="7">
-            <Image Source="./Img/options-icon.png" Height="40" Width="40" Canvas.Left="1225" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        </Canvas>-->
+        
         <Grid Grid.ColumnSpan="3">
             <Grid.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="5"/>
-                    <Setter Property="Background" Value="White"/>
-
-                </Style>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Foreground" Value="#5D70D1"/>
                     <Setter Property="FontFamily" Value="Roboto"/>
@@ -123,7 +99,6 @@
                     </Style>
                 </StackPanel.Resources>
                 <Button Background="Transparent" Command="{Binding NavigateMenuCommand}"  BorderThickness="0">
-
                     <Image Source="./Img/left-arrow.png" Margin="0 5"/>
                 </Button>
                 <TextBlock Text="Shop" VerticalAlignment="Center" FontSize="25" Foreground="White" FontFamily="Dilo World"/>
@@ -132,7 +107,9 @@
         </Grid>
         <Grid Grid.Row="2" Grid.Column="1"  ClipToBounds="False">
             <Grid.Resources>
-
+                <Style TargetType="{x:Type Grid}" x:Key="shrinkGrid">
+                    <Setter Property="Margin" Value="60 0"/>
+                </Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="Transparent"/>
                     <Setter Property="BorderThickness" Value="0"/>
@@ -164,8 +141,7 @@
                         </Trigger>
                     </Style.Triggers>
                 </Style>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="Margin" Value="60 0"/>
+                <Style TargetType="{x:Type Border}" x:Key="baseBorder">
                     <Setter Property="Grid.RowSpan" Value="4"/>
                     <Setter Property="Background" Value="white"/>
                     <Setter Property="CornerRadius" Value="15"/>
@@ -189,42 +165,96 @@
             </Grid.ColumnDefinitions>
 
 
-            <Grid Grid.Row="1">
-                
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition Height="8*"/>
-                    <RowDefinition />
-                </Grid.RowDefinitions>
-                <Border/>
-                <TextBlock Grid.Row="0" Text="{Binding DeckCard[0].TipoMazzo}"/>
-                <Image Grid.Row="1"/>
-                <Button Grid.Row="2" Content="Compra!"/>
-            </Grid>
-            <Grid Grid.Row="1" Grid.Column="1">
+            <Grid x:Name="card0" Grid.Row="1" Style="{StaticResource shrinkGrid}">
 
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="8*"/>
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Border/>
+                <Border>
+                    <Border.Style>
+                        <Style TargetType="Border" BasedOn="{StaticResource baseBorder}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsDeckLocked[0]}" Value="true">
+                                    <Setter Property="Background">
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="#FFFF" Opacity=".4"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IsPurchased[0]}"  Value="true">
+                                    <Setter Property="Background" Value="#7AE83F"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+                    
+                </Border>
+                <TextBlock Grid.Row="0" Text="{Binding mazzi[0].TipoMazzo}"/>
+                <Image Grid.Row="1"/>
+                <Button Grid.Row="2" Content="Compra!" x:Name="Buttoncard0" />
+            </Grid>
+            <Grid x:Name="card1" Grid.Row="1" Grid.Column="1" Style="{StaticResource shrinkGrid}">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Border>
+                    <Border.Style>
+                        <Style TargetType="Border" BasedOn="{StaticResource baseBorder}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsDeckLocked[1]}"  Value="true">
+                                    <Setter Property="Background">
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="#FFFF" Opacity=".4"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IsPurchased[1]}"  Value="true">
+                                    <Setter Property="Background" Value="#7AE83F"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+
+                </Border>
                 <TextBlock Grid.Row="0" Text="Nome Mazzo"/>
                 <Image Grid.Row="1"/>
-                <Button Grid.Row="2" Content="Compra!"/>
+                <Button Grid.Row="2" Content="Compra!" x:Name="Buttoncard1"/>
             </Grid>
 
-            <Grid Grid.Row="1" Grid.Column="2">
+            <Grid x:Name="card2" Grid.Row="1" Grid.Column="2" Style="{StaticResource shrinkGrid}">
 
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="8*"/>
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Border/>
+                <Border>
+                    <Border.Style>
+                        <Style TargetType="Border" BasedOn="{StaticResource baseBorder}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsDeckLocked[2]}"  Value="true">
+                                    <Setter Property="Background">
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="#FFFF" Opacity=".4"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IsPurchased[2]}"  Value="true">
+                                    <Setter Property="Background" Value="#7AE83F"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+
+                </Border>
                 <TextBlock Grid.Row="0" Text="Nome Mazzo"/>
                 <Image Grid.Row="1"/>
-                <Button Grid.Row="2" Content="Compra!"/>
+                <Button Grid.Row="2" Content="Compra!" x:Name="Buttoncard2" Command="{Binding BuyDeck}"/>
             </Grid>
 
         </Grid>

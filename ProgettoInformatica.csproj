@@ -10,6 +10,8 @@
   <ItemGroup>
     <None Remove="Views\Img\background.png" />
     <None Remove="Views\Img\background1.png" />
+    <None Remove="Views\Img\Backgroundefinitivo.png" />
+    <None Remove="Views\Img\BackgrounDefinitivo1.png" />
     <None Remove="Views\Img\backgroundProva.png" />
     <None Remove="Views\Img\coin.png" />
     <None Remove="Views\Img\default-robot.png" />
@@ -26,10 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Views\Img\background1.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Img\backgroundProva.png">
+    <Content Include="Views\Img\Backgroundefinitivo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Img\default-robot.png">
@@ -48,9 +47,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Img\options-icon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Img\play.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Img\playFullBlack.png">

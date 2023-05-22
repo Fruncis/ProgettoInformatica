@@ -47,72 +47,74 @@
         </Style>
     </UserControl.Resources>
 
-
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="50"/>
-        </Grid.ColumnDefinitions>
-        <Grid.Background>
-            <ImageBrush ImageSource="./Img/backgroundProva.png"
+    <Border Background="#0C6EC4">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <ImageBrush ImageSource="./Img/backgroundefinitivo.png" 
                     Stretch="Fill" TileMode="Tile"
                     ViewportUnits="Absolute" Viewport="0,0,1280,720"/>
-        </Grid.Background>
-        <Grid.Triggers>
+            </Grid.Background>
+            <Grid.Triggers>
 
-            <EventTrigger RoutedEvent="Loaded">
-                <BeginStoryboard>
-                    <Storyboard>
-                        <RectAnimation Storyboard.TargetProperty="Background.Viewport"
-                                   To="1280,0,1280,720" Duration="0:1:0" 
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <RectAnimation Storyboard.TargetProperty="Background.Viewport"
+                                   To="1280,0,1280,720" Duration="0:1:15" 
                                    RepeatBehavior="Forever" AutoReverse="True"/>
-                    </Storyboard>
-                </BeginStoryboard>
-            </EventTrigger>
-        </Grid.Triggers>
-        <Button Grid.Column="1" Background="Transparent" >
-            <Image Source="./Img/options-icon.png" Style="{StaticResource Option}" HorizontalAlignment="Left" Margin="5,0,0,0" Width="40"/>
-            <Button.ContextMenu>
-                <ContextMenu>
-                    <MenuItem Header="Volume">
-                        <Slider Maximum="100"/>
-                    </MenuItem>
-                </ContextMenu>
-            </Button.ContextMenu>
-        </Button>
-
-        <!--<views:SoundWindow/>-->
-        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Grid.Row="1" Grid.ColumnSpan="2" FontSize="100" HorizontalContentAlignment="Center" Background="Transparent" BorderThickness="0" Command="{Binding NavigateGameCommand}" FontFamily="Samurai Blast">
-                <Button.Content>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Gioca" FontFamily="Samurai Blast">
-                            <TextBlock.Foreground>
-                                <LinearGradientBrush StartPoint="1,1" EndPoint="0,0" >
-                                    <GradientStopCollection>
-                                        <GradientStop Color="#2A9DFF" Offset="1"/>
-                                        <GradientStop Color="#4AD6FF" Offset="0.2"/>
-                                    </GradientStopCollection>
-                                </LinearGradientBrush>
-                            </TextBlock.Foreground>
-                        </TextBlock>
-                        <Image HorizontalAlignment="Center" Source="./Img/playIcon.png" Width="120" Height="80"/>
-                    </StackPanel>
-                </Button.Content>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Grid.Triggers>
+            <Button Grid.Column="1" Background="Transparent" >
+                <Image Source="./Img/options-icon.png" Style="{StaticResource Option}" HorizontalAlignment="Left" Margin="5,0,0,0" Width="40"/>
+                <Button.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Volume">
+                            <Slider Maximum="100"/>
+                        </MenuItem>
+                    </ContextMenu>
+                </Button.ContextMenu>
             </Button>
-        </StackPanel>
-        
 
-        <Button Grid.Row="1" Grid.Column="1" Background="Transparent" BorderThickness="0" Command="{Binding NavigateShopCommand}" >
-            <Image Source="./Img/shopping-cart.png" Height="40" Width="40" />
-        </Button>
+            <!--<views:SoundWindow/>-->
+            <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Grid.Row="1" Grid.ColumnSpan="2" FontSize="100" HorizontalContentAlignment="Center" Background="Transparent" BorderThickness="0" Command="{Binding NavigateGameCommand}" FontFamily="Samurai Blast">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Gioca" FontFamily="Samurai Blast">
+                                <TextBlock.Foreground>
+                                    <LinearGradientBrush StartPoint="1,1" EndPoint="0,0" >
+                                        <GradientStopCollection>
+                                            <GradientStop Color="#2A9DFF" Offset="1"/>
+                                            <GradientStop Color="#4AD6FF" Offset="0.2"/>
+                                        </GradientStopCollection>
+                                    </LinearGradientBrush>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                            <Image HorizontalAlignment="Center" Source="./Img/playIcon.png" Width="120" Height="80"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+
+
+            <Button Grid.Row="1" Grid.Column="1" Background="Transparent" BorderThickness="0" Command="{Binding NavigateShopCommand}" >
+                <Image Source="./Img/shopping-cart.png" Height="40" Width="40" />
+            </Button>
 
 
 
-    </Grid>
+        </Grid>
+    </Border>
+    
 
 </UserControl>
