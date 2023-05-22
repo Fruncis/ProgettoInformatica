@@ -101,6 +101,7 @@ namespace ProgettoInformatica.Model
 
         public Giocatore()
         {
+            MazziPosseduti = new List<Mazzo>();
             MaxEsperienza = 100;
             Livello = 1;
             Esperienza = 0;

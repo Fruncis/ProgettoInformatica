@@ -125,16 +125,16 @@ namespace ProgettoInformatica.ViewModels
             
             if (CartaCorrente != null)
             {
-                GestioneGioco.ConvertPuntiEsperienzaGettoni(Punteggio);//da spostare nel'else
-                IsGameTerminated = true;
                 QuesitoCorrente = CartaCorrente.Quesito;
                 RisposteCorrenti = CartaCorrente.Risposte;
                 IsAnswered = false;
             }
             else
             {
-                
-                
+                GestioneGioco.ConvertPuntiEsperienzaGettoni(Punteggio);//da spostare nel'else
+                IsGameTerminated = true;
+
+
             }
             
         }

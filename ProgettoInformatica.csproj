@@ -16,11 +16,13 @@
     <None Remove="Views\Img\coin.png" />
     <None Remove="Views\Img\default-robot.png" />
     <None Remove="Views\Img\left-arrow.png" />
+    <None Remove="Views\Img\options-icon-blue.png" />
     <None Remove="Views\Img\options-icon-white.png" />
     <None Remove="Views\Img\options-icon.png" />
     <None Remove="Views\Img\play.png" />
     <None Remove="Views\Img\playFullBlack.png" />
     <None Remove="Views\Img\playIcon.png" />
+    <None Remove="Views\Img\shopping-cart-blue.png" />
     <None Remove="Views\Img\shopping-cart.png" />
     <None Remove="Views\Img\sparkBack.png" />
     <None Remove="Views\Resources\DiloWorld.ttf" />
@@ -43,6 +45,9 @@
     <Content Include="Views\Img\left-arrow.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\Img\options-icon-blue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Views\Img\options-icon-white.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -53,6 +58,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Img\playIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Img\shopping-cart-blue.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Img\shopping-cart.png">

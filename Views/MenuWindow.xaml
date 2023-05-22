@@ -75,7 +75,7 @@
                 </EventTrigger>
             </Grid.Triggers>
             <Button Grid.Column="1" Background="Transparent" >
-                <Image Source="./Img/options-icon.png" Style="{StaticResource Option}" HorizontalAlignment="Left" Margin="5,0,0,0" Width="40"/>
+                <Image Source="./Img/options-icon-blue.png" Style="{StaticResource Option}" HorizontalAlignment="Left" Margin="5,0,0,0" Width="40"/>
                 <Button.ContextMenu>
                     <ContextMenu>
                         <MenuItem Header="Volume">
@@ -99,8 +99,25 @@
                                         </GradientStopCollection>
                                     </LinearGradientBrush>
                                 </TextBlock.Foreground>
+                                <TextBlock.Effect>
+                                    <DropShadowEffect
+                                              ShadowDepth="5"
+                                              Direction="300"
+                                              Color="Gray"
+                                              Opacity="0.6"
+                                             BlurRadius="10"/>
+                                </TextBlock.Effect>
                             </TextBlock>
-                            <Image HorizontalAlignment="Center" Source="./Img/playIcon.png" Width="120" Height="80"/>
+                            <Image HorizontalAlignment="Center" Source="./Img/playIcon.png" Width="120" Height="80">
+                                <Image.Effect>
+                                    <DropShadowEffect
+                                              ShadowDepth="6"
+                                              Direction="-30"
+                                              Color="Gray"
+                                              Opacity="0.6"
+                                             BlurRadius="15"/>
+                                </Image.Effect>
+                            </Image>
                         </StackPanel>
                     </Button.Content>
                 </Button>
@@ -108,7 +125,7 @@
 
 
             <Button Grid.Row="1" Grid.Column="1" Background="Transparent" BorderThickness="0" Command="{Binding NavigateShopCommand}" >
-                <Image Source="./Img/shopping-cart.png" Height="40" Width="40" />
+                <Image Source="./Img/shopping-cart-blue.png" Height="40" Width="40" />
             </Button>
 
 

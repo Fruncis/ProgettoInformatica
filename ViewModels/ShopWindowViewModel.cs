@@ -4,6 +4,7 @@ using ProgettoInformatica.Store;
 using ProgettoInformatica.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,7 @@ namespace ProgettoInformatica.ViewModels
         public ICommand BuyDeck { get; set; }
         public List<Mazzo> mazzi { get; set; }
 
-        private bool[] _isDeckLocked;
+        /*private bool[] _isDeckLocked;
         public bool[] IsDeckLocked
         {
             get
@@ -32,18 +33,34 @@ namespace ProgettoInformatica.ViewModels
                 _isDeckLocked = value;
                 OnPropertyChanged(nameof(IsDeckLocked));
             }
-        }
-        private bool[] _isPurchased;
-        public bool[] IsPurchased
+        }*/
+
+        private ObservableCollection<bool> _isDeckLocked;
+        public ObservableCollection<bool> AreDeckLocked
         {
             get
             {
-                return _isPurchased;
+                return _isDeckLocked;
             }
             set
             {
-                _isPurchased = value;
-                OnPropertyChanged(nameof(IsPurchased));
+                _isDeckLocked = value;
+                //OnPropertyChanged(nameof(ArePurchased));
+            }
+        }
+
+
+        private ObservableCollection<bool>? _arePurchased;
+        public ObservableCollection<bool>? ArePurchased
+        {
+            get
+            {
+                return _arePurchased;
+            }
+            set
+            {
+                _arePurchased = value;
+                //OnPropertyChanged(nameof(ArePurchased));
             }
         }
 
@@ -64,11 +81,20 @@ namespace ProgettoInformatica.ViewModels
 
         public ShopWindowViewModel(NavigationStore navigationStore, Giocatore giocatore)
         {
-            BuyDeck = new BuyDeck(this);
+            BuyDeck = new BuyDeckCommand(this);
             NavigateMenuCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore, () => IstanziaViewModel<MenuWindowViewModel>.Istanzia(navigationStore, giocatore));
             mazzi = new List<Mazzo>();
-            IsPurchased = new bool[cardNumber];
-            IsDeckLocked = new bool[cardNumber];
+
+            ArePurchased = new ObservableCollection<bool>();
+            for(int i = 0; i < cardNumber; i++)
+            {
+                ArePurchased.Add(false);
+            }
+            AreDeckLocked = new ObservableCollection<bool>();
+            for (int i = 0; i < cardNumber; i++)
+            {
+                AreDeckLocked.Add(false);
+            }
             //FillIsDeckLoacked();
             this.Giocatore = giocatore;
             mazzi.Add(new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml"));

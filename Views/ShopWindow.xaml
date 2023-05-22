@@ -18,7 +18,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Grid.Triggers>
-            
+
             <EventTrigger RoutedEvent="Loaded">
                 <BeginStoryboard>
                     <Storyboard>
@@ -32,23 +32,47 @@
                             To="#3194F4" Duration="0:0:10" RepeatBehavior="Forever" AutoReverse="True"/>
                     </Storyboard>
                 </BeginStoryboard>
-               
+
             </EventTrigger>
         </Grid.Triggers>
         <Grid.Resources>
-            <Style TargetType="{x:Type TextBlock}">
+            <!--<BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />-->
+            <Style TargetType="{x:Type TextBlock}" x:Key="Textblockbase">
                 <Setter Property="Foreground" Value="#5D70D1"/>
                 <Setter Property="FontFamily" Value="Roboto"/>
                 <Setter Property="FontWeight" Value="Bold"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
             </Style>
+            <!--<Style TargetType="{x:Type TextBlock}" x:Key="purchaseAnimation" BasedOn="{StaticResource Textblockbase}">
+                <Setter Property="Visibility" Value="Collapsed"/>
+                <Style.Triggers>
+                    <MultiTrigger>
+                        <MultiTrigger.Conditions>
+                            <Condition Value="false">
+                                <Condition.Binding>
+                                    <MultiBinding Converter="BooleanToVisibilityConverter">
+                                        <Binding Path="ArePurchased[0]"/>
+                                        <Binding Path="ArePurchased[1]"/>
+                                        <Binding Path="ArePurchased[2]"/>
+                                    </MultiBinding>
+                                </Condition.Binding>
+                            </Condition>
+                        </MultiTrigger.Conditions>
+                        <MultiTrigger.Setters>
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </MultiTrigger.Setters>
+                    </MultiTrigger>
+                </Style.Triggers>
+            </Style>-->
+
         </Grid.Resources>
 
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="239*"/>
             <ColumnDefinition/>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="40*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -56,8 +80,10 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
-        <Grid Grid.ColumnSpan="3">
+
+        <!--<TextBlock Grid.Row="1" Grid.Column="1" Text="Congratulazioni! mazzo acquistato" FontSize="25" Style="{StaticResource purchaseAnimation}"/>-->
+
+        <Grid Grid.ColumnSpan="4">
             <Grid.Resources>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Foreground" Value="#5D70D1"/>
@@ -105,7 +131,7 @@
             </StackPanel>
             <local:UIBar Grid.Column="1" Grid.ColumnSpan="2"/>
         </Grid>
-        <Grid Grid.Row="2" Grid.Column="1"  ClipToBounds="False">
+        <Grid Grid.Row="2" Grid.Column="1"  ClipToBounds="False" Grid.ColumnSpan="2">
             <Grid.Resources>
                 <Style TargetType="{x:Type Grid}" x:Key="shrinkGrid">
                     <Setter Property="Margin" Value="60 0"/>
@@ -176,24 +202,24 @@
                     <Border.Style>
                         <Style TargetType="Border" BasedOn="{StaticResource baseBorder}">
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding IsDeckLocked[0]}" Value="true">
+                                <DataTrigger Binding="{Binding AreDeckLocked[0]}" Value="true">
                                     <Setter Property="Background">
                                         <Setter.Value>
                                             <SolidColorBrush Color="#FFFF" Opacity=".4"/>
                                         </Setter.Value>
                                     </Setter>
                                 </DataTrigger>
-                                <DataTrigger Binding="{Binding IsPurchased[0]}"  Value="true">
+                                <DataTrigger Binding="{Binding ArePurchased[0]}"  Value="true">
                                     <Setter Property="Background" Value="#7AE83F"/>
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
                     </Border.Style>
-                    
+
                 </Border>
-                <TextBlock Grid.Row="0" Text="{Binding mazzi[0].TipoMazzo}"/>
+                <TextBlock Grid.Row="0" Text="{Binding mazzi[0].TipoMazzo}" Style="{StaticResource Textblockbase}"/>
                 <Image Grid.Row="1"/>
-                <Button Grid.Row="2" Content="Compra!" x:Name="Buttoncard0" />
+                <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard0" Command="{Binding BuyDeck}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
             </Grid>
             <Grid x:Name="card1" Grid.Row="1" Grid.Column="1" Style="{StaticResource shrinkGrid}">
 
@@ -206,14 +232,14 @@
                     <Border.Style>
                         <Style TargetType="Border" BasedOn="{StaticResource baseBorder}">
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding IsDeckLocked[1]}"  Value="true">
+                                <DataTrigger Binding="{Binding AreDeckLocked[1]}"  Value="true">
                                     <Setter Property="Background">
                                         <Setter.Value>
                                             <SolidColorBrush Color="#FFFF" Opacity=".4"/>
                                         </Setter.Value>
                                     </Setter>
                                 </DataTrigger>
-                                <DataTrigger Binding="{Binding IsPurchased[1]}"  Value="true">
+                                <DataTrigger Binding="{Binding ArePurchased[1]}"  Value="true">
                                     <Setter Property="Background" Value="#7AE83F"/>
                                 </DataTrigger>
                             </Style.Triggers>
@@ -221,9 +247,9 @@
                     </Border.Style>
 
                 </Border>
-                <TextBlock Grid.Row="0" Text="Nome Mazzo"/>
+                <TextBlock Grid.Row="0" Text="Nome Mazzo" Style="{StaticResource Textblockbase}"/>
                 <Image Grid.Row="1"/>
-                <Button Grid.Row="2" Content="Compra!" x:Name="Buttoncard1"/>
+                <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard1" Command="{Binding BuyDeck}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
             </Grid>
 
             <Grid x:Name="card2" Grid.Row="1" Grid.Column="2" Style="{StaticResource shrinkGrid}">
@@ -237,14 +263,14 @@
                     <Border.Style>
                         <Style TargetType="Border" BasedOn="{StaticResource baseBorder}">
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding IsDeckLocked[2]}"  Value="true">
+                                <DataTrigger Binding="{Binding AreDeckLocked[2]}"  Value="true">
                                     <Setter Property="Background">
                                         <Setter.Value>
                                             <SolidColorBrush Color="#FFFF" Opacity=".4"/>
                                         </Setter.Value>
                                     </Setter>
                                 </DataTrigger>
-                                <DataTrigger Binding="{Binding IsPurchased[2]}"  Value="true">
+                                <DataTrigger Binding="{Binding ArePurchased[2]}"  Value="true">
                                     <Setter Property="Background" Value="#7AE83F"/>
                                 </DataTrigger>
                             </Style.Triggers>
@@ -252,9 +278,9 @@
                     </Border.Style>
 
                 </Border>
-                <TextBlock Grid.Row="0" Text="Nome Mazzo"/>
+                <TextBlock Grid.Row="0" Text="Nome Mazzo" Style="{StaticResource Textblockbase}"/>
                 <Image Grid.Row="1"/>
-                <Button Grid.Row="2" Content="Compra!" x:Name="Buttoncard2" Command="{Binding BuyDeck}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+                <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard2" Command="{Binding BuyDeck}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
             </Grid>
 
         </Grid>
