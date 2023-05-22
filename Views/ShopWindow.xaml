@@ -254,14 +254,10 @@
                 </Border>
                 <TextBlock Grid.Row="0" Text="Nome Mazzo"/>
                 <Image Grid.Row="1"/>
-                <Button Grid.Row="2" Content="Compra!" x:Name="Buttoncard2" Command="{Binding BuyDeck}"/>
+                <Button Grid.Row="2" Content="Compra!" x:Name="Buttoncard2" Command="{Binding BuyDeck}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
             </Grid>
 
         </Grid>
-
-
-
-
 
 
     </Grid>

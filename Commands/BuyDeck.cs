@@ -23,11 +23,10 @@ namespace ProgettoInformatica.Commands
         }
         public override void Execute(object? parameter)
         {
-            System.Diagnostics.Debug.WriteLine(parameter);
 
             if (parameter is Button button )
             {
-                System.Diagnostics.Debug.WriteLine("sfa");
+                System.Diagnostics.Debug.WriteLine(button.Name + "sfa");
 
             }
         }
