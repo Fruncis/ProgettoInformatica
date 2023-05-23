@@ -36,7 +36,7 @@
             </EventTrigger>
         </Grid.Triggers>
         <Grid.Resources>
-            <!--<BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />-->
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
             <Style TargetType="{x:Type TextBlock}" x:Key="Textblockbase">
                 <Setter Property="Foreground" Value="#5D70D1"/>
                 <Setter Property="FontFamily" Value="Roboto"/>
@@ -44,27 +44,35 @@
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
             </Style>
-            <!--<Style TargetType="{x:Type TextBlock}" x:Key="purchaseAnimation" BasedOn="{StaticResource Textblockbase}">
-                <Setter Property="Visibility" Value="Collapsed"/>
+            <Style TargetType="{x:Type TextBlock}" x:Key="purchaseAnimation" BasedOn="{StaticResource Textblockbase}">
+                <Style.Setters>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Opacity" Value="1"/>
+                </Style.Setters>
                 <Style.Triggers>
-                    <MultiTrigger>
-                        <MultiTrigger.Conditions>
-                            <Condition Value="false">
-                                <Condition.Binding>
-                                    <MultiBinding Converter="BooleanToVisibilityConverter">
-                                        <Binding Path="ArePurchased[0]"/>
-                                        <Binding Path="ArePurchased[1]"/>
-                                        <Binding Path="ArePurchased[2]"/>
-                                    </MultiBinding>
-                                </Condition.Binding>
-                            </Condition>
-                        </MultiTrigger.Conditions>
-                        <MultiTrigger.Setters>
-                            <Setter Property="Visibility" Value="Visible"/>
-                        </MultiTrigger.Setters>
-                    </MultiTrigger>
+                    <MultiDataTrigger>
+                        <MultiDataTrigger.Conditions>
+                            <Condition Binding="{Binding ArePurchased[0]}" Value="false"/>
+                            <Condition Binding="{Binding ArePurchased[1]}" Value="false"/>
+                            <Condition Binding="{Binding ArePurchased[2]}" Value="false"/>
+                        </MultiDataTrigger.Conditions>
+                        <MultiDataTrigger.Setters>
+                            <Setter Property="Opacity" Value="0"/>
+                        </MultiDataTrigger.Setters>
+                        <MultiDataTrigger.ExitActions>
+                            <BeginStoryboard >
+                                <Storyboard >
+                                    <DoubleAnimationUsingKeyFrames Duration="0:0:1.5" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                        <LinearDoubleKeyFrame KeyTime="0:0:.5" Value="1"/>
+                                        <LinearDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                                        <LinearDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </MultiDataTrigger.ExitActions>
+                    </MultiDataTrigger>
                 </Style.Triggers>
-            </Style>-->
+            </Style>
 
         </Grid.Resources>
 
@@ -80,8 +88,19 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <!--<TextBlock Grid.Row="1" Grid.Column="1" Text="Congratulazioni! mazzo acquistato" FontSize="25" Style="{StaticResource purchaseAnimation}"/>-->
+        <!--<Grid Grid.Row="1" Grid.Column="1">
+            <Border Margin="420 30"
+            BorderBrush="Black"
+            BorderThickness="1"
+            CornerRadius="100">
+                <Border.Effect>
+                    <DropShadowEffect />
+                </Border.Effect>
+            </Border>
+            <TextBlock  Text="Congratulazioni! mazzo acquistato"  FontSize="15" Style="{StaticResource purchaseAnimation}"/>
+        </Grid>-->
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Congratulazioni! mazzo acquistato"  FontSize="15" Style="{StaticResource purchaseAnimation}"/>
+        
 
         <Grid Grid.ColumnSpan="4">
             <Grid.Resources>
@@ -210,7 +229,7 @@
                                     </Setter>
                                 </DataTrigger>
                                 <DataTrigger Binding="{Binding ArePurchased[0]}"  Value="true">
-                                    <Setter Property="Background" Value="#7AE83F"/>
+                                    <Setter Property="Opacity" Value="0.8"/>
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
@@ -219,7 +238,7 @@
                 </Border>
                 <TextBlock Grid.Row="0" Text="{Binding mazzi[0].TipoMazzo}" Style="{StaticResource Textblockbase}"/>
                 <Image Grid.Row="1"/>
-                <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard0" Command="{Binding BuyDeck}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+                <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard0" Command="{Binding BuyDeck[0]}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
             </Grid>
             <Grid x:Name="card1" Grid.Row="1" Grid.Column="1" Style="{StaticResource shrinkGrid}">
 
@@ -249,7 +268,7 @@
                 </Border>
                 <TextBlock Grid.Row="0" Text="Nome Mazzo" Style="{StaticResource Textblockbase}"/>
                 <Image Grid.Row="1"/>
-                <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard1" Command="{Binding BuyDeck}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+                <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard1" Command="{Binding BuyDeck[1]}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
             </Grid>
 
             <Grid x:Name="card2" Grid.Row="1" Grid.Column="2" Style="{StaticResource shrinkGrid}">
@@ -280,7 +299,7 @@
                 </Border>
                 <TextBlock Grid.Row="0" Text="Nome Mazzo" Style="{StaticResource Textblockbase}"/>
                 <Image Grid.Row="1"/>
-                <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard2" Command="{Binding BuyDeck}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+                <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard2" Command="{Binding BuyDeck[2]}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
             </Grid>
 
         </Grid>

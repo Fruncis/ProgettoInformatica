@@ -5,26 +5,39 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProgettoInformatica.Views" 
              xmlns:viewmodels="clr-namespace:ProgettoInformatica.ViewModels"
-             d:DataContext="{d:DesignInstance Type=viewmodels:SoundWindowViewModel}"
+             d:DataContext="{d:DesignInstance Type=viewmodels:GameWindowViewModel}"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="200" d:DesignWidth="300">
+
+    <!--<UserControl.Resources>
+        <Style TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="#299BFF"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="Effect">
+                    <Setter.Value>
+                        
+                    </Setter.Value>
+                </Setter>
+        </Style>
+    </UserControl.Resources>-->
+
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Grid.Resources>
-            <Style TargetType="{x:Type Border}">
-                <Setter Property="Background" Value="White"/>
-                <Setter Property="CornerRadius" Value="15"/>
-            </Style>
-        </Grid.Resources>
-        <Border Grid.ColumnSpan="3"/>
-        <StackPanel Grid.Column="1" VerticalAlignment="Center">
-            <Slider Maximum="100"/>
+        <TextBlock Grid.Column="1" Text="{Binding Giocatore.MazziPosseduti.Count, StringFormat='Mazzi Posseduti {0}/10'}" FontSize="13" VerticalAlignment="Bottom" Margin="0 0 0 10"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" Margin="0 0 0 30">
+            <TextBlock Text="Regola il Volume:" Margin="0 0 0 10"/>
+            <Slider Maximum="100" />
         </StackPanel>
 
 
     </Grid>
+
 </UserControl>

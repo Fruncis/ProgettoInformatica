@@ -74,6 +74,8 @@
                     </BeginStoryboard>
                 </EventTrigger>
             </Grid.Triggers>
+            
+
             <Button Grid.Column="1" Background="Transparent" >
                 <Image Source="./Img/options-icon-blue.png" Style="{StaticResource Option}" HorizontalAlignment="Left" Margin="5,0,0,0" Width="40"/>
                 <Button.ContextMenu>
@@ -132,6 +134,6 @@
 
         </Grid>
     </Border>
-    
+
 
 </UserControl>

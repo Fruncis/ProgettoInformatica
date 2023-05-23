@@ -1,11 +1,14 @@
-﻿using ProgettoInformatica.ViewModels;
+﻿using Microsoft.Win32;
+using ProgettoInformatica.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace ProgettoInformatica.Commands
 {
@@ -13,8 +16,10 @@ namespace ProgettoInformatica.Commands
     class BuyDeckCommand : CommandBase
     {
         private ShopWindowViewModel _shopWindowViewModel;
+        //./Sound/bonus-sound-effect.mp3
+        private SoundPlayer player = new SoundPlayer("././Sound/completion-of-a-level.wav");
 
-        private Dictionary<string, int> deckDict = new Dictionary<string, int>(); 
+        private Dictionary<string, int> deckDict = new Dictionary<string, int>();
 
         public BuyDeckCommand(ShopWindowViewModel shopWindowViewModel)
         {
@@ -27,10 +32,10 @@ namespace ProgettoInformatica.Commands
         public override void Execute(object? parameter)
         {
 
-            if (parameter is Button button )
+            if (parameter is Button button)
             {
                 BuyDeck(button);
-
+                
             }
         }
 
@@ -56,9 +61,13 @@ namespace ProgettoInformatica.Commands
                             return;
                         }
                     }
+                    //System.Diagnostics.Debug.WriteLine("24");
+                    
                     _shopWindowViewModel.Giocatore.MazziPosseduti.Add(_shopWindowViewModel.mazzi[index]);
                     //_shopWindowViewModel.IsPurchased = true;
                     _shopWindowViewModel.ArePurchased[index] = true;
+                    player.Play();
+                    //canExecute = false;
 
                     System.Diagnostics.Debug.WriteLine(_shopWindowViewModel.Giocatore.MazziPosseduti[0].TipoMazzo + _shopWindowViewModel.ArePurchased[0] + index);
 

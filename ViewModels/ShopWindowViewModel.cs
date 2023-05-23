@@ -18,7 +18,7 @@ namespace ProgettoInformatica.ViewModels
         private const int cardNumber = 3;
         public ICommand NavigateMenuCommand { get; }
 
-        public ICommand BuyDeck { get; set; }
+        public List<ICommand> BuyDeck { get; set; }
         public List<Mazzo> mazzi { get; set; }
 
         /*private bool[] _isDeckLocked;
@@ -81,7 +81,11 @@ namespace ProgettoInformatica.ViewModels
 
         public ShopWindowViewModel(NavigationStore navigationStore, Giocatore giocatore)
         {
-            BuyDeck = new BuyDeckCommand(this);
+            BuyDeck = new List<ICommand>();
+            for (int i = 0; i < cardNumber; i++)
+            {
+                BuyDeck.Add(new BuyDeckCommand(this));
+            }
             NavigateMenuCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore, () => IstanziaViewModel<MenuWindowViewModel>.Istanzia(navigationStore, giocatore));
             mazzi = new List<Mazzo>();
 
@@ -112,6 +116,7 @@ namespace ProgettoInformatica.ViewModels
                 if (mazzi[i].LivelloMazzo > Giocatore.Livello)// manca livello mazzo
                 {
                     IsDeckLocked[i] = true;
+                    BuyDeck[i].BlockCommand();
                 }
                 else
                 {

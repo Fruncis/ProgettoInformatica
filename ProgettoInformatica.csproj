@@ -80,10 +80,4 @@
     </Content>
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="ViewModels\SoundWindowViewModel.cs">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-  </ItemGroup>
-
 </Project>
