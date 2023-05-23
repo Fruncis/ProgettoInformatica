@@ -10,8 +10,8 @@ namespace ProgettoInformatica.Model
 {
     public class GestioneGioco
     {
-        //private readonly Mazzo mazzo = new Mazzo("C:\\Users\\Simone\\Downloads\\ProgettoInformatica-main\\Data\\mazzo-geografia.xml");
-        private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
+        private readonly Mazzo mazzo = new Mazzo("C:\\Users\\Simone\\Downloads\\ProgettoInformatica-main\\Data\\mazzo-geografia.xml");
+       // private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
         // private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
         public List<Carta> mazzoCorrente { get; set; } //= new Mazzo("C:\\Users\\simone.bertolini\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml").Carte.ToList();
         
@@ -60,8 +60,8 @@ namespace ProgettoInformatica.Model
 
         public void ConvertPuntiEsperienzaGettoni(int punti)//Aggiustare la proporzione dei gettoni e dell'esperienza
         {
-            Giocatore.Gettoni += punti * 3;
-            Giocatore.Esperienza += punti * 2;
+            Giocatore.Gettoni += (int)Math.Round(punti * 1.5);
+            Giocatore.Esperienza += (int)Math.Round(punti * 1.2);
         }
 
         public string RispostaAvversario(int difficolta, Carta cartaCorrente)
