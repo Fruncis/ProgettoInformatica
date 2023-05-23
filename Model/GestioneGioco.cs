@@ -64,6 +64,43 @@ namespace ProgettoInformatica.Model
             Giocatore.Esperienza += (int)Math.Round(punti * 1.2);
         }
 
+        public void SaliDiLivello(int esperienza)
+        {
+            switch(esperienza) { 
+                case < 100:
+                    Giocatore.Livello = 1;
+                    break;
+                case < 250:
+                    Giocatore.Livello = 2;
+                    break;
+                case < 500:
+                    Giocatore.Livello = 3;
+                    break;
+                case < 800:
+                    Giocatore.Livello = 4;
+                    break;
+                case < 1100:
+                    Giocatore.Livello = 5;
+                    break;
+                case < 1600:
+                    Giocatore.Livello = 6;
+                    break;
+                case < 2200:
+                    Giocatore.Livello = 7;
+                    break;
+                case < 3100:
+                    Giocatore.Livello = 8;
+                    break;
+                case < 4200:
+                    Giocatore.Livello = 9;
+                    break;
+                case < 5500:
+                    Giocatore.Livello = 10;
+                    break;
+                default: break;
+            }
+        }
+
         public string RispostaAvversario(int difficolta, Carta cartaCorrente)
         {
             List<string> risposte = cartaCorrente.Risposte.ToList();
