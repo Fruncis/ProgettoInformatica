@@ -2,6 +2,8 @@
 <root>
     <!-- Domande di Astronomia -->
 	<TipoMazzo>Scienze</TipoMazzo>
+	<Immagine></Immagine>
+	<Livello></Livello>
 	<Carta>
 		<Titolo>Astronomia</Titolo>
 		<Quesito>Cosa causa un'eclissi solare?</Quesito>

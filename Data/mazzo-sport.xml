@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Carte>
+	<TipoMazzo>Sport</TipoMazzo>
+	<Immagine></Immagine>
+	<Livello></Livello>
+	<Carta>
+		<Titolo>Calcio</Titolo>
+		<Quesito>In quale città si trova lo stadio Camp Nou, sede del FC Barcelona?</Quesito>
+		<Risposte>Madrid</Risposte>
+		<Risposte>Barcellona</Risposte>
+		<Risposte>Milano</Risposte>
+		<Risposte>Londra</Risposte>
+		<RispostaCorretta>Barcellona</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Basket</Titolo>
+		<Quesito>Qual è la squadra più titolata nella storia della NBA?</Quesito>
+		<Risposte>Los Angeles Lakers</Risposte>
+		<Risposte>Boston Celtics</Risposte>
+		<Risposte>Chicago Bulls</Risposte>
+		<Risposte>Golden State Warriors</Risposte>
+		<RispostaCorretta>Boston Celtics</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Tennis</Titolo>
+		<Quesito>Chi detiene il record di vittorie in singolare maschile nei tornei del Grande Slam?</Quesito>
+		<Risposte>Roger Federer</Risposte>
+		<Risposte>Rafael Nadal</Risposte>
+		<Risposte>Novak Djokovic</Risposte>
+		<Risposte>Serena Williams</Risposte>
+		<RispostaCorretta>Novak Djokovic</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Olimpiadi</Titolo>
+		<Quesito>In quale città si sono svolte le Olimpiadi del 2016?</Quesito>
+		<Risposte>Atene</Risposte>
+		<Risposte>Rio de Janeiro</Risposte>
+		<Risposte>Barcellona</Risposte>
+		<Risposte>Tokyo</Risposte>
+		<RispostaCorretta>Rio de Janeiro</RispostaCorretta>
+	</Carta>
+	<Carte>
+		<Carta>
+			<Titolo>Calcio</Titolo>
+			<Quesito>Qual è la squadra di calcio italiana con più titoli di Serie A?</Quesito>
+			<Risposte>Juventus</Risposte>
+			<Risposte>Inter</Risposte>
+			<Risposte>Milan</Risposte>
+			<Risposte>Roma</Risposte>
+			<RispostaCorretta>Juventus</RispostaCorretta>
+		</Carta>
+		<Carta>
+			<Titolo>Basket</Titolo>
+			<Quesito>Chi è considerato il più grande giocatore di basket di tutti i tempi?</Quesito>
+			<Risposte>Michael Jordan</Risposte>
+			<Risposte>LeBron James</Risposte>
+			<Risposte>Kobe Bryant</Risposte>
+			<Risposte>Magic Johnson</Risposte>
+			<RispostaCorretta>Michael Jordan</RispostaCorretta>
+		</Carta>
+		<Carta>
+			<Titolo>Tennis</Titolo>
+			<Quesito>Qual è la superficie di gioco principale del torneo di Wimbledon?</Quesito>
+			<Risposte>Erba</Risposte>
+			<Risposte>Terra battuta</Risposte>
+			<Risposte>Cemento</Risposte>
+			<Risposte>Moquette</Risposte>
+			<RispostaCorretta>Erba</RispostaCorretta>
+		</Carta>
+		<Carta>
+			<Titolo>Olimpiadi</Titolo>
+			<Quesito>Quale paese ha vinto il maggior numero di medaglie d'oro alle Olimpiadi estive del 2021?</Quesito>
+			<Risposte>Stati Uniti</Risposte>
+			<Risposte>Cina</Risposte>
+			<Risposte>Giappone</Risposte>
+			<Risposte>Australia</Risposte>
+			<RispostaCorretta>Stati Uniti</RispostaCorretta>
+		</Carta>
+		<Carta>
+			<Titolo>Calcio</Titolo>
+			<Quesito>In quale anno si è disputata la prima Coppa del Mondo di calcio?</Quesito>
+			<Risposte>1922</Risposte>
+			<Risposte>1930</Risposte>
+			<Risposte>1950</Risposte>
+			<Risposte>1966</Risposte>
+			<RispostaCorretta>1930</RispostaCorretta>
+		</Carta>
+		<Carta>
+			<Titolo>Basket</Titolo>
+			<Quesito>Qual è il record di punti segnati in una singola partita di NBA?</Quesito>
+			<Risposte>81</Risposte>
+			<Risposte>100</Risposte>
+			<Risposte>73</Risposte>
+			<Risposte>68</Risposte>
+			<RispostaCorretta>100</RispostaCorretta>
+		</Carta>
+		<Carta>
+			<Titolo>Tennis</Titolo>
+			<Quesito>Chi è la detentrice del record di maggior numero di titoli vinti in singolare femminile nei tornei del Grande Slam?</Quesito>
+			<Risposte>Serena Williams</Risposte>
+			<Risposte>Margaret Court</Risposte>
+			<Risposte>Steffi Graf</Risposte>
+			<Risposte>Chris Evert</Risposte>
+			<RispostaCorretta>Margaret Court</RispostaCorretta>
+		</Carta>
+		<Carta>
+			<Titolo>Olimpiadi</Titolo>
+			<Quesito>In quale anno si sono svolte le prime Olimpiadi moderne?</Quesito>
+			<Risposte>1884</Risposte>
+			<Risposte>1896</Risposte>
+			<Risposte>1900</Risposte>
+			<Risposte>1904</Risposte>
+			<RispostaCorretta>1896</RispostaCorretta>
+		</Carta>
+		<Carta>
+			<Titolo>Calcio</Titolo>
+			<Quesito>Qual è il club di calcio con più vittorie nella Champions League?</Quesito>
+			<Risposte>Real Madrid</Risposte>
+			<Risposte>Barcellona</Risposte>
+			<Risposte>Bayern Monaco</Risposte>
+			<Risposte>Liverpool</Risposte>
+			<RispostaCorretta>Real Madrid</RispostaCorretta>
+		</Carta>
+		<Carta>
+			<Titolo>Basket</Titolo>
+			<Quesito>Quale giocatore ha vinto il maggior numero di titoli NBA nella storia?</Quesito>
+			<Risposte>Bill Russell</Risposte>
+			<Risposte>Michael Jordan</Risposte>
+			<Risposte>LeBron James</Risposte>
+			<Risposte>Kareem Abdul-Jabbar</Risposte>
+			<RispostaCorretta>Bill Russell</RispostaCorretta>
+		</Carta>
+		<Carta>
+			<Titolo>Tennis</Titolo>
+			<Quesito>Qual è il torneo di tennis conosciuto come "La Cattedrale del Tennis"?</Quesito>
+			<Risposte>US Open</Risposte>
+			<Risposte>Australian Open</Risposte>
+			<Risposte>Roland Garros</Risposte>
+			<Risposte>Wimbledon</Risposte>
+			<RispostaCorretta>Wimbledon</RispostaCorretta>
+		</Carta>
+		<Carta>
+			<Titolo>Olimpiadi</Titolo>
+			<Quesito>In quale città si sono svolte le Olimpiadi del 2012?</Quesito>
+			<Risposte>Athens</Risposte>
+			<Risposte>Beijing</Risposte>
+			<Risposte>Rio de Janeiro</Risposte>
+			<Risposte>Londra</Risposte>
+			<RispostaCorretta>Londra</RispostaCorretta>
+		</Carta>
+		<Carta>
+			<Titolo>Calcio</Titolo>
+			<Quesito>Qual è il club di calcio italiano con più vittorie in Coppa Italia?</Quesito>
+			<Risposte>Juventus</Risposte>
+			<Risposte>Inter</Risposte>
+			<Risposte>Milan</Risposte>
+			<Risposte>Roma</Risposte>
+			<RispostaCorretta>Juventus</RispostaCorretta>
+		</Carta>
+		<Carta>
+			<Titolo>Basket</Titolo>
+			<Quesito>Qual è la nazionale di basket più vincente nella storia delle Olimpiadi?</Quesito>
+			<Risposte>Stati Uniti</Risposte>
+			<Risposte>Serbia</Risposte>
+			<Risposte>Spagna</Risposte>
+			<Risposte>Argentina</Risposte>
+			<RispostaCorretta>Stati Uniti</RispostaCorretta>
+		</Carta>
+		<Carta>
+			<Titolo>Tennis</Titolo>
+			<Quesito>Quale giocatore detiene il record di titoli vinti nel singolare maschile nei tornei del Grande Slam?</Quesito>
+			<Risposte>Roger Federer</Risposte>
+			<Risposte>Rafael Nadal</Risposte>
+			<Risposte>Novak Djokovic</Risposte>
+			<Risposte>Pete Sampras</Risposte>
+			<RispostaCorretta>Novak Djokovic</RispostaCorretta>
+		</Carta>
+		<Carta>
+			<Titolo>Olimpiadi</Titolo>
+			<Quesito>Quale atleta ha vinto il maggior numero di medaglie d'oro alle Olimpiadi estive?</Quesito>
+			<Risposte>Michael Phelps</Risposte>
+			<Risposte>Usain Bolt</Risposte>
+			<Risposte>Carl Lewis</Risposte>
+			<Risposte>Simone Biles</Risposte>
+			<RispostaCorretta>Michael Phelps</RispostaCorretta>
+		</Carta>
+	</Carte>
+</Carte>

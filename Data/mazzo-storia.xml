@@ -2,6 +2,8 @@
 <root>
 	<!-- Domande sugli Eventi storici -->
 	<TipoMazzo>Storia</TipoMazzo>
+	<Immagine></Immagine>
+	<Livello></Livello>
 	<Carta>
 		<Titolo>Eventi storici</Titolo>
 		<Quesito>Quando è iniziata la Prima Guerra Mondiale?</Quesito>
@@ -163,5 +165,32 @@
 		<Risposte>Roma</Risposte>
 		<Risposte>Alessandria</Risposte>
 		<RispostaCorretta>Roma</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Eventi storici</Titolo>
+		<Quesito>In quale anno è avvenuta la caduta del Muro di Berlino?</Quesito>
+		<Risposte>1987</Risposte>
+		<Risposte>1989</Risposte>
+		<Risposte>1991</Risposte>
+		<Risposte>1993</Risposte>
+		<RispostaCorretta>1989</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Personaggi storici</Titolo>
+		<Quesito>Chi è stato il primo presidente degli Stati Uniti d'America?</Quesito>
+		<Risposte>Thomas Jefferson</Risposte>
+		<Risposte>George Washington</Risposte>
+		<Risposte>Abraham Lincoln</Risposte>
+		<Risposte>John F. Kennedy</Risposte>
+		<RispostaCorretta>George Washington</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Periodi e civiltà</Titolo>
+		<Quesito>In quale periodo si è sviluppata la civiltà egizia?</Quesito>
+		<Risposte>Antica Roma</Risposte>
+		<Risposte>Antica Grecia</Risposte>
+		<Risposte>Antico Egitto</Risposte>
+		<Risposte>Antica Persia</Risposte>
+		<RispostaCorretta>Antico Egitto</RispostaCorretta>
 	</Carta>
 </root>
