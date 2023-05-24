@@ -103,3 +103,10 @@ C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-
 C:\Users\francesco\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ProgettoInformatica.Properties.Resources.resources
 C:\Users\francesco\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ProgettoInformatica.csproj.GenerateResource.cache
 C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Properties\Resources.resx
+C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\deck.png
+C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Data\mazzo-scienze.xml
+C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Data\mazzo-sport.xml
+C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Data\mazzo-storia.xml
+C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Data\mazzo-cinema.xml
+C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Data\mazzo-geografia.xml
+C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\power-button-sign.png

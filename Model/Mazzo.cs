@@ -36,7 +36,6 @@ namespace ProgettoInformatica.Model
             {
                 for(int j = 0; j < numRisposte; j++)
                 {
-                    System.Diagnostics.Debug.WriteLine(i);
                     risposte[j] = doc.DocumentElement.SelectSingleNode("/Carte/Carta[" + (i + 1) + "]/Risposte[" + (j + 1) + "]").InnerText;
                     //System.Diagnostics.Debug.WriteLine(domande[j]);
                 }

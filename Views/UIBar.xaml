@@ -43,7 +43,6 @@
                 </StackPanel>
 
             </Border>
-
             <Image Grid.Column="2" HorizontalAlignment="Right" Source=".\Img\options-icon-white.png" Margin="0 0 15 0" Height="40" />
         </StackPanel>
     </Grid>

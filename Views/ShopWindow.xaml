@@ -62,10 +62,10 @@
                         <MultiDataTrigger.ExitActions>
                             <BeginStoryboard >
                                 <Storyboard >
-                                    <DoubleAnimationUsingKeyFrames Duration="0:0:1.5" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                    <DoubleAnimationUsingKeyFrames Duration="0:0:2" Storyboard.TargetProperty="(UIElement.Opacity)">
                                         <LinearDoubleKeyFrame KeyTime="0:0:.5" Value="1"/>
-                                        <LinearDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
-                                        <LinearDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+                                        <LinearDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+                                        <LinearDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
                                     </DoubleAnimationUsingKeyFrames>
                                 </Storyboard>
                             </BeginStoryboard>
@@ -263,7 +263,7 @@
 
                 </Border>
                 <TextBlock Grid.Row="0" Text="{Binding mazzi[0].TipoMazzo}" Style="{StaticResource Textblockbase}"/>
-                <Image Grid.Row="1"/>
+                <Image Grid.Row="1" Source="./Img/deck.png" Margin="20 0"/>
                 <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard0" Command="{Binding BuyDeck[0]}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
             </Grid>
             <Grid x:Name="card1" Grid.Row="1" Grid.Column="1" Style="{StaticResource shrinkGrid}">
@@ -293,7 +293,7 @@
 
                 </Border>
                 <TextBlock Grid.Row="0" Text="{Binding mazzi[1].TipoMazzo}" Style="{StaticResource Textblockbase}"/>
-                <Image Grid.Row="1"/>
+                <Image Grid.Row="1" Source="./Img/deck.png" Margin="20 0"/>
                 <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard1" Command="{Binding BuyDeck[1]}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
             </Grid>
 
@@ -324,7 +324,7 @@
 
                 </Border>
                 <TextBlock Grid.Row="0" Text="{Binding mazzi[2].TipoMazzo}" Style="{StaticResource Textblockbase}"/>
-                <Image Grid.Row="1"/>
+                <Image Grid.Row="1" Source="./Img/deck.png" Margin="20 0"/>
                 <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard2" Command="{Binding BuyDeck[2]}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
             </Grid>
 

@@ -101,14 +101,12 @@ namespace ProgettoInformatica.ViewModels
             {
                 AreDeckLocked.Add(false);
             }
-            //FillIsDeckLoacked();
+            
             this.Giocatore = giocatore;
-            System.Diagnostics.Debug.WriteLine(Resources.mazzo_sport);
             mazzi.Add(new Mazzo(Resources.mazzo_sport));
-            //
             mazzi.Add(new Mazzo(Resources.mazzo_storia));
             mazzi.Add(new Mazzo(Resources.mazzo_scienze));
-            
+            FillIsDeckLoacked();
             /*mazzi.Add(new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-scienze.xml"));
             mazzi.Add(new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-cinema.xml"));*/
             Giocatore.PropertyChanged += OnGiocatoreChanged;
@@ -118,20 +116,20 @@ namespace ProgettoInformatica.ViewModels
             Giocatore = (Giocatore)source;
         }
 
-        /*private void FillIsDeckLoacked()
+        private void FillIsDeckLoacked()
         {
             for(int i=0; i<cardNumber; i++)
             {
-                if (mazzi[i].LivelloMazzo > Giocatore.Livello)// manca livello mazzo
+                System.Diagnostics.Debug.WriteLine("Livello" + mazzi[i].Livello);
+                if (Int32.Parse(mazzi[i].Livello) > Giocatore.Livello)// manca livello mazzo
                 {
-                    IsDeckLocked[i] = true;
-                    BuyDeck[i].BlockCommand();
+                    AreDeckLocked[i] = true;
                 }
                 else
                 {
-                    IsDeckLocked[i] = false;
+                    AreDeckLocked[i] = false;
                 }
             }
-        }*/
+        }
     }
 }

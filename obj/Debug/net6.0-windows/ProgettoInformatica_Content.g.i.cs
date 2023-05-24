@@ -9,6 +9,7 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/backgroundefinitivo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/deck.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/default-robot.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/coin.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/left-arrow.png")]
@@ -17,6 +18,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/options-icon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/playfullblack.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/playicon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/power-button-sign.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/shopping-cart-blue.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/shopping-cart.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/img/sparkback.png")]

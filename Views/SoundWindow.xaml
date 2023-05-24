@@ -37,7 +37,6 @@
             <Slider Maximum="100" />
         </StackPanel>
 
-
     </Grid>
 
 </UserControl>

@@ -30,7 +30,19 @@ namespace ProgettoInformatica.ViewModels
 
         public GestioneGioco GestioneGioco { get; set; }
 
-        public Carta CartaCorrente { get; set; }
+        private Carta _cartaCorrente;
+        public Carta CartaCorrente
+        {
+            get
+            {
+                return _cartaCorrente;
+            }
+            set
+            {
+                _cartaCorrente = value;
+                OnPropertyChanged(nameof(CartaCorrente));
+            }
+        }
 
         private Giocatore _giocatore;
         public Giocatore Giocatore
@@ -51,34 +63,6 @@ namespace ProgettoInformatica.ViewModels
 
         public Timer timer = new Timer();//Da spostare in Gestione Gioco
 
-        
-        private string _quesitoCorrente = "default";
-        public string QuesitoCorrente 
-        { 
-            get
-            {
-                return _quesitoCorrente;
-            }
-            set
-            {
-                _quesitoCorrente = value;
-                OnPropertyChanged(nameof(QuesitoCorrente));
-            } 
-        }
-        private string[] _risposteCorrenti;
-        public string[] RisposteCorrenti
-        {
-            get
-            {
-                return _risposteCorrenti;
-            }
-            set
-            {
-                _risposteCorrenti = value;
-                OnPropertyChanged(nameof(RisposteCorrenti));
-            }
-        }
-
 
         public ICommand ChangeButtonColor { get; set; }
 
@@ -96,9 +80,6 @@ namespace ProgettoInformatica.ViewModels
             GestioneGioco = new GestioneGioco(this.Giocatore);
             NavigateMenuCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore, () => IstanziaViewModel<MenuWindowViewModel>.Istanzia(navigationStore, giocatore));
             CartaCorrente = GestioneGioco.PescaCarta();
-            
-            QuesitoCorrente = CartaCorrente.Quesito;
-            RisposteCorrenti = CartaCorrente.Risposte;
 
             ChangeButtonColor = new ChangeBackgroundCommand(this);
             timer.Interval = 500; // In milliseconds
@@ -121,17 +102,15 @@ namespace ProgettoInformatica.ViewModels
             
 
             await Task.Delay(TimeSpan.FromSeconds(animationTime));
-            CartaCorrente = GestioneGioco.PescaCarta();
             
             if (CartaCorrente != null)
             {
-                QuesitoCorrente = CartaCorrente.Quesito;
-                RisposteCorrenti = CartaCorrente.Risposte;
+                CartaCorrente = GestioneGioco.PescaCarta();
                 IsAnswered = false;
             }
             else
             {
-                GestioneGioco.ConvertPuntiEsperienzaGettoni(Punteggio);//da spostare nel'else
+                GestioneGioco.ConvertPuntiEsperienzaGettoni(Punteggio);
                 IsGameTerminated = true;
 
 

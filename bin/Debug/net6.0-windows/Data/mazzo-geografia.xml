@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Carte>
+	<TipoMazzo>Geografia</TipoMazzo>
+	<Immagine></Immagine>
+	<Livello>1</Livello>
+	<Carta>
+		<Titolo>Capitali</Titolo>
+		<Quesito>Qual è la capitale dell'Italia?</Quesito>
+		<Risposte>Roma</Risposte>
+		<Risposte>Milano</Risposte>
+		<Risposte>Napoli</Risposte>
+		<Risposte>Firenze</Risposte>
+		<RispostaCorretta>Roma</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Capitali</Titolo>
+		<Quesito>Qual è la capitale della Russia?</Quesito>
+		<Risposte>Moscova</Risposte>
+		<Risposte>San Pietroburgo</Risposte>
+		<Risposte>Novosibirsk</Risposte>
+		<Risposte>Ekaterinburg</Risposte>
+		<RispostaCorretta>Moscova</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Capitali</Titolo>
+		<Quesito>Qual è la capitale della Spagna?</Quesito>
+		<Risposte>Barcellona</Risposte>
+		<Risposte>Siviglia</Risposte>
+		<Risposte>Madrid</Risposte>
+		<Risposte>Valencia</Risposte>
+		<RispostaCorretta>Madrid</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Continenti</Titolo>
+		<Quesito>Qual è il continente più grande del mondo?</Quesito>
+		<Risposte>Europa</Risposte>
+		<Risposte>Asia</Risposte>
+		<Risposte>America</Risposte>
+		<Risposte>Africa</Risposte>
+		<RispostaCorretta>Asia</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Continenti</Titolo>
+		<Quesito>Qual è il continente più popoloso del mondo?</Quesito>
+		<Risposte>Europa</Risposte>
+		<Risposte>Asia</Risposte>
+		<Risposte>America</Risposte>
+		<Risposte>Africa</Risposte>
+		<RispostaCorretta>Asia</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Continenti</Titolo>
+		<Quesito>Qual è il continente più piccolo del mondo?</Quesito>
+		<Risposte>Europa</Risposte>
+		<Risposte>Asia</Risposte>
+		<Risposte>Oceania</Risposte>
+		<Risposte>Antartide</Risposte>
+		<RispostaCorretta>Oceania</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Paesi</Titolo>
+		<Quesito>In quale paese si trova il Colosseo?</Quesito>
+		<Risposte>Italia</Risposte>
+		<Risposte>Grecia</Risposte>
+		<Risposte>Egitto</Risposte>
+		<Risposte>Turchia</Risposte>
+		<RispostaCorretta>Italia</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Paesi</Titolo>
+		<Quesito>In quale paese si trova Machu Picchu?</Quesito>
+		<Risposte>Argentina</Risposte>
+		<Risposte>Brasile</Risposte>
+		<Risposte>Perù</Risposte>
+		<Risposte>Cile</Risposte>
+		<RispostaCorretta>Perù</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Fiumi</Titolo>
+		<Quesito>Qual è il fiume più lungo d'Europa?</Quesito>
+		<Risposte>Danubio</Risposte>
+		<Risposte>Volga</Risposte>
+		<Risposte>Senna</Risposte>
+		<Risposte>Tamigi</Risposte>
+		<RispostaCorretta>Volga</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Fiumi</Titolo>
+		<Quesito>Qual è il fiume più lungo d'Africa?</Quesito>
+		<Risposte>Nilo</Risposte>
+		<Risposte>Congo</Risposte>
+		<Risposte>Zambesi</Risposte>
+		<Risposte>Orange</Risposte>
+		<RispostaCorretta>Nilo</RispostaCorretta>
+	</Carta>
+</Carte>

@@ -10,12 +10,16 @@
   <ItemGroup>
     <None Remove="Data\mazzo-cinema.xml" />
     <None Remove="Data\mazzo-geografia.xml" />
+    <None Remove="Data\mazzo-scienze.xml" />
+    <None Remove="Data\mazzo-sport.xml" />
+    <None Remove="Data\mazzo-storia.xml" />
     <None Remove="Views\Img\background.png" />
     <None Remove="Views\Img\background1.png" />
     <None Remove="Views\Img\Backgroundefinitivo.png" />
     <None Remove="Views\Img\BackgrounDefinitivo1.png" />
     <None Remove="Views\Img\backgroundProva.png" />
     <None Remove="Views\Img\coin.png" />
+    <None Remove="Views\Img\deck.png" />
     <None Remove="Views\Img\default-robot.png" />
     <None Remove="Views\Img\left-arrow.png" />
     <None Remove="Views\Img\options-icon-blue.png" />
@@ -24,6 +28,7 @@
     <None Remove="Views\Img\play.png" />
     <None Remove="Views\Img\playFullBlack.png" />
     <None Remove="Views\Img\playIcon.png" />
+    <None Remove="Views\Img\power-button-sign.png" />
     <None Remove="Views\Img\shopping-cart-blue.png" />
     <None Remove="Views\Img\shopping-cart.png" />
     <None Remove="Views\Img\sparkBack.png" />
@@ -33,6 +38,9 @@
 
   <ItemGroup>
     <Content Include="Views\Img\Backgroundefinitivo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Img\deck.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Img\default-robot.png">
@@ -62,6 +70,9 @@
     <Content Include="Views\Img\playIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\Img\power-button-sign.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Views\Img\shopping-cart-blue.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -83,12 +94,24 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Data\mazzo-cinema.xml">
+    <EmbeddedResource Include="Data\mazzo-scienze.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Data\mazzo-geografia.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\mazzo-sport.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\mazzo-storia.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\mazzo-cinema.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\mazzo-geografia.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

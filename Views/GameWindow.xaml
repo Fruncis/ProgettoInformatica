@@ -173,6 +173,7 @@
                         </Setter>
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
+                                
                                 <Setter Property="ForceCursor" Value="True"/>
                                 <Setter Property="Cursor" Value="Hand"/>
                             </Trigger>
@@ -201,7 +202,7 @@
 
             <Path Fill="White" Stretch="Fill" Stroke="Transparent" HorizontalAlignment="Right" Margin="8.3,-1.7,18,0" Width="50" Grid.Row="1" Data="M0,10.2438 L100,187.66699 100.791059,9.54395"/>
             <Rectangle Fill="White" RadiusX="20" RadiusY="20" Margin="1"/>
-            <TextBlock Text="{Binding QuesitoCorrente}" Foreground="#5D70D1" FontWeight="SemiBold" FontFamily="Roboto" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40"/>
+            <TextBlock Text="{Binding CartaCorrente.Quesito}" Foreground="#5D70D1" FontWeight="SemiBold" FontFamily="Roboto" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40"/>
         </Grid>
 
 
@@ -210,7 +211,8 @@
             <Grid.Resources>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Padding" Value="10"/>
-                    <Setter Property="Margin" Value="100 10"/>
+                    <Setter Property="Margin" Value="0 10"/>
+                    <Setter Property="Width" Value="440"/>
                     <Setter Property="FontWeight" Value="Bold"/>
                     <Setter Property="Background" Value="White"/>
                     <Setter Property="FontSize" Value="20"/>
@@ -246,9 +248,28 @@
                     </Style.Resources>
 
                     <Style.Triggers>
+                        
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="ForceCursor" Value="True"/>
                             <Setter Property="Cursor" Value="Hand"/>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames  Storyboard.TargetProperty="Width" Duration="0:0:.1" >
+                                            <LinearDoubleKeyFrame KeyTime="0:0:.1" Value="460"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames  Storyboard.TargetProperty="Width" Duration="0:0:.1" >
+                                            <LinearDoubleKeyFrame KeyTime="0:0:.1" Value="440"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
                             <!--<Trigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
@@ -270,10 +291,10 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Content="{Binding RisposteCorrenti[0]}" Grid.Row="0" Command="{Binding ChangeButtonColor}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"></Button>
-            <Button Content="{Binding RisposteCorrenti[1]}" Grid.Row="0" Grid.Column="1" Command="{Binding ChangeButtonColor}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"></Button>
-            <Button Content="{Binding RisposteCorrenti[2]}" Grid.Row="1" Command="{Binding ChangeButtonColor}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"></Button>
-            <Button Content="{Binding RisposteCorrenti[3]}" Grid.Row="1" Grid.Column="1" Command="{Binding ChangeButtonColor}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"></Button>
+            <Button Content="{Binding CartaCorrente.Risposte[0]}" Grid.Row="0" Command="{Binding ChangeButtonColor}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"></Button>
+            <Button Content="{Binding CartaCorrente.Risposte[1]}" Grid.Row="0" Grid.Column="1" Command="{Binding ChangeButtonColor}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"></Button>
+            <Button Content="{Binding CartaCorrente.Risposte[2]}" Grid.Row="1" Command="{Binding ChangeButtonColor}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"></Button>
+            <Button Content="{Binding CartaCorrente.Risposte[3]}" Grid.Row="1" Grid.Column="1" Command="{Binding ChangeButtonColor}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"></Button>
         </Grid>
 
     </Grid>
