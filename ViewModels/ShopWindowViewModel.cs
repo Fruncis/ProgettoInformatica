@@ -1,10 +1,12 @@
 ﻿using ProgettoInformatica.Commands;
 using ProgettoInformatica.Model;
+using ProgettoInformatica.Properties;
 using ProgettoInformatica.Store;
 using ProgettoInformatica.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -101,7 +103,12 @@ namespace ProgettoInformatica.ViewModels
             }
             //FillIsDeckLoacked();
             this.Giocatore = giocatore;
-            mazzi.Add(new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml"));
+            System.Diagnostics.Debug.WriteLine(Resources.mazzo_sport);
+            mazzi.Add(new Mazzo(Resources.mazzo_sport));
+            //
+            mazzi.Add(new Mazzo(Resources.mazzo_storia));
+            mazzi.Add(new Mazzo(Resources.mazzo_scienze));
+            
             /*mazzi.Add(new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-scienze.xml"));
             mazzi.Add(new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-cinema.xml"));*/
             Giocatore.PropertyChanged += OnGiocatoreChanged;

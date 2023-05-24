@@ -100,3 +100,6 @@ C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\sparkBack.png
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\UIBar.g.cs
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\UIBar.baml
+C:\Users\francesco\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ProgettoInformatica.Properties.Resources.resources
+C:\Users\francesco\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ProgettoInformatica.csproj.GenerateResource.cache
+C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Properties\Resources.resx

@@ -1,18 +1,21 @@
-﻿using System;
+﻿using ProgettoInformatica.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace ProgettoInformatica.Model
 {
     public class GestioneGioco
     {
         //private readonly Mazzo mazzo = new Mazzo("C:\\Users\\Simone\\Downloads\\ProgettoInformatica-main\\Data\\mazzo-geografia.xml");
-       //private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
-         private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
+        //private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
+        private readonly Mazzo mazzo = new Mazzo(Resources.mazzo_geografia);
         public List<Carta> mazzoCorrente { get; set; } //= new Mazzo("C:\\Users\\simone.bertolini\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml").Carte.ToList();
         
 
@@ -25,6 +28,7 @@ namespace ProgettoInformatica.Model
         /*public Carta CartaCorrente { get { return _cartaCorrente; } set { _cartaCorrente = value; CambioCartaCorrente(); } }*/
         public GestioneGioco( Giocatore giocatore)
         {
+            //System.Diagnostics.Debug.WriteLine(Directory.GetCurrentDirectory() + "\\Data\\mazzo-geografia.xml");
             Giocatore = giocatore;
             Giocatore.PropertyChanged += OnGiocatoreChanged;
             mazzoCorrente = mazzo.Carte.ToList();
@@ -46,7 +50,7 @@ namespace ProgettoInformatica.Model
             {
                 Random random = new Random();
                 int carta = random.Next(0, mazzoCorrente.Count);
-
+                System.Diagnostics.Debug.WriteLine(carta);
                 Carta tmp = mazzoCorrente[carta];
                 System.Diagnostics.Debug.WriteLine(tmp.RipostaCorretta);
                 mazzoCorrente.RemoveAt(carta);

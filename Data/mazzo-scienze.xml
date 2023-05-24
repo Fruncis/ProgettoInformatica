@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<root>
+<Carte>
     <!-- Domande di Astronomia -->
 	<TipoMazzo>Scienze</TipoMazzo>
 	<Immagine></Immagine>
-	<Livello></Livello>
+	<Livello>3</Livello>
 	<Carta>
 		<Titolo>Astronomia</Titolo>
 		<Quesito>Cosa causa un'eclissi solare?</Quesito>
@@ -94,7 +94,7 @@
         <Risposte>Molecole chimiche prodotte dalle ghiandole endocrine</Risposte>
         <RispostaCorretta>Molecole chimiche prodotte dalle ghiandole endocrine</RispostaCorretta>
     </Carta>
-    <Carta>
+	<!--<Carta>
         <Titolo>Chimica</Titolo>
         <Quesito>Cosa rappresenta il numero atomico di un elemento?</Quesito>
         <Risposte>La somma di protoni e neutroni nel nucleo atomico</Risposte>
@@ -138,5 +138,5 @@
         <Risposte>La massa aumenta durante una reazione chimica</Risposte>
         <Risposte>La massa diminuisce durante una reazione chimica</Risposte>
         <RispostaCorretta>La massa rimane costante durante una reazione chimica</RispostaCorretta>
-    </Carta>
-</root>
+    </Carta>-->
+</Carte>

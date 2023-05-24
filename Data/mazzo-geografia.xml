@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<root>
+<Carte>
 	<TipoMazzo>Geografia</TipoMazzo>
 	<Immagine></Immagine>
-	<Livello></Livello>
+	<Livello>1</Livello>
 	<Carta>
 		<Titolo>Capitali</Titolo>
 		<Quesito>Qual è la capitale dell'Italia?</Quesito>
@@ -93,4 +93,4 @@
 		<Risposte>Orange</Risposte>
 		<RispostaCorretta>Nilo</RispostaCorretta>
 	</Carta>
-</root>
+</Carte>

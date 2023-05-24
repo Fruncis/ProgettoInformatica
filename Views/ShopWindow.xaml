@@ -100,9 +100,9 @@
             <TextBlock  Text="Congratulazioni! mazzo acquistato"  FontSize="15" Style="{StaticResource purchaseAnimation}"/>
         </Grid>-->
         <TextBlock Grid.Row="1" Grid.Column="1" Text="Congratulazioni! mazzo acquistato"  FontSize="15" Style="{StaticResource purchaseAnimation}"/>
-        
 
-        <Grid Grid.ColumnSpan="4">
+
+        <Grid Grid.ColumnSpan="4" Panel.ZIndex="3">
             <Grid.Resources>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Foreground" Value="#5D70D1"/>
@@ -122,7 +122,7 @@
                 <ColumnDefinition Width=".2*"/>
             </Grid.ColumnDefinitions>
 
-            <Canvas Panel.ZIndex="3">
+            <Canvas >
                 <Canvas.Resources>
                     <Style TargetType="{x:Type TextBlock}">
                         <Setter Property="Foreground" Value="#5D70D1"/>
@@ -292,7 +292,7 @@
                     </Border.Style>
 
                 </Border>
-                <TextBlock Grid.Row="0" Text="Testo" Style="{StaticResource Textblockbase}"/>
+                <TextBlock Grid.Row="0" Text="{Binding mazzi[1].TipoMazzo}" Style="{StaticResource Textblockbase}"/>
                 <Image Grid.Row="1"/>
                 <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard1" Command="{Binding BuyDeck[1]}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
             </Grid>
@@ -323,7 +323,7 @@
                     </Border.Style>
 
                 </Border>
-                <TextBlock Grid.Row="0" Text="Testo" Style="{StaticResource Textblockbase}"/>
+                <TextBlock Grid.Row="0" Text="{Binding mazzi[2].TipoMazzo}" Style="{StaticResource Textblockbase}"/>
                 <Image Grid.Row="1"/>
                 <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard2" Command="{Binding BuyDeck[2]}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
             </Grid>

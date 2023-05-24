@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<root>
+<Carte>
 	<!-- Domande sugli Eventi storici -->
 	<TipoMazzo>Storia</TipoMazzo>
 	<Immagine></Immagine>
-	<Livello></Livello>
+	<Livello>5</Livello>
 	<Carta>
 		<Titolo>Eventi storici</Titolo>
 		<Quesito>Quando è iniziata la Prima Guerra Mondiale?</Quesito>
@@ -94,7 +94,7 @@
 		<Risposte>1707</Risposte>
 		<RispostaCorretta>1648</RispostaCorretta>
 	</Carta>
-	<Carta>
+	<!--<Carta>
 		<Titolo>Personaggi storici</Titolo>
 		<Quesito>Chi è stato il comandante delle forze alleate durante la Seconda Guerra Mondiale?</Quesito>
 		<Risposte>Dwight D. Eisenhower</Risposte>
@@ -192,5 +192,5 @@
 		<Risposte>Antico Egitto</Risposte>
 		<Risposte>Antica Persia</Risposte>
 		<RispostaCorretta>Antico Egitto</RispostaCorretta>
-	</Carta>
-</root>
+	</Carta>-->
+</Carte>

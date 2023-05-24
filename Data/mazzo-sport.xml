@@ -2,7 +2,7 @@
 <Carte>
 	<TipoMazzo>Sport</TipoMazzo>
 	<Immagine></Immagine>
-	<Livello></Livello>
+	<Livello>4</Livello>
 	<Carta>
 		<Titolo>Calcio</Titolo>
 		<Quesito>In quale città si trova lo stadio Camp Nou, sede del FC Barcelona?</Quesito>
@@ -39,16 +39,15 @@
 		<Risposte>Tokyo</Risposte>
 		<RispostaCorretta>Rio de Janeiro</RispostaCorretta>
 	</Carta>
-	<Carte>
-		<Carta>
-			<Titolo>Calcio</Titolo>
-			<Quesito>Qual è la squadra di calcio italiana con più titoli di Serie A?</Quesito>
-			<Risposte>Juventus</Risposte>
-			<Risposte>Inter</Risposte>
-			<Risposte>Milan</Risposte>
-			<Risposte>Roma</Risposte>
-			<RispostaCorretta>Juventus</RispostaCorretta>
-		</Carta>
+	<Carta>
+		<Titolo>Calcio</Titolo>
+		<Quesito>Qual è la squadra di calcio italiana con più titoli di Serie A?</Quesito>
+		<Risposte>Juventus</Risposte>
+		<Risposte>Inter</Risposte>
+		<Risposte>Milan</Risposte>
+		<Risposte>Roma</Risposte>
+		<RispostaCorretta>Juventus</RispostaCorretta>
+	</Carta>
 		<Carta>
 			<Titolo>Basket</Titolo>
 			<Quesito>Chi è considerato il più grande giocatore di basket di tutti i tempi?</Quesito>
@@ -94,7 +93,7 @@
 			<Risposte>68</Risposte>
 			<RispostaCorretta>100</RispostaCorretta>
 		</Carta>
-		<Carta>
+	<!--<Carta>
 			<Titolo>Tennis</Titolo>
 			<Quesito>Chi è la detentrice del record di maggior numero di titoli vinti in singolare femminile nei tornei del Grande Slam?</Quesito>
 			<Risposte>Serena Williams</Risposte>
@@ -183,6 +182,5 @@
 			<Risposte>Carl Lewis</Risposte>
 			<Risposte>Simone Biles</Risposte>
 			<RispostaCorretta>Michael Phelps</RispostaCorretta>
-		</Carta>
-	</Carte>
+		</Carta>-->
 </Carte>

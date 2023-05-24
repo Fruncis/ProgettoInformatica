@@ -2,7 +2,7 @@
 <Carte>
 	<TipoMazzo>Cinema</TipoMazzo>
 	<Immagine></Immagine>
-	<Livello></Livello>
+	<Livello>1</Livello>
 	<Carta>
 		<Titolo>Film classici</Titolo>
 		<Quesito>Qual è il film diretto da Francis Ford Coppola nel 1972 che racconta la storia della famiglia Corleone?</Quesito>

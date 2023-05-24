@@ -13,30 +13,37 @@ namespace ProgettoInformatica.Model
 {
     public class Mazzo
     {
+        const int numCarte = 10;
+        const int numRisposte = 4;
         public string TipoMazzo { get; set; }
-        public Carta[] Carte { get; set; } = new Carta[20];
+
+        public string Livello { get; set; }
+        public Carta[] Carte { get; set; } = new Carta[numCarte];
 
 
         public Mazzo(string percorsoMazzo)
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load(percorsoMazzo);
+            doc.LoadXml(percorsoMazzo);
             
-            this.TipoMazzo = doc.DocumentElement.SelectSingleNode("/root/TipoMazzo").InnerText;
+            this.TipoMazzo = doc.DocumentElement.SelectSingleNode("/Carte/TipoMazzo").InnerText;
+
+            Livello = doc.DocumentElement.SelectSingleNode("/Carte/Livello").InnerText;
 
             string[] risposte = new string[4];
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < numCarte; i++)
             {
-                for(int j = 0; j < 4; j++)
+                for(int j = 0; j < numRisposte; j++)
                 {
-                    risposte[j] = doc.DocumentElement.SelectSingleNode("/root/Carta[" + (i + 1) + "]/Risposte[" + (j + 1) + "]").InnerText;
+                    System.Diagnostics.Debug.WriteLine(i);
+                    risposte[j] = doc.DocumentElement.SelectSingleNode("/Carte/Carta[" + (i + 1) + "]/Risposte[" + (j + 1) + "]").InnerText;
                     //System.Diagnostics.Debug.WriteLine(domande[j]);
                 }
 
-                Carte[i] = new Carta(doc.DocumentElement.SelectSingleNode("/root/Carta[" + (i + 1) +"]/Titolo").InnerText,
-                                     doc.DocumentElement.SelectSingleNode("/root/Carta[" + (i + 1) +"]/Quesito").InnerText,
-                                     doc.DocumentElement.SelectSingleNode("/root/Carta[" + (i + 1) +"]/RispostaCorretta").InnerText,
+                Carte[i] = new Carta(doc.DocumentElement.SelectSingleNode("/Carte/Carta[" + (i + 1) +"]/Titolo").InnerText,
+                                     doc.DocumentElement.SelectSingleNode("/Carte/Carta[" + (i + 1) +"]/Quesito").InnerText,
+                                     doc.DocumentElement.SelectSingleNode("/Carte/Carta[" + (i + 1) +"]/RispostaCorretta").InnerText,
                                      risposte);
             }
         }
