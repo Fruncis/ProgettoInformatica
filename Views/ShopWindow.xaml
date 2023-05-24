@@ -121,6 +121,31 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width=".2*"/>
             </Grid.ColumnDefinitions>
+
+            <Canvas Panel.ZIndex="3">
+                <Canvas.Resources>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Foreground" Value="#5D70D1"/>
+                        <Setter Property="FontFamily" Value="Roboto"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                    </Style>
+                </Canvas.Resources>
+                <Border Background="White" CornerRadius="20" Canvas.Left="1047" Canvas.Top="50" >
+                    <Border.Effect>
+                        <DropShadowEffect
+                            Color="Gray"
+                            Opacity="0.4"
+                            Direction="230"
+                            BlurRadius="20"
+                            />
+                    </Border.Effect>
+                    <local:SoundWindow Width="200" Height="200" />
+                </Border>
+
+            </Canvas>
+
             <StackPanel Orientation="Horizontal">
                 <StackPanel.Resources>
                     <Style TargetType="{x:Type Button}">
@@ -209,7 +234,8 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-
+            
+            
             <Grid x:Name="card0" Grid.Row="1" Style="{StaticResource shrinkGrid}">
 
                 <Grid.RowDefinitions>
@@ -266,7 +292,7 @@
                     </Border.Style>
 
                 </Border>
-                <TextBlock Grid.Row="0" Text="Nome Mazzo" Style="{StaticResource Textblockbase}"/>
+                <TextBlock Grid.Row="0" Text="Testo" Style="{StaticResource Textblockbase}"/>
                 <Image Grid.Row="1"/>
                 <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard1" Command="{Binding BuyDeck[1]}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
             </Grid>
@@ -297,7 +323,7 @@
                     </Border.Style>
 
                 </Border>
-                <TextBlock Grid.Row="0" Text="Nome Mazzo" Style="{StaticResource Textblockbase}"/>
+                <TextBlock Grid.Row="0" Text="Testo" Style="{StaticResource Textblockbase}"/>
                 <Image Grid.Row="1"/>
                 <Button Grid.Row="2" Content="Compra!" x:Name="ButtonCard2" Command="{Binding BuyDeck[2]}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
             </Grid>

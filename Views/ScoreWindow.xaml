@@ -101,7 +101,7 @@
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
         <Border Grid.RowSpan="2" Grid.ColumnSpan="3" Style="{StaticResource shadowBorder}"/>
-        <TextBlock Grid.Column="1" Text="{Binding Punteggio, StringFormat='Punteggio Totale {0}'}" FontSize="50" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Text="{Binding Punteggio, StringFormat='Punteggio Totale {0}/10'}" FontSize="50" VerticalAlignment="Center"/>
         <Grid Grid.Row="2" Grid.Column="1" >
             <Grid.RowDefinitions>
                 <RowDefinition/>

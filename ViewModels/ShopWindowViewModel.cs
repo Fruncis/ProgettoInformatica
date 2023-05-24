@@ -101,7 +101,9 @@ namespace ProgettoInformatica.ViewModels
             }
             //FillIsDeckLoacked();
             this.Giocatore = giocatore;
-            mazzi.Add(new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml"));
+            mazzi.Add(new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml"));
+            /*mazzi.Add(new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-scienze.xml"));
+            mazzi.Add(new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-cinema.xml"));*/
             Giocatore.PropertyChanged += OnGiocatoreChanged;
         }
         public void OnGiocatoreChanged(object source, EventArgs args)

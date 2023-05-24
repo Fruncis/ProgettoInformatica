@@ -86,6 +86,15 @@
         </Grid.RowDefinitions>
 
         <Canvas Panel.ZIndex="3">
+            <Canvas.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Foreground" Value="#5D70D1"/>
+                    <Setter Property="FontFamily" Value="Roboto"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                </Style>
+            </Canvas.Resources>
             <Border Background="White" CornerRadius="20" Canvas.Left="1047" Canvas.Top="50" >
                 <Border.Effect>
                     <DropShadowEffect

@@ -44,7 +44,6 @@ C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\refint\ProgettoInformatica.dll
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ProgettoInformatica.pdb
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\options-icon.png
-C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\play.png
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\playFullBlack.png
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\shopping-cart.png
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\ProgettoInformatica.exe
@@ -63,7 +62,6 @@ C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ProgettoInformatica.csproj.CoreCompileInputs.cache
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ProgettoInformatica.genruntimeconfig.cache
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ref\ProgettoInformatica.dll
-C:\Users\francesco.santamaria\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\background.png
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Resources\SamuraiBlast.ttf
 C:\Users\francesco\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Resources\SamuraiBlast.ttf
 C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Resources\DiloWorld.ttf
@@ -80,7 +78,6 @@ C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\left-arrow.png
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\options-icon-white.png
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Resources\DiloWorld.ttf
-C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\ViewModels\SoundWindowViewModel.cs
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\SaveWindow.g.cs
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\SoundWindow.g.cs
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\SaveWindow.baml
@@ -96,3 +93,10 @@ C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Vie
 C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\Backgroundefinitivo.png
 C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\options-icon-blue.png
 C:\Users\francesco\source\repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\shopping-cart-blue.png
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\Backgroundefinitivo.png
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\options-icon-blue.png
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\playIcon.png
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\shopping-cart-blue.png
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\bin\Debug\net6.0-windows\Views\Img\sparkBack.png
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\UIBar.g.cs
+C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\UIBar.baml
