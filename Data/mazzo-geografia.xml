@@ -14,66 +14,12 @@
 	</Carta>
 	<Carta>
 		<Titolo>Capitali</Titolo>
-		<Quesito>Qual è la capitale della Germania?</Quesito>
-		<Risposte>Amburgo</Risposte>
-		<Risposte>Berlino</Risposte>
-		<Risposte>Monaco di Baviera</Risposte>
-		<Risposte>Francoforte</Risposte>
-		<RispostaCorretta>Berlino</RispostaCorretta>
-	</Carta>
-	<Carta>
-		<Titolo>Capitali</Titolo>
 		<Quesito>Qual è la capitale della Russia?</Quesito>
 		<Risposte>Moscova</Risposte>
 		<Risposte>San Pietroburgo</Risposte>
 		<Risposte>Novosibirsk</Risposte>
 		<Risposte>Ekaterinburg</Risposte>
 		<RispostaCorretta>Moscova</RispostaCorretta>
-	</Carta>
-	<Carta>
-		<Titolo>Capitali</Titolo>
-		<Quesito>Qual è la capitale del Brasile?</Quesito>
-		<Risposte>Rio de Janeiro</Risposte>
-		<Risposte>Brasilia</Risposte>
-		<Risposte>Sao Paulo</Risposte>
-		<Risposte>Salvador</Risposte>
-		<RispostaCorretta>Brasilia</RispostaCorretta>
-	</Carta>
-	<Carta>
-		<Titolo>Capitali</Titolo>
-		<Quesito>Qual è la capitale del Giappone?</Quesito>
-		<Risposte>Tokyo</Risposte>
-		<Risposte>Kyoto</Risposte>
-		<Risposte>Osaka</Risposte>
-		<Risposte>Hiroshima</Risposte>
-		<RispostaCorretta>Tokyo</RispostaCorretta>
-	</Carta>
-	<Carta>
-		<Titolo>Capitali</Titolo>
-		<Quesito>Qual è la capitale della Cina?</Quesito>
-		<Risposte>Shanghai</Risposte>
-		<Risposte>Pechino</Risposte>
-		<Risposte>Hong Kong</Risposte>
-		<Risposte>Chongqing</Risposte>
-		<RispostaCorretta>Pechino</RispostaCorretta>
-	</Carta>
-	<Carta>
-		<Titolo>Capitali</Titolo>
-		<Quesito>Qual è la capitale dell'Australia?</Quesito>
-		<Risposte>Sydney</Risposte>
-		<Risposte>Melbourne</Risposte>
-		<Risposte>Canberra</Risposte>
-		<Risposte>Brisbane</Risposte>
-		<RispostaCorretta>Canberra</RispostaCorretta>
-	</Carta>
-	<Carta>
-		<Titolo>Capitali</Titolo>
-		<Quesito>Qual è la capitale del Canada?</Quesito>
-		<Risposte>Toronto</Risposte>
-		<Risposte>Ottawa</Risposte>
-		<Risposte>Vancouver</Risposte>
-		<Risposte>Montreal</Risposte>
-		<RispostaCorretta>Ottawa</RispostaCorretta>
 	</Carta>
 	<Carta>
 		<Titolo>Capitali</Titolo>
@@ -113,24 +59,6 @@
 	</Carta>
 	<Carta>
 		<Titolo>Paesi</Titolo>
-		<Quesito>In quale paese si trova il Taj Mahal?</Quesito>
-		<Risposte>India</Risposte>
-		<Risposte>Thailandia</Risposte>
-		<Risposte>Cambogia</Risposte>
-		<Risposte>Nepal</Risposte>
-		<RispostaCorretta>India</RispostaCorretta>
-	</Carta>
-	<Carta>
-		<Titolo>Paesi</Titolo>
-		<Quesito>In quale paese si trova la Torre Eiffel?</Quesito>
-		<Risposte>Italia</Risposte>
-		<Risposte>Spagna</Risposte>
-		<Risposte>Francia</Risposte>
-		<Risposte>Germania</Risposte>
-		<RispostaCorretta>Francia</RispostaCorretta>
-	</Carta>
-	<Carta>
-		<Titolo>Paesi</Titolo>
 		<Quesito>In quale paese si trova il Colosseo?</Quesito>
 		<Risposte>Italia</Risposte>
 		<Risposte>Grecia</Risposte>
@@ -146,15 +74,6 @@
 		<Risposte>Perù</Risposte>
 		<Risposte>Cile</Risposte>
 		<RispostaCorretta>Perù</RispostaCorretta>
-	</Carta>
-	<Carta>
-		<Titolo>Paesi</Titolo>
-		<Quesito>In quale paese si trova la Grande Muraglia?</Quesito>
-		<Risposte>Cina</Risposte>
-		<Risposte>Giappone</Risposte>
-		<Risposte>Corea del Sud</Risposte>
-		<Risposte>Taiwan</Risposte>
-		<RispostaCorretta>Cina</RispostaCorretta>
 	</Carta>
 	<Carta>
 		<Titolo>Fiumi</Titolo>
@@ -173,14 +92,5 @@
 		<Risposte>Zambesi</Risposte>
 		<Risposte>Orange</Risposte>
 		<RispostaCorretta>Nilo</RispostaCorretta>
-	</Carta>
-	<Carta>
-		<Titolo>Fiumi</Titolo>
-		<Quesito>Qual è il fiume più lungo dell'America del Sud?</Quesito>
-		<Risposte>Amazzoni</Risposte>
-		<Risposte>Orinoco</Risposte>
-		<Risposte>Paraguay</Risposte>
-		<Risposte>Magdalena</Risposte>
-		<RispostaCorretta>Amazzoni</RispostaCorretta>
 	</Carta>
 </root>

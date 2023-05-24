@@ -49,7 +49,6 @@
         <Risposte>Decadimento radioattivo</Risposte>
         <RispostaCorretta>Fusione nucleare</RispostaCorretta>
     </Carta>
-    <!-- Domande di Biologia -->
     <Carta>
         <Titolo>Biologia</Titolo>
         <Quesito>Come si chiama il processo attraverso il quale le piante producono il proprio cibo?</Quesito>
@@ -95,8 +94,6 @@
         <Risposte>Molecole chimiche prodotte dalle ghiandole endocrine</Risposte>
         <RispostaCorretta>Molecole chimiche prodotte dalle ghiandole endocrine</RispostaCorretta>
     </Carta>
-
-    <!-- Domande di Chimica -->
     <Carta>
         <Titolo>Chimica</Titolo>
         <Quesito>Cosa rappresenta il numero atomico di un elemento?</Quesito>
