@@ -79,7 +79,26 @@ namespace ProgettoInformatica.ViewModels
                 OnPropertyChanged(nameof(Giocatore));
             }
         }
-        public string CheckBoxName { get; set; } = "CheckBox";
+
+        private bool _isVolumePressed;
+        public bool IsVolumePressed
+        {
+            get
+            {
+                return _isVolumePressed;
+            }
+            set
+            {
+                _isVolumePressed = value;
+                OnPropertyChanged(nameof(IsVolumePressed));
+                System.Diagnostics.Debug.WriteLine("pressed: " + IsVolumePressed);
+            }
+        }
+
+        public ICommand VolumePopUp
+        {
+            get { return new RelayCommand(VolumePopUpFunc, CanVolumePopUp); }
+        }
 
         public ShopWindowViewModel(NavigationStore navigationStore, Giocatore giocatore)
         {
@@ -107,6 +126,7 @@ namespace ProgettoInformatica.ViewModels
             mazzi.Add(new Mazzo(Resources.mazzo_storia));
             mazzi.Add(new Mazzo(Resources.mazzo_scienze));
             FillIsDeckLoacked();
+            //new VolumePopUpCommand<ShopWindowViewModel>(this);
             /*mazzi.Add(new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-scienze.xml"));
             mazzi.Add(new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-cinema.xml"));*/
             Giocatore.PropertyChanged += OnGiocatoreChanged;
@@ -114,6 +134,23 @@ namespace ProgettoInformatica.ViewModels
         public void OnGiocatoreChanged(object source, EventArgs args)
         {
             Giocatore = (Giocatore)source;
+        }
+
+        private bool CanVolumePopUp(object context)
+        {
+            return true;
+        }
+
+        private void VolumePopUpFunc(object context)
+        {
+            if (IsVolumePressed)
+            {
+                IsVolumePressed = false;
+            }
+            else
+            {
+                IsVolumePressed = true;
+            }
         }
 
         private void FillIsDeckLoacked()

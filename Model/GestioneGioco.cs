@@ -15,7 +15,9 @@ namespace ProgettoInformatica.Model
     {
         //private readonly Mazzo mazzo = new Mazzo("C:\\Users\\Simone\\Downloads\\ProgettoInformatica-main\\Data\\mazzo-geografia.xml");
         //private readonly Mazzo mazzo = new Mazzo("C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml");
-        private readonly Mazzo mazzo = new Mazzo(Resources.mazzo_geografia);
+        public List<Mazzo> mazzi = new List<Mazzo>();
+
+
         public List<Carta> mazzoCorrente { get; set; } //= new Mazzo("C:\\Users\\simone.bertolini\\source\\repos\\ProgettoInformatica\\Data\\mazzo-geografia.xml").Carte.ToList();
         
 
@@ -24,14 +26,20 @@ namespace ProgettoInformatica.Model
         //public event Action CartaCambiata;
         //public event PropertyChangedEventHandler? PropertyChanged;
 
-
+        private static int index = 0;
         /*public Carta CartaCorrente { get { return _cartaCorrente; } set { _cartaCorrente = value; CambioCartaCorrente(); } }*/
         public GestioneGioco( Giocatore giocatore)
         {
+            mazzi.Add(new Mazzo(Resources.mazzo_geografia));
+            mazzi.Add(new Mazzo(Resources.mazzo_scienze));
+            mazzi.Add(new Mazzo(Resources.mazzo_cinema));
+            mazzi.Add(new Mazzo(Resources.mazzo_storia));
+            mazzi.Add(new Mazzo(Resources.mazzo_sport));
+           
             //System.Diagnostics.Debug.WriteLine(Directory.GetCurrentDirectory() + "\\Data\\mazzo-geografia.xml");
             Giocatore = giocatore;
             Giocatore.PropertyChanged += OnGiocatoreChanged;
-            mazzoCorrente = mazzo.Carte.ToList();
+            mazzoCorrente = mazzi[index].Carte.ToList();
         }
 
         public void OnGiocatoreChanged(object source, EventArgs args)
@@ -46,6 +54,7 @@ namespace ProgettoInformatica.Model
 
         public Carta? PescaCarta()
         {
+            
             if (mazzoCorrente.Count > 0)
             {
                 Random random = new Random();
@@ -58,8 +67,16 @@ namespace ProgettoInformatica.Model
                 return tmp;
             }
             else
+            {
                 return null;
+            }
+                
 
+        }
+
+        public void resetGestioneGioco()
+        {
+            
         }
 
         public void ConvertPuntiEsperienzaGettoni(int punti)//Aggiustare la proporzione dei gettoni e dell'esperienza
@@ -68,35 +85,43 @@ namespace ProgettoInformatica.Model
             Giocatore.Esperienza += (int)Math.Round(punti * 1.2);
         }
 
-        public void SaliDiLivello(int esperienza)
+        public void SaliDiLivello()
         {
-            switch(esperienza) { 
+            switch(Giocatore.Esperienza) { 
                 case < 100:
                     Giocatore.Livello = 1;
                     break;
                 case < 250:
                     Giocatore.Livello = 2;
+                    Giocatore.MaxEsperienza = 250;
                     break;
                 case < 500:
                     Giocatore.Livello = 3;
+                    Giocatore.MaxEsperienza = 500;
                     break;
                 case < 800:
                     Giocatore.Livello = 4;
+                    Giocatore.MaxEsperienza = 800;
                     break;
                 case < 1100:
                     Giocatore.Livello = 5;
+                    Giocatore.MaxEsperienza = 1100;
                     break;
                 case < 1600:
                     Giocatore.Livello = 6;
+                    Giocatore.MaxEsperienza = 1600;
                     break;
                 case < 2200:
                     Giocatore.Livello = 7;
+                    Giocatore.MaxEsperienza = 2200;
                     break;
                 case < 3100:
                     Giocatore.Livello = 8;
+                    Giocatore.MaxEsperienza = 3100;
                     break;
                 case < 4200:
                     Giocatore.Livello = 9;
+                    Giocatore.MaxEsperienza = 4200;
                     break;
                 case < 5500:
                     Giocatore.Livello = 10;

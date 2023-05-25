@@ -3,6 +3,7 @@ using ProgettoInformatica.Model;
 using ProgettoInformatica.Store;
 using System;
 using System.Collections.Generic;
+using System.DirectoryServices;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -61,10 +62,37 @@ namespace ProgettoInformatica.ViewModels
         private int _punteggio;
         public int Punteggio { get { return _punteggio; } set { _punteggio = value; OnPropertyChanged(nameof(Punteggio)); } }
 
+        private bool _isVolumePressed;
+        public bool IsVolumePressed
+        {
+            get
+            {
+                return _isVolumePressed;
+            }
+            set
+            {
+                _isVolumePressed = value;
+                OnPropertyChanged(nameof(IsVolumePressed));
+                System.Diagnostics.Debug.WriteLine("pressed: " + IsVolumePressed);
+            }
+        }
+
         public Timer timer = new Timer();//Da spostare in Gestione Gioco
 
 
         public ICommand ChangeButtonColor { get; set; }
+
+
+        public ICommand VolumePopUp
+        {
+            get { return new RelayCommand(VolumePopUpFunc, CanVolumePopUp); }
+        }
+
+        public ICommand GameTerminatedCommand
+        {
+            get { return new RelayCommand(GameTerminatedFunc, CanGameTerminated); }
+        }
+
 
 
         public ICommand NavigateMenuCommand { get; }
@@ -80,7 +108,7 @@ namespace ProgettoInformatica.ViewModels
             GestioneGioco = new GestioneGioco(this.Giocatore);
             NavigateMenuCommand = new NavigateCommand<MenuWindowViewModel>(navigationStore, () => IstanziaViewModel<MenuWindowViewModel>.Istanzia(navigationStore, giocatore));
             CartaCorrente = GestioneGioco.PescaCarta();
-
+            //VolumePopUp = new VolumePopUpCommand(this.IsVolumePressed);
             ChangeButtonColor = new ChangeBackgroundCommand(this);
             timer.Interval = 500; // In milliseconds
             timer.AutoReset = false; // Stops it from repeating
@@ -94,6 +122,43 @@ namespace ProgettoInformatica.ViewModels
             Console.WriteLine("Hello, world!");
         }
 
+        private bool CanVolumePopUp(object context)
+        {
+            return true;
+        }
+
+        private void VolumePopUpFunc(object context)
+        {
+            if (IsVolumePressed)
+            {
+                IsVolumePressed = false;
+            }
+            else
+            {
+                IsVolumePressed = true;
+            }
+        }
+
+        private bool CanGameTerminated(object context)
+        {
+            return true;
+        }
+
+        private void GameTerminatedFunc(object context)
+        {
+            if (IsGameTerminated)
+            {
+                IsGameTerminated = false;
+            }
+            else
+            {
+                IsGameTerminated = true;
+            }
+        }
+
+
+
+
         public async void DelayedCodeExecution(int animationTime)
         {
             // Delay the execution by 2 seconds (2000 milliseconds)
@@ -102,20 +167,29 @@ namespace ProgettoInformatica.ViewModels
             
 
             await Task.Delay(TimeSpan.FromSeconds(animationTime));
-            
+            System.Diagnostics.Debug.WriteLine(CartaCorrente);
+            CartaCorrente = GestioneGioco.PescaCarta();
             if (CartaCorrente != null)
             {
+                IsAnswered = false;
+                return;
+            }
+            else//Quando Finisce il Livello
+            {
+                IsGameTerminated = true;
+                int tmp = Giocatore.Livello;
+                GestioneGioco.ConvertPuntiEsperienzaGettoni(Punteggio);
+                GestioneGioco.SaliDiLivello();
+                /*if(tmp < Giocatore.Livello)
+                {
+
+                }*/
                 CartaCorrente = GestioneGioco.PescaCarta();
+
                 IsAnswered = false;
             }
-            else
-            {
-                GestioneGioco.ConvertPuntiEsperienzaGettoni(Punteggio);
-                IsGameTerminated = true;
-
-
-            }
             
+
         }
         public void OnGiocatoreChanged(object source, EventArgs args)
         {

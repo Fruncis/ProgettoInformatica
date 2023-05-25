@@ -18,7 +18,6 @@ namespace ProgettoInformatica.Model
         public static T CurrentWindowViewModel { get; set; }
         public static T gameWindowViewModel { get; set; }
         public static T shopWindowViewModel { get; set; }
-
         public static T menuWindowViewModel { get; set; }
 
         public static T Istanzia(NavigationStore navigationStore,Giocatore giocatore)

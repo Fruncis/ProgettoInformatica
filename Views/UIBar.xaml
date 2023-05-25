@@ -36,14 +36,14 @@
         </Border>
 
         <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Border Grid.Column="2" Width="80" Height="25" Margin="0 0 15 0" >
+            <Border Grid.Column="2" Width="80" Height="25" Margin="0 0 45 0" >
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBlock  x:Name="coins" Text="{Binding Giocatore.Gettoni}"  />
                     <Image Source="./Img/coin.png" Height="15" Margin="5 0 0 0"/>
                 </StackPanel>
 
             </Border>
-            <Image Grid.Column="2" HorizontalAlignment="Right" Source=".\Img\options-icon-white.png" Margin="0 0 15 0" Height="40" />
+            
         </StackPanel>
     </Grid>
 </UserControl>

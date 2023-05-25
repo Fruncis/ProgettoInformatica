@@ -10,12 +10,31 @@ using System.Windows.Input;
 
 namespace ProgettoInformatica.ViewModels
 {
-
-    
     public class MenuWindowViewModel : ViewModelBase
     {
         public ICommand NavigateGameCommand { get; }
         public ICommand NavigateShopCommand { get; }
+
+
+        private bool _isVolumePressed;
+        public bool IsVolumePressed
+        {
+            get
+            {
+                return _isVolumePressed;
+            }
+            set
+            {
+                _isVolumePressed = value;
+                OnPropertyChanged(nameof(IsVolumePressed));
+                System.Diagnostics.Debug.WriteLine("pressed: " + IsVolumePressed);
+            }
+        }
+
+        public ICommand VolumePopUp
+        {
+            get { return new RelayCommand(VolumePopUpFunc, CanVolumePopUp); }
+        }
 
         //private readonly GameWindowViewModel _gameWindowViewModel = IstanziaViewModel.IstanzaGameViewModel;
         public string MyName { get; set; }
@@ -32,6 +51,24 @@ namespace ProgettoInformatica.ViewModels
         public void ClickExecute(object param)
         {
             System.Diagnostics.Debug.WriteLine($"Clicked: Button");
+        }
+
+
+        private bool CanVolumePopUp(object context)
+        {
+            return true;
+        }
+
+        private void VolumePopUpFunc(object context)
+        {
+            if (IsVolumePressed)
+            {
+                IsVolumePressed = false;
+            }
+            else
+            {
+                IsVolumePressed = true;
+            }
         }
     }
 }

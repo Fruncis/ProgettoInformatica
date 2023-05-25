@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:ProgettoInformatica.Views" xmlns:viewmodels="clr-namespace:ProgettoInformatica.ViewModels" 
              d:DataContext="{d:DesignInstance Type=viewmodels:GameWindowViewModel}"
              mc:Ignorable="d" 
-             d:DesignHeight="720" d:DesignWidth="1280">
+             d:DesignHeight="720" d:DesignWidth="1280" >
 
-    <Grid>
+    <Grid x:Name="BaseGrid">
         <Grid.Background>
             <LinearGradientBrush x:Name="Gradient" StartPoint="1,1" EndPoint="0,0">
                 <GradientStop x:Name="GradientStop1" Color="#3194F4" Offset="0.7"/>
@@ -33,8 +33,29 @@
             </EventTrigger>
         </Grid.Triggers>
         <Grid.Resources>
+            <Style TargetType="{x:Type Button}" x:Key="UIButtonStyle">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                                </ContentPresenter>
+                            </Border>
+
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+
+                        <Setter Property="ForceCursor" Value="True"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
             <Style TargetType="{x:Type Canvas}" x:Key="ScoreViewShowUp">
-                <Setter Property="Visibility" Value="Hidden"/>
+                <Setter Property="Visibility" Value="Collapsed"/>
                 <Style.Triggers>
                     <DataTrigger Binding="{Binding Path=IsGameTerminated}" Value="true">
                         <Setter Property="Visibility" Value="Visible"/>
@@ -54,7 +75,6 @@
                                         <LinearDoubleKeyFrame KeyTime="0:0:3" Value="200"/>
                                         <LinearDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
                                     </DoubleAnimationUsingKeyFrames>
-
                                 </Storyboard>
                             </BeginStoryboard>
                         </DataTrigger.EnterActions>
@@ -85,7 +105,24 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Canvas Panel.ZIndex="3">
+        <Canvas Style="{StaticResource RobotAnimation}" Panel.ZIndex="3">
+            <Canvas.RenderTransform>
+                <TranslateTransform X="0" Y="0"/>
+            </Canvas.RenderTransform>
+            <Grid Canvas.Left="-181" Canvas.Top="278" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="20"/>
+                </Grid.RowDefinitions>
+                <Rectangle Fill="White" Stroke="Transparent" RadiusX="8" RadiusY="10"/>
+                <Path Fill="White" Stretch="Fill" Stroke="Transparent" HorizontalAlignment="Left" Margin="8.3,-1.597,0,0" Width="25" Grid.Row="1" Data="M0,10.45381 L0,187.66699 100.791059,10.54395"/>
+                <Rectangle Fill="White" RadiusX="10" RadiusY="10" Margin="1"/>
+                <TextBlock Foreground="#5D70D1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="{Binding RispostaRobot}" TextWrapping="Wrap" Padding="5" />
+            </Grid>
+            <Image x:Name="robot" VerticalAlignment="Top"  Source="./Img/default-robot.png" Canvas.Left="-252" Height="110" Width="130" HorizontalAlignment="Center" Canvas.Top="332"/>
+        </Canvas>
+
+        <Canvas Panel.ZIndex="3" x:Name="volumePopUp">
             <Canvas.Resources>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Foreground" Value="#5D70D1"/>
@@ -93,6 +130,14 @@
                     <Setter Property="FontWeight" Value="Bold"/>
                     <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="HorizontalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="{x:Type Canvas}">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsVolumePressed}" Value="true">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
                 </Style>
             </Canvas.Resources>
             <Border Background="White" CornerRadius="20" Canvas.Left="1047" Canvas.Top="50" >
@@ -106,33 +151,22 @@
                 </Border.Effect>
                 <local:SoundWindow Width="200" Height="200" />
             </Border>
-            
+
         </Canvas>
 
         <Canvas x:Name="ScoreView" Grid.RowSpan="1" Panel.ZIndex="100" VerticalAlignment="Center" Style="{StaticResource ScoreViewShowUp}">
-            <local:ScoreWindow Width="900" Height="500"  Canvas.Left="190" Canvas.Top="-21" />
+            <Border BorderBrush="LightGray" Width="1280" Height="720" BorderThickness="1" HorizontalAlignment="Center" Canvas.Top="-122" VerticalAlignment="Top" ClipToBounds="True" Background="Black" Opacity="0.1"/>
+            <Button x:Name="myButton" Background="Transparent" Width="1280" Height="720" HorizontalAlignment="Center" Canvas.Top="-122" VerticalAlignment="Top"  Style="{StaticResource UIButtonStyle}" ClipToBounds="True" Command="{Binding GameTerminatedCommand}">
+                
+                <local:ScoreWindow Width="900" Height="500"/>
+
+            </Button>
         </Canvas>
 
-        <Canvas Grid.Row="1" Style="{StaticResource RobotAnimation}" Panel.ZIndex="3">
-            <Canvas.RenderTransform>
-                <TranslateTransform X="0" Y="0"/>
-            </Canvas.RenderTransform>
-            <Grid Canvas.Left="-181" Canvas.Top="78" >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="20"/>
-                </Grid.RowDefinitions>
-                <Rectangle Fill="White" Stroke="Transparent" RadiusX="8" RadiusY="10"/>
-                <Path Fill="White" Stretch="Fill" Stroke="Transparent" HorizontalAlignment="Left" Margin="8.3,-1.597,0,0" Width="25" Grid.Row="1" Data="M0,10.45381 L0,187.66699 100.791059,10.54395"/>
-                <Rectangle Fill="White" RadiusX="10" RadiusY="10" Margin="1"/>
-                <TextBlock Foreground="#5D70D1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="{Binding RispostaRobot}" TextWrapping="Wrap" Padding="5" />
-            </Grid>
-            <Image x:Name="robot" VerticalAlignment="Top"  Source="./Img/default-robot.png" Canvas.Left="-252" Height="110" Width="130" HorizontalAlignment="Left" Canvas.Top="132"/>
-        </Canvas>
+
 
 
         <Grid>
-
             <Grid.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -158,36 +192,16 @@
             </Grid.ColumnDefinitions>
             <TextBlock FontSize="30" Foreground="white" Grid.Column="1" Text="0:0:40"/>
             <StackPanel Orientation="Horizontal">
-                <StackPanel.Resources>
-                    <Style TargetType="{x:Type Button}">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Border Background="{TemplateBinding Background}">
-                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
-
-                                        </ContentPresenter>
-                                    </Border>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                
-                                <Setter Property="ForceCursor" Value="True"/>
-                                <Setter Property="Cursor" Value="Hand"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </StackPanel.Resources>
-                <Button Background="Transparent" Command="{Binding NavigateMenuCommand}"  BorderThickness="0">
+                <Button Background="Transparent" Command="{Binding NavigateMenuCommand}"  BorderThickness="0" Style="{StaticResource UIButtonStyle}">
 
                     <Image Source="./Img/left-arrow.png" Margin="0 5"/>
                 </Button>
                 <TextBlock Text="Quiz" VerticalAlignment="Center" FontSize="25" Foreground="White" FontFamily="Dilo World"/>
             </StackPanel>
             <local:UIBar Grid.Column="1" Grid.ColumnSpan="2"/>
-
+            <Button Grid.Column="2" Background="Transparent" Margin="60 0 0 0" Style="{StaticResource UIButtonStyle}" Command="{Binding VolumePopUp}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <Image  HorizontalAlignment="Right" Source=".\Img\options-icon-white.png"  Height="40" />
+            </Button>
         </Grid>
 
         <!--<Border HorizontalAlignment="Center" Padding="100,0"  CornerRadius="50" Grid.Row="1" >-->
@@ -248,7 +262,7 @@
                     </Style.Resources>
 
                     <Style.Triggers>
-                        
+
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="ForceCursor" Value="True"/>
                             <Setter Property="Cursor" Value="Hand"/>

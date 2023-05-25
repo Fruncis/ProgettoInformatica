@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProgettoInformatica.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -102,9 +103,10 @@ namespace ProgettoInformatica.Model
         public Giocatore()
         {
             MazziPosseduti = new List<Mazzo>();
+            MazziPosseduti.Add(new Mazzo(Resources.mazzo_geografia));
             MaxEsperienza = 100;
             Livello = 1;
-            Esperienza = 0;
+            Esperienza = 99;
             Gettoni = 0;
         }
 

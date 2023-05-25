@@ -111,6 +111,25 @@
                     <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="HorizontalAlignment" Value="Center"/>
                 </Style>
+                <Style TargetType="{x:Type Button}" x:Key="UIButtonStyle">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                                    </ContentPresenter>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="ForceCursor" Value="True"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
             </Grid.Resources>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
@@ -131,6 +150,15 @@
                         <Setter Property="VerticalAlignment" Value="Center"/>
                         <Setter Property="HorizontalAlignment" Value="Center"/>
                     </Style>
+                    
+                    <Style TargetType="{x:Type Canvas}">
+                        <Setter Property="Visibility" Value="Hidden"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsVolumePressed}" Value="true">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
                 </Canvas.Resources>
                 <Border Background="White" CornerRadius="20" Canvas.Left="1047" Canvas.Top="50" >
                     <Border.Effect>
@@ -148,32 +176,17 @@
 
             <StackPanel Orientation="Horizontal">
                 <StackPanel.Resources>
-                    <Style TargetType="{x:Type Button}">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Border Background="{TemplateBinding Background}">
-                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
-
-                                        </ContentPresenter>
-                                    </Border>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="ForceCursor" Value="True"/>
-                                <Setter Property="Cursor" Value="Hand"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
+                    
                 </StackPanel.Resources>
-                <Button Background="Transparent" Command="{Binding NavigateMenuCommand}"  BorderThickness="0">
+                <Button Background="Transparent" Command="{Binding NavigateMenuCommand}"  BorderThickness="0" Style="{StaticResource UIButtonStyle}">
                     <Image Source="./Img/left-arrow.png" Margin="0 5"/>
                 </Button>
                 <TextBlock Text="Shop" VerticalAlignment="Center" FontSize="25" Foreground="White" FontFamily="Dilo World"/>
             </StackPanel>
             <local:UIBar Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Button Grid.Column="2" Background="Transparent" Margin="60 0 0 0" Style="{StaticResource UIButtonStyle}" Command="{Binding VolumePopUp}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" >
+                <Image  HorizontalAlignment="Right" Source=".\Img\options-icon-white.png"  Height="40" />
+            </Button>
         </Grid>
         <Grid Grid.Row="2" Grid.Column="1"  ClipToBounds="False" Grid.ColumnSpan="2">
             <Grid.Resources>
