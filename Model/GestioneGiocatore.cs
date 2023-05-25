@@ -8,9 +8,11 @@ using System.Xml;
 
 namespace ProgettoInformatica.Model
 {
-    class GestioneGiocatore
+    public class GestioneGiocatore
     {
         private Giocatore Giocatore;
+
+        private XmlDocument doc = new XmlDocument();
         public GestioneGiocatore(Giocatore giocatore)
         {
             Giocatore = giocatore;
@@ -20,28 +22,30 @@ namespace ProgettoInformatica.Model
         {
             Giocatore = (Giocatore)source;
         }
-        public void Salva(int livello, int esperienza, List<Mazzo> mazziPosseduti, int gettoni)
+        public void Salva()
         {
             string formattazione = "<giocatore>" +
-                "<livello>" + livello + "</livello>" +
-                "<esperienza>" + esperienza + "</esperienza>" +
+                "<livello>" + Giocatore.Livello + "</livello>" +
+                "<esperienza>" + Giocatore.Esperienza + "</esperienza>" +
                 "<mazzi-posseduti>";
 
-            for (int i = 0; i < mazziPosseduti.Count; i++)
+            for (int i = 0; i < Giocatore.MazziPosseduti.Count; i++)
             {
-                formattazione += "<mazzo>" + mazziPosseduti[i].TipoMazzo + "</mazzo>";
+                formattazione += "<mazzo>" + Giocatore.MazziPosseduti[i].TipoMazzo + "</mazzo>";
             }
 
             formattazione += "<mazzi-posseduti>" +
-                "<gettoni>" + gettoni + "</gettoni>" +
+                "<gettoni>" + Giocatore.Gettoni + "</gettoni>" +
                 "</giocatore>";
 
             File.WriteAllText("saves.xml", formattazione);
         }
 
-        public void CaricaSalvataggio(int giocatore)
+        public void CaricaSalvataggio()
         {
-            XmlDocument doc = new XmlDocument();
+            
+
+            int giocatore = 1;
             doc.Load("saves.xml");
 
             this.Giocatore.Livello = int.Parse(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/livello").InnerText);
@@ -55,6 +59,17 @@ namespace ProgettoInformatica.Model
             this.Giocatore.Gettoni = int.Parse(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/gettoni").InnerText);
         }
         
+        public bool isXMLEmpty()
+        {
+            doc.Load("saves.xml");
+            if (doc.GetElementById("root") == null || doc.GetElementById("root").HasChildNodes)
+            {
+                // The XML file is empty
+                return true;
+            }
+            return false;
+        }
+
         private string TypeToPath(string tipoMazzo)
         {
             string path;

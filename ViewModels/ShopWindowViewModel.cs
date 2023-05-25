@@ -55,7 +55,7 @@ namespace ProgettoInformatica.ViewModels
         {
             DateTime currentDateTime = DateTime.Now;
 
-            string text = File.ReadAllText("C:\\Users\\Simone\\Downloads\\ProgettoInformatica-main\\Data\\change-shop.txt");
+            string text = File.ReadAllText("C:\\Users\\Simone\\Downloads\\ProgettoInformatica-main\\Data\\change-shop.txt");//da caricare nel resource 00/00/0000 00:00:00
 
 
             ;
@@ -74,6 +74,20 @@ namespace ProgettoInformatica.ViewModels
             if (result >= 0)
             {
                 //aggiungi carte allo shop
+            }
+        }
+
+        private bool _isAnyDeckPurchased;
+        public bool IsAnyDeckPurchased
+        {
+            get
+            {
+                return _isAnyDeckPurchased;
+            }
+            set
+            {
+                _isAnyDeckPurchased = value;
+                OnPropertyChanged(nameof(IsAnyDeckPurchased));
             }
         }
 

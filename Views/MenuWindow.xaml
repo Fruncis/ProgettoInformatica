@@ -47,6 +47,8 @@
         </Style>
     </UserControl.Resources>
 
+    
+
     <Border Background="#0C6EC4">
         <Grid>
             <Grid.RowDefinitions>
@@ -75,7 +77,10 @@
                     </BeginStoryboard>
                 </EventTrigger>
             </Grid.Triggers>
-             
+            <Canvas Panel.ZIndex="100"  Grid.ColumnSpan="3" Grid.RowSpan="2">
+                <Border BorderBrush="LightGray" Width="1280" Height="720" BorderThickness="1" HorizontalAlignment="Center"  VerticalAlignment="Top" ClipToBounds="True" Background="Black" Opacity="0.15"/>
+                <local:SaveWindow Width="1280" Height="720"/>
+            </Canvas>
             <Canvas>
                 <Canvas.Resources>
                     <Style TargetType="{x:Type TextBlock}">

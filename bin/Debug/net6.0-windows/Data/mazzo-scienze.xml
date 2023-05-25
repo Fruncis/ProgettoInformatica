@@ -14,13 +14,13 @@
 		<RispostaCorretta>L'ombra della Luna che cade sulla Terra</RispostaCorretta>
 	</Carta>
 	<Carta>
-		<Titolo>Astronomia</Titolo>
-		<Quesito>Cosa sono le stelle cadenti?</Quesito>
-		<Risposte>Pezzetti di comete che bruciano nell'atmosfera</Risposte>
-		<Risposte>Satelliti artificiali che si disintegrano</Risposte>
-		<Risposte>Debris spaziali che rientrano nell'atmosfera</Risposte>
-		<Risposte>Esperimenti scientifici che vengono rilasciati nello spazio</Risposte>
-		<RispostaCorretta>Pezzetti di comete che bruciano nell'atmosfera</RispostaCorretta>
+		<Titolo>Chimica</Titolo>
+		<Quesito>Cosa indica il numero di ossidazione di un elemento in un composto chimico?</Quesito>
+		<Risposte>La sua massa atomica</Risposte>
+		<Risposte>La sua carica elettrica</Risposte>
+		<Risposte>Il suo stato di aggregazione</Risposte>
+		<Risposte>La sua reattività chimica</Risposte>
+		<RispostaCorretta>La sua carica elettrica</RispostaCorretta>
 	</Carta>
 	<Carta>
 		<Titolo>Astronomia</Titolo>
@@ -76,24 +76,24 @@
         <Risposte>Rene</Risposte>
         <RispostaCorretta>Cuore</RispostaCorretta>
     </Carta>
-    <Carta>
-        <Titolo>Biologia</Titolo>
-        <Quesito>Cosa sono gli enzimi?</Quesito>
-        <Risposte>Proteine che accelerano le reazioni chimiche nel corpo</Risposte>
-        <Risposte>Lipidi che facilitano il trasporto delle sostanze nel corpo</Risposte>
-        <Risposte>Acidi nucleici che immagazzinano le informazioni genetiche</Risposte>
-        <Risposte>Carboidrati che forniscono energia al corpo</Risposte>
-        <RispostaCorretta>Proteine che accelerano le reazioni chimiche nel corpo</RispostaCorretta>
-    </Carta>
-    <Carta>
-        <Titolo>Biologia</Titolo>
-        <Quesito>Cosa sono gli ormoni?</Quesito>
-        <Risposte>Sostanze chimiche prodotte dal sistema immunitario</Risposte>
-        <Risposte>Neurotrasmettitori responsabili della comunicazione neuronale</Risposte>
-        <Risposte>Proteine che regolano le funzioni cellulari</Risposte>
-        <Risposte>Molecole chimiche prodotte dalle ghiandole endocrine</Risposte>
-        <RispostaCorretta>Molecole chimiche prodotte dalle ghiandole endocrine</RispostaCorretta>
-    </Carta>
+	<Carta>
+		<Titolo>Chimica</Titolo>
+		<Quesito>Cosa indica il numero di ossidazione di un elemento in un composto chimico?</Quesito>
+		<Risposte>La sua massa atomica</Risposte>
+		<Risposte>La sua carica elettrica</Risposte>
+		<Risposte>Il suo stato di aggregazione</Risposte>
+		<Risposte>La sua reattività chimica</Risposte>
+		<RispostaCorretta>La sua carica elettrica</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Chimica</Titolo>
+		<Quesito>Cosa rappresenta il pH di una soluzione?</Quesito>
+		<Risposte>La concentrazione di ioni idrogeno (H+)</Risposte>
+		<Risposte>La concentrazione di ioni idrossido (OH-)</Risposte>
+		<Risposte>La concentrazione di ioni sodio (Na+)</Risposte>
+		<Risposte>La concentrazione di ioni cloruro (Cl-)</Risposte>
+		<RispostaCorretta>La concentrazione di ioni idrogeno (H+)</RispostaCorretta>
+	</Carta>
 	<!--<Carta>
         <Titolo>Chimica</Titolo>
         <Quesito>Cosa rappresenta il numero atomico di un elemento?</Quesito>

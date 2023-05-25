@@ -3,25 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ProgettoInformatica.Views" xmlns:viewmodels="clr-namespace:ProgettoInformatica.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:GameWindowViewModel}"
+             xmlns:local="clr-namespace:ProgettoInformatica.Views" xmlns:viewmodels="clr-namespace:ProgettoInformatica.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:MenuWindowViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <!--button background#5875d1 #6579e2-->
+    <!--Aggiustare animazioni d'ingrandimento-->
     <Grid>
         
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="500">
             <StackPanel.Resources>
-                <Style TargetType="{x:Type TextBlock}" x:Key="buttonStyle">
+                <Style TargetType="{x:Type TextBlock}" >
                     <Setter Property="Foreground" Value="white"/>
                     <Setter Property="FontFamily" Value="Times New Roman"/>
                     <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="FontSize" Value="15"/>
                 </Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="#5875d1"/>
                     <Setter Property="BorderThickness" Value="0"/>
-                    <Setter Property="Margin" Value="0 20 0 0"/>
+                    <Setter Property="Margin" Value="0 25 0 0"/>
                     <Setter Property="Height" Value="80"/>
-                    
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect
+                                  ShadowDepth="0"
+                                  Color="Gray"
+                                  Opacity=".6"
+                                 BlurRadius="10"/>
+                        </Setter.Value>
+                    </Setter>
                     <Setter Property="Template" >
                         <Setter.Value>
                             <ControlTemplate TargetType="Button">
@@ -69,38 +79,41 @@
                 </Style>
             </StackPanel.Resources>
             
-            <Border Background="#6579e2" CornerRadius="15" Height="75" Margin="40 0">
-                <TextBlock Text="Seleziona il tuo salvataggio" HorizontalAlignment="Center" Foreground="white" VerticalAlignment="Center"/>
+            <Border Background="#6579e2" CornerRadius="15" Height="75" Margin="40 15">
+                <TextBlock Text="Seleziona il tuo salvataggio" HorizontalAlignment="Center" Foreground="white" VerticalAlignment="Center" FontWeight="DemiBold" FontFamily="Segoe UI"/>
             </Border>
-            <Button FontFamily="Times New Roman">
-                <StackPanel Orientation="Horizontal" >
-                    <StackPanel.Resources>
-                        <Style TargetType="{x:Type TextBlock}">
-                            <Setter Property="Foreground" Value="white"/>
-                            <Setter Property="Margin" Value="50 0"/>
-                        </Style>
-                    </StackPanel.Resources>
+            <Button FontFamily="Times New Roman" Command="{Binding LoadSave}">
+                <StackPanel Orientation="Horizontal">
+                    
                     <!--<TextBlock Text="{Binding Giocatore.Livello}" />
                     <TextBlock Text="{Binding Giocatore.Esperienza}" />
                     <TextBlock Text="{Binding Giocatore.Gettoni}" />-->
-                    <TextBlock Text="cacca" />
-                    <TextBlock Text="pupu" />
-                    <TextBlock Text="ciccia" />
+                    <TextBlock Text="Continua da dove avevi lasciato"/>
                 </StackPanel>
             </Button>
-            <Button>
-                <TextBlock Text="Ricomincia daccapo" Style="{StaticResource buttonStyle}"/>
+            <Button Command="{Binding ButtonSaveCommand}">
+                <TextBlock Text="Ricomincia daccapo"/>
             </Button>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button>
-                    <TextBlock Text="No" Style="{StaticResource buttonStyle}"/>
+                <Grid.Resources>
+                    <Style TargetType="{x:Type Grid}">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsLoadSavePressed}" Value="true">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Resources>
+                <Button Width="150" Command="{Binding ButtonSaveCommand}">
+                    <TextBlock Text="No" />
                 </Button>
-                <Button Grid.Column="1">
-                    <TextBlock Text="Si" Style="{StaticResource buttonStyle}"/>
+                <Button Grid.Column="1" Command="{Binding NewSave}" Width="150">
+                    <TextBlock Text="Si" />
                 </Button>
             </Grid>
         </StackPanel>

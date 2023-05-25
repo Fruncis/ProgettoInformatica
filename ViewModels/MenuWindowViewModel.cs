@@ -12,8 +12,40 @@ namespace ProgettoInformatica.ViewModels
 {
     public class MenuWindowViewModel : ViewModelBase
     {
+
+        private Giocatore _giocatore;
+        public Giocatore Giocatore
+        {
+            get
+            {
+                return _giocatore;
+            }
+            set
+            {
+                _giocatore = value;
+                OnPropertyChanged(nameof(Giocatore));
+            }
+        }
+        private GestioneGiocatore GestioneGiocatore { get; set; }
         public ICommand NavigateGameCommand { get; }
         public ICommand NavigateShopCommand { get; }
+
+        public ICommand ButtonSaveCommand { get; }
+
+
+        private bool _isLoadSavePressed;
+        public bool IsLoadSavePressed
+        {
+            get
+            {
+                return _isLoadSavePressed;
+            }
+            set
+            {
+                _isLoadSavePressed = value;
+                OnPropertyChanged(nameof(IsLoadSavePressed));
+            }
+        }
 
 
         private bool _isVolumePressed;
@@ -31,6 +63,16 @@ namespace ProgettoInformatica.ViewModels
             }
         }
 
+        public ICommand NewSave
+        {
+            get { return new RelayCommand(NewSaveFunc, CanVolumePopUp); }
+        }
+
+        public ICommand LoadSave
+        {
+            get { return new RelayCommand(LoadSaveFunc, CanVolumePopUp); }
+        }
+
         public ICommand VolumePopUp
         {
             get { return new RelayCommand(VolumePopUpFunc, CanVolumePopUp); }
@@ -42,6 +84,9 @@ namespace ProgettoInformatica.ViewModels
         public RelayCommand ClickCommandEvent { get; set; }
         public MenuWindowViewModel(NavigationStore navigationStore, Giocatore giocatore)
         {
+            Giocatore = giocatore;
+            GestioneGiocatore = new GestioneGiocatore(Giocatore);
+            ButtonSaveCommand = new ButtonSaveCommand(this);
             NavigateGameCommand = new NavigateCommand<GameWindowViewModel>(navigationStore, () => IstanziaViewModel<GameWindowViewModel>.Istanzia(navigationStore, giocatore));
             NavigateShopCommand = new NavigateCommand<ShopWindowViewModel>(navigationStore, () => IstanziaViewModel<ShopWindowViewModel>.Istanzia(navigationStore, giocatore));
             MyName = "Menu";
@@ -53,6 +98,15 @@ namespace ProgettoInformatica.ViewModels
             System.Diagnostics.Debug.WriteLine($"Clicked: Button");
         }
 
+        private void NewSaveFunc(object context)
+        {
+            GestioneGiocatore.Salva();
+        }
+
+        private void LoadSaveFunc(object context)
+        {
+            GestioneGiocatore.CaricaSalvataggio();
+        }
 
         private bool CanVolumePopUp(object context)
         {
