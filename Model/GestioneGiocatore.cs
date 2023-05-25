@@ -64,8 +64,17 @@ namespace ProgettoInformatica.Model
                 case "Geografia":
                     path = "mazzo-geografia.xml";
                     break;
+                case "Scienze":
+                    path = "mazzo-scienze.xml";
+                    break;
                 case "Storia":
                     path = "mazzo-storia.xml";
+                    break;
+                case "Sport":
+                    path = "mazzo-sport.xml";
+                    break;
+                case "Cinema":
+                    path = "mazzo-cinema.xml";
                     break;
                 default:
                     path = null;

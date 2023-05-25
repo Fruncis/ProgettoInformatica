@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Carte>
+	<TipoMazzo>Religione</TipoMazzo>
+	<Immagine></Immagine>
+	<Livello>8</Livello>
+	<!-- Principali religioni del mondo -->
+	<Carta>
+		<Titolo>Principali religioni del mondo</Titolo>
+		<Quesito>Qual è la religione con il maggior numero di fedeli nel mondo?</Quesito>
+		<Risposte>Cristianesimo</Risposte>
+		<Risposte>Islam</Risposte>
+		<Risposte>Ebraismo</Risposte>
+		<Risposte>Induismo</Risposte>
+		<RispostaCorretta>Cristianesimo</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Principali religioni del mondo</Titolo>
+		<Quesito>Qual è la religione più diffusa in India?</Quesito>
+		<Risposte>Induismo</Risposte>
+		<Risposte>Cristianesimo</Risposte>
+		<Risposte>Buddhismo</Risposte>
+		<Risposte>Islam</Risposte>
+		<RispostaCorretta>Induismo</RispostaCorretta>
+	</Carta>
+	<!-- Simboli religiosi -->
+	<Carta>
+		<Titolo>Simboli religiosi</Titolo>
+		<Quesito>Quale animale è considerato sacro nel buddhismo?</Quesito>
+		<Risposte>Elefante</Risposte>
+		<Risposte>Tigre</Risposte>
+		<Risposte>Leone</Risposte>
+		<Risposte>Drago</Risposte>
+		<RispostaCorretta>Elefante</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Simboli religiosi</Titolo>
+		<Quesito>Che fiore è associato alla dea Shiva nell'induismo?</Quesito>
+		<Risposte>Loto</Risposte>
+		<Risposte>Rosa</Risposte>
+		<Risposte>Girasole</Risposte>
+		<Risposte>Orchidea</Risposte>
+		<RispostaCorretta>Loto</RispostaCorretta>
+	</Carta>
+	<!-- Credenze e pratiche -->
+	<Carta>
+		<Titolo>Credenze e pratiche</Titolo>
+		<Quesito>Come si chiama il testo sacro dell'islam?</Quesito>
+		<Risposte>Corano</Risposte>
+		<Risposte>Bibbia</Risposte>
+		<Risposte>Vedas</Risposte>
+		<Risposte>Sutra</Risposte>
+		<RispostaCorretta>Corano</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Credenze e pratiche</Titolo>
+		<Quesito>Qual è la pratica religiosa principale nel giudaismo?</Quesito>
+		<Risposte>Preghiera</Risposte>
+		<Risposte>Digiuno</Risposte>
+		<Risposte>Celebrazione del sabato</Risposte>
+		<Risposte>Pellegrinaggio</Risposte>
+		<RispostaCorretta>Celebrazione del sabato</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Principali religioni del mondo</Titolo>
+		<Quesito>Qual è la religione principale in Giappone?</Quesito>
+		<Risposte>Shintoismo</Risposte>
+		<Risposte>Cristianesimo</Risposte>
+		<Risposte>Buddhismo</Risposte>
+		<Risposte>Ebraismo</Risposte>
+		<RispostaCorretta>Shintoismo</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Principali religioni del mondo</Titolo>
+		<Quesito>Qual è il libro sacro dell'ebraismo?</Quesito>
+		<Risposte>Talmud</Risposte>
+		<Risposte>Corano</Risposte>
+		<Risposte>Bibbia</Risposte>
+		<Risposte>Baghavad Gita</Risposte>
+		<RispostaCorretta>Talmud</RispostaCorretta>
+	</Carta>
+	<!-- Simboli religiosi -->
+	<Carta>
+		<Titolo>Simboli religiosi</Titolo>
+		<Quesito>Che animale è considerato sacro nel giainismo?</Quesito>
+		<Risposte>Mucca</Risposte>
+		<Risposte>Elefante</Risposte>
+		<Risposte>Leone</Risposte>
+		<Risposte>Maiale</Risposte>
+		<RispostaCorretta>Mucca</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Simboli religiosi</Titolo>
+		<Quesito>Qual è il simbolo principale dell'islam?</Quesito>
+		<Risposte>Luna e stella</Risposte>
+		<Risposte>Croce</Risposte>
+		<Risposte>Yin e Yang</Risposte>
+		<Risposte>Om</Risposte>
+		<RispostaCorretta>Luna e stella</RispostaCorretta>
+	</Carta>
+</Carte>

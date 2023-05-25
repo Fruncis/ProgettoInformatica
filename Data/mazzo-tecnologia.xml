@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Carte>
+	<TipoMazzo>Tecnologia</TipoMazzo>
+	<Immagine></Immagine>
+	<Livello>9</Livello>
+	<Carta>
+		<Titolo>Internet</Titolo>
+		<Quesito>Cosa significa l'acronimo "www"?</Quesito>
+		<Risposte>World Wide Web</Risposte>
+		<Risposte>Web Wide World</Risposte>
+		<Risposte>Wide World Web</Risposte>
+		<Risposte>World Web Wide</Risposte>
+		<RispostaCorretta>World Wide Web</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Internet</Titolo>
+		<Quesito>Che cosa rappresenta il protocollo HTTP?</Quesito>
+		<Risposte>HyperText Transfer Protocol</Risposte>
+		<Risposte>Home Transfer Protocol</Risposte>
+		<Risposte>High Transfer Protocol</Risposte>
+		<Risposte>Hyper Transfer Protocol</Risposte>
+		<RispostaCorretta>HyperText Transfer Protocol</RispostaCorretta>
+	</Carta>
+	<!-- Computer -->
+	<Carta>
+		<Titolo>Computer</Titolo>
+		<Quesito>Cosa significa CPU?</Quesito>
+		<Risposte>Central Processing Unit</Risposte>
+		<Risposte>Computer Processing Unit</Risposte>
+		<Risposte>Control Processing Unit</Risposte>
+		<Risposte>Central Power Unit</Risposte>
+		<RispostaCorretta>Central Processing Unit</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Computer</Titolo>
+		<Quesito>Come si chiama la memoria volatile utilizzata per l'esecuzione dei programmi?</Quesito>
+		<Risposte>RAM</Risposte>
+		<Risposte>ROM</Risposte>
+		<Risposte>HDD</Risposte>
+		<Risposte>SSD</Risposte>
+		<RispostaCorretta>RAM</RispostaCorretta>
+	</Carta>
+	<!-- Smartphone -->
+	<Carta>
+		<Titolo>Smartphone</Titolo>
+		<Quesito>Che azienda ha introdotto il primo iPhone?</Quesito>
+		<Risposte>Apple</Risposte>
+		<Risposte>Samsung</Risposte>
+		<Risposte>Google</Risposte>
+		<Risposte>Microsoft</Risposte>
+		<RispostaCorretta>Apple</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Smartphone</Titolo>
+		<Quesito>Quale sistema operativo è utilizzato dai telefoni Pixel di Google?</Quesito>
+		<Risposte>Android</Risposte>
+		<Risposte>iOS</Risposte>
+		<Risposte>Windows Phone</Risposte>
+		<Risposte>BlackBerry OS</Risposte>
+		<RispostaCorretta>Android</RispostaCorretta>
+	</Carta>
+	<!-- Innovazioni tecnologiche recenti -->
+	<Carta>
+		<Titolo>Innovazioni tecnologiche recenti</Titolo>
+		<Quesito>Che tecnologia wireless consente la trasmissione dati a breve distanza?</Quesito>
+		<Risposte>Bluetooth</Risposte>
+		<Risposte>Wi-Fi</Risposte>
+		<Risposte>GPS</Risposte>
+		<Risposte>NFC</Risposte>
+		<RispostaCorretta>Bluetooth</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Innovazioni tecnologiche recenti</Titolo>
+		<Quesito>Cosa rappresenta l'acronimo "AI" nel campo della tecnologia?</Quesito>
+		<Risposte>Artificial Intelligence</Risposte>
+		<Risposte>Augmented Intelligence</Risposte>
+		<Risposte>Automated Intelligence</Risposte>
+		<Risposte>Advanced Intelligence</Risposte>
+		<RispostaCorretta>Artificial Intelligence</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Internet</Titolo>
+		<Quesito>Chi è considerato il "padre" di Internet?</Quesito>
+		<Risposte>Vinton Cerf</Risposte>
+		<Risposte>Tim Berners-Lee</Risposte>
+		<Risposte>Al Gore</Risposte>
+		<Risposte>Steve Jobs</Risposte>
+		<RispostaCorretta>Vinton Cerf</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Internet</Titolo>
+		<Quesito>Cosa rappresenta l'acronimo "HTML"?</Quesito>
+		<Risposte>HyperText Markup Language</Risposte>
+		<Risposte>Home Tool Markup Language</Risposte>
+		<Risposte>High Tech Markup Language</Risposte>
+		<Risposte>Hyperlink Text Markup Language</Risposte>
+		<RispostaCorretta>HyperText Markup Language</RispostaCorretta>
+	</Carta>
+</Carte>

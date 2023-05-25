@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Carte>
+	<TipoMazzo>Musica</TipoMazzo>
+	<Immagine></Immagine>
+	<Livello>7</Livello>
+	<Carta>
+		<Titolo>Generi musicali</Titolo>
+		<Quesito>Quale genere musicale è caratterizzato dal sound dei sintetizzatori e delle drum machine?</Quesito>
+		<Risposte>Rock</Risposte>
+		<Risposte>Country</Risposte>
+		<Risposte>Reggae</Risposte>
+		<Risposte>Electronic Dance Music (EDM)</Risposte>
+		<RispostaCorretta>Electronic Dance Music (EDM)</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Generi musicali</Titolo>
+		<Quesito>In quale genere musicale si ispira il film "Grease" del 1978?</Quesito>
+		<Risposte>Jazz</Risposte>
+		<Risposte>Rock</Risposte>
+		<Risposte>Disco</Risposte>
+		<Risposte>Country</Risposte>
+		<RispostaCorretta>Disco</RispostaCorretta>
+	</Carta>
+	<!-- Compositori famosi -->
+	<Carta>
+		<Titolo>Compositori famosi</Titolo>
+		<Quesito>Chi è il compositore dell'opera "La Traviata"?</Quesito>
+		<Risposte>Wolfgang Amadeus Mozart</Risposte>
+		<Risposte>Ludwig van Beethoven</Risposte>
+		<Risposte>Giuseppe Verdi</Risposte>
+		<Risposte>Johann Sebastian Bach</Risposte>
+		<RispostaCorretta>Giuseppe Verdi</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Compositori famosi</Titolo>
+		<Quesito>Qual è il compositore del famoso brano "Für Elise"?</Quesito>
+		<Risposte>Johannes Brahms</Risposte>
+		<Risposte>Franz Schubert</Risposte>
+		<Risposte>Ludwig van Beethoven</Risposte>
+		<Risposte>Antonio Vivaldi</Risposte>
+		<RispostaCorretta>Ludwig van Beethoven</RispostaCorretta>
+	</Carta>
+	<!-- Strumenti musicali -->
+	<Carta>
+		<Titolo>Strumenti musicali</Titolo>
+		<Quesito>Qual è lo strumento musicale a corda più grande dell'orchestra?</Quesito>
+		<Risposte>Chitarra</Risposte>
+		<Risposte>Violino</Risposte>
+		<Risposte>Contrabbasso</Risposte>
+		<Risposte>Violoncello</Risposte>
+		<RispostaCorretta>Contrabbasso</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Strumenti musicali</Titolo>
+		<Quesito>Che strumento a fiato viene spesso associato alla musica jazz?</Quesito>
+		<Risposte>Tromba</Risposte>
+		<Risposte>Sassofono</Risposte>
+		<Risposte>Clarinetto</Risposte>
+		<Risposte>Flauto traverso</Risposte>
+		<RispostaCorretta>Sassofono</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Generi musicali</Titolo>
+		<Quesito>Qual è il genere musicale originario di Cuba?</Quesito>
+		<Risposte>Reggaeton</Risposte>
+		<Risposte>Salsa</Risposte>
+		<Risposte>Rap</Risposte>
+		<Risposte>Pop</Risposte>
+		<RispostaCorretta>Salsa</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Strumenti musicali</Titolo>
+		<Quesito>Qual è lo strumento a corda che viene suonato con un archetto?</Quesito>
+		<Risposte>Chitarra</Risposte>
+		<Risposte>Violino</Risposte>
+		<Risposte>Pianoforte</Risposte>
+		<Risposte>Mandolino</Risposte>
+		<RispostaCorretta>Violino</RispostaCorretta>
+	</Carta>
+	<!-- Compositori famosi -->
+	<Carta>
+		<Titolo>Compositori famosi</Titolo>
+		<Quesito>Chi è il compositore della famosa composizione "Le Quattro Stagioni"?</Quesito>
+		<Risposte>Johann Sebastian Bach</Risposte>
+		<Risposte>Antonio Vivaldi</Risposte>
+		<Risposte>Ludwig van Beethoven</Risposte>
+		<Risposte>Wolfgang Amadeus Mozart</Risposte>
+		<RispostaCorretta>Antonio Vivaldi</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Compositori famosi</Titolo>
+		<Quesito>Qual è il compositore della celebre "Nona Sinfonia"?</Quesito>
+		<Risposte>Richard Wagner</Risposte>
+		<Risposte>Frederic Chopin</Risposte>
+		<Risposte>Ludwig van Beethoven</Risposte>
+		<Risposte>Franz Schubert</Risposte>
+		<RispostaCorretta>Ludwig van Beethoven</RispostaCorretta>
+	</Carta>
+</Carte>

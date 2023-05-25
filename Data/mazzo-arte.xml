@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Carte>
+	<TipoMazzo>Arte</TipoMazzo>
+	<Immagine></Immagine>
+	<Livello>10</Livello>
+	<Carta>
+		<Titolo>Pittura</Titolo>
+		<Quesito>Chi ha dipinto "La Gioconda"?</Quesito>
+		<Risposte>Leonardo da Vinci</Risposte>
+		<Risposte>Pablo Picasso</Risposte>
+		<Risposte>Vincent van Gogh</Risposte>
+		<Risposte>Michelangelo Buonarroti</Risposte>
+		<RispostaCorretta>Leonardo da Vinci</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Pittura</Titolo>
+		<Quesito>A quale movimento artistico appartiene la famosa opera "La notte stellata"?</Quesito>
+		<Risposte>Barocco</Risposte>
+		<Risposte>Rinascimento</Risposte>
+		<Risposte>Impressionismo</Risposte>
+		<Risposte>Surrealismo</Risposte>
+		<RispostaCorretta>Impressionismo</RispostaCorretta>
+	</Carta>
+	<!-- Scultura -->
+	<Carta>
+		<Titolo>Scultura</Titolo>
+		<Quesito>Chi ha scolpito il celebre David?</Quesito>
+		<Risposte>Michelangelo Buonarroti</Risposte>
+		<Risposte>Gian Lorenzo Bernini</Risposte>
+		<Risposte>Donatello</Risposte>
+		<Risposte>Alessandro Algardi</Risposte>
+		<RispostaCorretta>Michelangelo Buonarroti</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Scultura</Titolo>
+		<Quesito>Quale antica civiltà è famosa per le sue statue colossali di testa umana?</Quesito>
+		<Risposte>Grecia Antica</Risposte>
+		<Risposte>Egitto Antico</Risposte>
+		<Risposte>Mesopotamia</Risposte>
+		<Risposte>Impero Romano</Risposte>
+		<RispostaCorretta>Egitto Antico</RispostaCorretta>
+	</Carta>
+	<!-- Movimenti artistici -->
+	<Carta>
+		<Titolo>Movimenti artistici</Titolo>
+		<Quesito>A quale movimento artistico appartiene l'opera "La persistenza della memoria" di Salvador Dalí?</Quesito>
+		<Risposte>Cubismo</Risposte>
+		<Risposte>Surrealismo</Risposte>
+		<Risposte>Futurismo</Risposte>
+		<Risposte>Espressionismo</Risposte>
+		<RispostaCorretta>Surrealismo</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Movimenti artistici</Titolo>
+		<Quesito>Qual è il movimento artistico caratterizzato dall'uso di colori vivaci e forme geometriche?</Quesito>
+		<Risposte>Cubismo</Risposte>
+		<Risposte>Impressionismo</Risposte>
+		<Risposte>Fauvismo</Risposte>
+		<Risposte>Simbolismo</Risposte>
+		<RispostaCorretta>Fauvismo</RispostaCorretta>
+	</Carta>
+	<!-- Artisti rinomati -->
+	<Carta>
+		<Titolo>Artisti rinomati</Titolo>
+		<Quesito>Chi è l'artista rinascimentale noto per le sue opere come "La nascita di Venere" e "Primavera"?</Quesito>
+		<Risposte>Michelangelo Buonarroti</Risposte>
+		<Risposte>Leonardo da Vinci</Risposte>
+		<Risposte>Sandro Botticelli</Risposte>
+		<Risposte>Raffaello Sanzio</Risposte>
+		<RispostaCorretta>Sandro Botticelli</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Artisti rinomati</Titolo>
+		<Quesito>Chi è l'artista spagnolo famoso per i suoi dipinti cubisti, come "Guernica"?</Quesito>
+		<Risposte>Pablo Picasso</Risposte>
+		<Risposte>Salvador Dalí</Risposte>
+		<Risposte>Diego Rivera</Risposte>
+		<Risposte>Joan Miró</Risposte>
+		<RispostaCorretta>Pablo Picasso</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Pittura</Titolo>
+		<Quesito>Chi è l'autore del celebre dipinto "L'ultima cena"?</Quesito>
+		<Risposte>Sandro Botticelli</Risposte>
+		<Risposte>Leonardo da Vinci</Risposte>
+		<Risposte>Raffaello Sanzio</Risposte>
+		<Risposte>Caravaggio</Risposte>
+		<RispostaCorretta>Leonardo da Vinci</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Scultura</Titolo>
+		<Quesito>Chi è l'autore della statua di "David" situata a Firenze?</Quesito>
+		<Risposte>Gian Lorenzo Bernini</Risposte>
+		<Risposte>Donatello</Risposte>
+		<Risposte>Michelangelo Buonarroti</Risposte>
+		<Risposte>Alessandro Algardi</Risposte>
+		<RispostaCorretta>Michelangelo Buonarroti</RispostaCorretta>
+	</Carta>
+</Carte>
