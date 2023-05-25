@@ -110,7 +110,7 @@ namespace ProgettoInformatica.ViewModels
             CartaCorrente = GestioneGioco.PescaCarta();
             //VolumePopUp = new VolumePopUpCommand(this.IsVolumePressed);
             ChangeButtonColor = new ChangeBackgroundCommand(this);
-            timer.Interval = 500; // In milliseconds
+            timer.Interval = 30000; // In milliseconds
             timer.AutoReset = false; // Stops it from repeating
             timer.Elapsed += new ElapsedEventHandler(TimerElapsed);
             timer.Start();
@@ -119,7 +119,9 @@ namespace ProgettoInformatica.ViewModels
         
         void TimerElapsed(object sender, ElapsedEventArgs e)
         {
-            Console.WriteLine("Hello, world!");
+            GestioneGioco.PescaCarta();
+            timer.Stop();
+            timer.Start();
         }
 
         private bool CanVolumePopUp(object context)
