@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Carte>
+	<TipoMazzo>Cucina</TipoMazzo>
+	<Immagine></Immagine>
+	<Livello>6</Livello>
+	<Carta>
+		<Titolo>Cibi e piatti tipici</Titolo>
+		<Quesito>Cosa è il sushi?</Quesito>
+		<Risposte>Una zuppa giapponese</Risposte>
+		<Risposte>Un dolce messicano</Risposte>
+		<Risposte>Un piatto di pasta italiana</Risposte>
+		<Risposte>Un'arte culinaria giapponese a base di pesce crudo e riso</Risposte>
+		<RispostaCorretta>Un'arte culinaria giapponese a base di pesce crudo e riso</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Cibi e piatti tipici</Titolo>
+		<Quesito>Cosa rappresenta il falafel?</Quesito>
+		<Risposte>Un dolce italiano</Risposte>
+		<Risposte>Un piatto di riso cinese</Risposte>
+		<Risposte>Una specialità greca a base di carne macinata</Risposte>
+		<Risposte>Una pietanza mediorientale a base di ceci o fave</Risposte>
+		<RispostaCorretta>Una pietanza mediorientale a base di ceci o fave</RispostaCorretta>
+	</Carta>
+	<!-- Cucine internazionali -->
+	<Carta>
+		<Titolo>Cucine internazionali</Titolo>
+		<Quesito>Qual è il piatto nazionale della Thailandia?</Quesito>
+		<Risposte>Pad Thai</Risposte>
+		<Risposte>Pizza Margherita</Risposte>
+		<Risposte>Burger con patatine</Risposte>
+		<Risposte>Pasta al pomodoro</Risposte>
+		<RispostaCorretta>Pad Thai</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Cucine internazionali</Titolo>
+		<Quesito>Qual è il piatto nazionale del Messico?</Quesito>
+		<Risposte>Taco</Risposte>
+		<Risposte>Sushi</Risposte>
+		<Risposte>Spaghetti alla carbonara</Risposte>
+		<Risposte>Pizza Margherita</Risposte>
+		<RispostaCorretta>Taco</RispostaCorretta>
+	</Carta>
+	<!-- Chef rinomati -->
+	<Carta>
+		<Titolo>Chef rinomati</Titolo>
+		<Quesito>Chi è considerato il "Re della cucina italiana"?</Quesito>
+		<Risposte>Gordon Ramsay</Risposte>
+		<Risposte>Massimo Bottura</Risposte>
+		<Risposte>Julia Child</Risposte>
+		<Risposte>Anthony Bourdain</Risposte>
+		<RispostaCorretta>Massimo Bottura</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Chef rinomati</Titolo>
+		<Quesito>Chi è il famoso chef francese noto per la sua cucina molecolare?</Quesito>
+		<Risposte>Wolfgang Puck</Risposte>
+		<Risposte>Guy Fieri</Risposte>
+		<Risposte>Joël Robuchon</Risposte>
+		<Risposte>Bobby Flay</Risposte>
+		<RispostaCorretta>Joël Robuchon</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Cibi e piatti tipici</Titolo>
+		<Quesito>Cosa rappresenta il ceviche?</Quesito>
+		<Risposte>Una torta francese</Risposte>
+		<Risposte>Un piatto di pasta italiana</Risposte>
+		<Risposte>Una specialità peruviana a base di pesce crudo marinato</Risposte>
+		<Risposte>Un dolce brasiliano a base di cocco</Risposte>
+		<RispostaCorretta>Una specialità peruviana a base di pesce crudo marinato</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Cibi e piatti tipici</Titolo>
+		<Quesito>Qual è il piatto tipico dell'India?</Quesito>
+		<Risposte>Sushi</Risposte>
+		<Risposte>Pizza Margherita</Risposte>
+		<Risposte>Taco</Risposte>
+		<Risposte>Curry</Risposte>
+		<RispostaCorretta>Curry</RispostaCorretta>
+	</Carta>
+	<!-- Cucine internazionali -->
+	<Carta>
+		<Titolo>Cucine internazionali</Titolo>
+		<Quesito>Cosa caratterizza la cucina francese?</Quesito>
+		<Risposte>Piatti piccanti</Risposte>
+		<Risposte>Utilizzo di spezie esotiche</Risposte>
+		<Risposte>Abbondanza di riso e pesce</Risposte>
+		<Risposte>Ricchezza di salse e prelibatezze</Risposte>
+		<RispostaCorretta>Ricchezza di salse e prelibatezze</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Cucine internazionali</Titolo>
+		<Quesito>Qual è il piatto nazionale della Spagna?</Quesito>
+		<Risposte>Paella</Risposte>
+		<Risposte>Hamburger</Risposte>
+		<Risposte>Sushi</Risposte>
+		<Risposte>Currywurst</Risposte>
+		<RispostaCorretta>Paella</RispostaCorretta>
+	</Carta>
+</Carte>
