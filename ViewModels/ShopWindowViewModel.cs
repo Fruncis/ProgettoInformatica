@@ -37,20 +37,6 @@ namespace ProgettoInformatica.ViewModels
             }
         }*/
 
-        private bool _isAnyDeckPurchased;
-        public bool IsAnyDeckPurchased
-        {
-            get
-            {
-                return _isAnyDeckPurchased;
-            }
-            set
-            {
-                _isAnyDeckPurchased = value;
-                OnPropertyChanged(nameof(IsAnyDeckPurchased));
-            }
-        }
-
         private ObservableCollection<bool> _isDeckLocked;
         public ObservableCollection<bool> AreDeckLocked
         {
@@ -65,6 +51,31 @@ namespace ProgettoInformatica.ViewModels
             }
         }
 
+        void ChangeShop()
+        {
+            DateTime currentDateTime = DateTime.Now;
+
+            string text = File.ReadAllText("C:\\Users\\Simone\\Downloads\\ProgettoInformatica-main\\Data\\change-shop.txt");
+
+
+            ;
+
+            DateTime dateValue = new DateTime(Convert.ToInt32(text.Substring(0, 2)),
+                                              Convert.ToInt32(text.Substring(3, 5)),
+                                              Convert.ToInt32(text.Substring(6, 8)),
+                                              Convert.ToInt32(text.Substring(9, 10)),
+                                              Convert.ToInt32(text.Substring(11, 13)),
+                                              Convert.ToInt32(text.Substring(14, 16)));
+
+            dateValue.AddHours(24);
+
+            int result = DateTime.Compare(currentDateTime, dateValue);
+
+            if (result >= 0)
+            {
+                //aggiungi carte allo shop
+            }
+        }
 
         private ObservableCollection<bool>? _arePurchased;
         public ObservableCollection<bool>? ArePurchased
@@ -91,7 +102,6 @@ namespace ProgettoInformatica.ViewModels
             {
                 _giocatore = value;
                 OnPropertyChanged(nameof(Giocatore));
-                FillIsDeckLoacked();
             }
         }
 
@@ -135,18 +145,16 @@ namespace ProgettoInformatica.ViewModels
             {
                 AreDeckLocked.Add(false);
             }
-
+            
+            this.Giocatore = giocatore;
             mazzi.Add(new Mazzo(Resources.mazzo_sport));
             mazzi.Add(new Mazzo(Resources.mazzo_storia));
             mazzi.Add(new Mazzo(Resources.mazzo_scienze));
-            
+            FillIsDeckLoacked();
             //new VolumePopUpCommand<ShopWindowViewModel>(this);
             /*mazzi.Add(new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-scienze.xml"));
             mazzi.Add(new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-cinema.xml"));*/
-            this.Giocatore = giocatore;
             Giocatore.PropertyChanged += OnGiocatoreChanged;
-            FillIsDeckLoacked();
-
         }
         public void OnGiocatoreChanged(object source, EventArgs args)
         {
