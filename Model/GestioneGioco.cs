@@ -35,7 +35,11 @@ namespace ProgettoInformatica.Model
             mazzi.Add(new Mazzo(Resources.mazzo_cinema));
             mazzi.Add(new Mazzo(Resources.mazzo_storia));
             mazzi.Add(new Mazzo(Resources.mazzo_sport));
-           
+            mazzi.Add(new Mazzo(Resources.mazzo_cucina));
+            mazzi.Add(new Mazzo(Resources.mazzo_musica));
+            mazzi.Add(new Mazzo(Resources.mazzo_religione));
+            mazzi.Add(new Mazzo(Resources.mazzo_tecnologia));
+            mazzi.Add(new Mazzo(Resources.mazzo_arte));
             //System.Diagnostics.Debug.WriteLine(Directory.GetCurrentDirectory() + "\\Data\\mazzo-geografia.xml");
             Giocatore = giocatore;
             Giocatore.PropertyChanged += OnGiocatoreChanged;
