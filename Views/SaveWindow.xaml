@@ -3,27 +3,105 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ProgettoInformatica.Views"
+             xmlns:local="clr-namespace:ProgettoInformatica.Views" xmlns:viewmodels="clr-namespace:ProgettoInformatica.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:GameWindowViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <!--button background#5875d1 #6579e2-->
-    <Grid  >
+    <Grid>
         
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="500">
-            <Border Background="#6579e2">
-                <TextBlock Text="Seleziona il tuo salvataggio" HorizontalAlignment="Center" Foreground="white" />
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBlock}" x:Key="buttonStyle">
+                    <Setter Property="Foreground" Value="white"/>
+                    <Setter Property="FontFamily" Value="Times New Roman"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                </Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#5875d1"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Margin" Value="0 20 0 0"/>
+                    <Setter Property="Height" Value="80"/>
+                    
+                    <Setter Property="Template" >
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="ButtonBorder" BorderBrush="Transparent" BorderThickness="3" CornerRadius="10" Background="{TemplateBinding Background}">
+
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                                    </ContentPresenter>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="15"/>
+                        </Style>
+                    </Style.Resources>
+
+                    <Style.Triggers>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="ForceCursor" Value="True"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames  Storyboard.TargetProperty="Width" Duration="0:0:.1" >
+                                            <LinearDoubleKeyFrame KeyTime="0:0:.1" Value="460"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames  Storyboard.TargetProperty="Width" Duration="0:0:.1" >
+                                            <LinearDoubleKeyFrame KeyTime="0:0:.1" Value="440"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </StackPanel.Resources>
+            
+            <Border Background="#6579e2" CornerRadius="15" Height="75" Margin="40 0">
+                <TextBlock Text="Seleziona il tuo salvataggio" HorizontalAlignment="Center" Foreground="white" VerticalAlignment="Center"/>
             </Border>
-            <Button>
-                
+            <Button FontFamily="Times New Roman">
+                <StackPanel Orientation="Horizontal" >
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Foreground" Value="white"/>
+                            <Setter Property="Margin" Value="50 0"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <!--<TextBlock Text="{Binding Giocatore.Livello}" />
+                    <TextBlock Text="{Binding Giocatore.Esperienza}" />
+                    <TextBlock Text="{Binding Giocatore.Gettoni}" />-->
+                    <TextBlock Text="cacca" />
+                    <TextBlock Text="pupu" />
+                    <TextBlock Text="ciccia" />
+                </StackPanel>
             </Button>
-            <Button Content="Ricomincia daccapo"/>
+            <Button>
+                <TextBlock Text="Ricomincia daccapo" Style="{StaticResource buttonStyle}"/>
+            </Button>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button  Content="No"/>
-                <Button Grid.Column="1" Content="Si"/>
+                <Button>
+                    <TextBlock Text="No" Style="{StaticResource buttonStyle}"/>
+                </Button>
+                <Button Grid.Column="1">
+                    <TextBlock Text="Si" Style="{StaticResource buttonStyle}"/>
+                </Button>
             </Grid>
         </StackPanel>
         

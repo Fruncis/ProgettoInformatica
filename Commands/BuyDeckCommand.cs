@@ -66,6 +66,8 @@ namespace ProgettoInformatica.Commands
                     _shopWindowViewModel.Giocatore.MazziPosseduti.Add(_shopWindowViewModel.mazzi[index]);
                     //_shopWindowViewModel.IsPurchased = true;
                     _shopWindowViewModel.ArePurchased[index] = true;
+                    _shopWindowViewModel.IsAnyDeckPurchased = true;
+                    _shopWindowViewModel.IsAnyDeckPurchased = false;
                     //player.Play();
                     //canExecute = false;
 

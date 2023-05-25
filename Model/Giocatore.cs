@@ -105,7 +105,7 @@ namespace ProgettoInformatica.Model
             MazziPosseduti = new List<Mazzo>();
             MazziPosseduti.Add(new Mazzo(Resources.mazzo_geografia));
             MaxEsperienza = 100;
-            Livello = 1;
+            Livello = 5;
             Esperienza = 99;
             Gettoni = 0;
         }

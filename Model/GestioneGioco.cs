@@ -74,10 +74,6 @@ namespace ProgettoInformatica.Model
 
         }
 
-        public void resetGestioneGioco()
-        {
-            
-        }
 
         public void ConvertPuntiEsperienzaGettoni(int punti)//Aggiustare la proporzione dei gettoni e dell'esperienza
         {

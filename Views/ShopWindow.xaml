@@ -50,27 +50,20 @@
                     <Setter Property="Opacity" Value="1"/>
                 </Style.Setters>
                 <Style.Triggers>
-                    <MultiDataTrigger>
-                        <MultiDataTrigger.Conditions>
-                            <Condition Binding="{Binding ArePurchased[0]}" Value="false"/>
-                            <Condition Binding="{Binding ArePurchased[1]}" Value="false"/>
-                            <Condition Binding="{Binding ArePurchased[2]}" Value="false"/>
-                        </MultiDataTrigger.Conditions>
-                        <MultiDataTrigger.Setters>
-                            <Setter Property="Opacity" Value="0"/>
-                        </MultiDataTrigger.Setters>
-                        <MultiDataTrigger.ExitActions>
+                    <DataTrigger Binding="{Binding IsAnyDeckPurchased}" Value="true">
+                        <DataTrigger.EnterActions>
                             <BeginStoryboard >
-                                <Storyboard >
+                                <Storyboard>
                                     <DoubleAnimationUsingKeyFrames Duration="0:0:2" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
                                         <LinearDoubleKeyFrame KeyTime="0:0:.5" Value="1"/>
                                         <LinearDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
                                         <LinearDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
                                     </DoubleAnimationUsingKeyFrames>
                                 </Storyboard>
                             </BeginStoryboard>
-                        </MultiDataTrigger.ExitActions>
-                    </MultiDataTrigger>
+                        </DataTrigger.EnterActions>
+                    </DataTrigger>
                 </Style.Triggers>
             </Style>
 
@@ -99,7 +92,7 @@
             </Border>
             <TextBlock  Text="Congratulazioni! mazzo acquistato"  FontSize="15" Style="{StaticResource purchaseAnimation}"/>
         </Grid>-->
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="Congratulazioni! mazzo acquistato"  FontSize="15" Style="{StaticResource purchaseAnimation}"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Congratulazioni! mazzo acquistato"  FontSize="15" Style="{StaticResource purchaseAnimation}" Opacity="0"/>
 
 
         <Grid Grid.ColumnSpan="4" Panel.ZIndex="3">
@@ -298,7 +291,7 @@
                                     </Setter>
                                 </DataTrigger>
                                 <DataTrigger Binding="{Binding ArePurchased[1]}"  Value="true">
-                                    <Setter Property="Background" Value="#7AE83F"/>
+                                    <Setter Property="Opacity" Value="0.8"/>
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
@@ -329,7 +322,7 @@
                                     </Setter>
                                 </DataTrigger>
                                 <DataTrigger Binding="{Binding ArePurchased[2]}"  Value="true">
-                                    <Setter Property="Background" Value="#7AE83F"/>
+                                    <Setter Property="Opacity" Value="0.8"/>
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>

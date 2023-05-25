@@ -216,7 +216,7 @@
 
             <Path Fill="White" Stretch="Fill" Stroke="Transparent" HorizontalAlignment="Right" Margin="8.3,-1.7,18,0" Width="50" Grid.Row="1" Data="M0,10.2438 L100,187.66699 100.791059,9.54395"/>
             <Rectangle Fill="White" RadiusX="20" RadiusY="20" Margin="1"/>
-            <TextBlock Text="{Binding CartaCorrente.Quesito}" Foreground="#5D70D1" FontWeight="SemiBold" FontFamily="Roboto" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40"/>
+            <TextBlock Text="{Binding CartaCorrente.Quesito}" Foreground="#5D70D1" FontWeight="SemiBold" FontFamily="Roboto" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"/>
         </Grid>
 
 

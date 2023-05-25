@@ -37,6 +37,20 @@ namespace ProgettoInformatica.ViewModels
             }
         }*/
 
+        private bool _isAnyDeckPurchased;
+        public bool IsAnyDeckPurchased
+        {
+            get
+            {
+                return _isAnyDeckPurchased;
+            }
+            set
+            {
+                _isAnyDeckPurchased = value;
+                OnPropertyChanged(nameof(IsAnyDeckPurchased));
+            }
+        }
+
         private ObservableCollection<bool> _isDeckLocked;
         public ObservableCollection<bool> AreDeckLocked
         {
@@ -77,6 +91,7 @@ namespace ProgettoInformatica.ViewModels
             {
                 _giocatore = value;
                 OnPropertyChanged(nameof(Giocatore));
+                FillIsDeckLoacked();
             }
         }
 
@@ -120,16 +135,18 @@ namespace ProgettoInformatica.ViewModels
             {
                 AreDeckLocked.Add(false);
             }
-            
-            this.Giocatore = giocatore;
+
             mazzi.Add(new Mazzo(Resources.mazzo_sport));
             mazzi.Add(new Mazzo(Resources.mazzo_storia));
             mazzi.Add(new Mazzo(Resources.mazzo_scienze));
-            FillIsDeckLoacked();
+            
             //new VolumePopUpCommand<ShopWindowViewModel>(this);
             /*mazzi.Add(new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-scienze.xml"));
             mazzi.Add(new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-cinema.xml"));*/
+            this.Giocatore = giocatore;
             Giocatore.PropertyChanged += OnGiocatoreChanged;
+            FillIsDeckLoacked();
+
         }
         public void OnGiocatoreChanged(object source, EventArgs args)
         {

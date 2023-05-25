@@ -158,7 +158,6 @@ namespace ProgettoInformatica.ViewModels
 
 
 
-
         public async void DelayedCodeExecution(int animationTime)
         {
             // Delay the execution by 2 seconds (2000 milliseconds)
@@ -167,7 +166,7 @@ namespace ProgettoInformatica.ViewModels
             
 
             await Task.Delay(TimeSpan.FromSeconds(animationTime));
-            System.Diagnostics.Debug.WriteLine(CartaCorrente);
+
             CartaCorrente = GestioneGioco.PescaCarta();
             if (CartaCorrente != null)
             {
@@ -184,8 +183,9 @@ namespace ProgettoInformatica.ViewModels
                 {
 
                 }*/
+                GestioneGioco.mazzoCorrente = Giocatore.MazziPosseduti[Giocatore.MazziPosseduti.Count() - 1].Carte.ToList();
                 CartaCorrente = GestioneGioco.PescaCarta();
-
+                
                 IsAnswered = false;
             }
             
@@ -195,16 +195,6 @@ namespace ProgettoInformatica.ViewModels
         {
             Giocatore = (Giocatore)source;
         }
-        /*public GameWindowViewModel(GestioneGioco gestioneGioco)
-        {
-            _gestioneGioco = gestioneGioco;
-            _gestioneGioco.CartaCambiata += CartaCambiata;
-            
-        }
 
-        private void CartaCambiata()
-        {
-            OnPropertyChanged(nameof(CartaCambiata));
-        }*/
     }
 }
