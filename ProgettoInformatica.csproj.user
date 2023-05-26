@@ -13,6 +13,9 @@
     <Compile Update="Views\SaveWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\SchermataFinale.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\ScoreWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -34,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\SaveWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SchermataFinale.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ScoreWindow.xaml">

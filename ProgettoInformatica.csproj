@@ -13,6 +13,7 @@
     <None Remove="Data\mazzo-scienze.xml" />
     <None Remove="Data\mazzo-sport.xml" />
     <None Remove="Data\mazzo-storia.xml" />
+    <None Remove="Data\saves.xml" />
     <None Remove="Views\Img\background.png" />
     <None Remove="Views\Img\background1.png" />
     <None Remove="Views\Img\Backgroundefinitivo.png" />

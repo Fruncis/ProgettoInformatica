@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Carte>
+    <!-- Domande di Astronomia -->
+	<TipoMazzo>Scienze</TipoMazzo>
+	<Immagine></Immagine>
+	<Livello>2</Livello>
+	<Carta>
+		<Titolo>Astronomia</Titolo>
+		<Quesito>Cosa causa un'eclissi solare?</Quesito>
+		<Risposte>L'ombra della Luna che cade sulla Terra</Risposte>
+		<Risposte>L'ombra della Terra che cade sulla Luna</Risposte>
+		<Risposte>Un'allineamento di pianeti</Risposte>
+		<Risposte>Un impatto di asteroidi</Risposte>
+		<RispostaCorretta>L'ombra della Luna che cade sulla Terra</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Chimica</Titolo>
+		<Quesito>Cosa indica il numero di ossidazione di un elemento in un composto chimico?</Quesito>
+		<Risposte>La sua massa atomica</Risposte>
+		<Risposte>La sua carica elettrica</Risposte>
+		<Risposte>Il suo stato di aggregazione</Risposte>
+		<Risposte>La sua reattività chimica</Risposte>
+		<RispostaCorretta>La sua carica elettrica</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Astronomia</Titolo>
+		<Quesito>Come si chiama la galassia in cui si trova il nostro sistema solare?</Quesito>
+		<Risposte>Galassia di Andromeda</Risposte>
+		<Risposte>Galassia del Sombrero</Risposte>
+		<Risposte>Galassia del Triangolo</Risposte>
+		<Risposte>Via Lattea</Risposte>
+		<RispostaCorretta>Via Lattea</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Astronomia</Titolo>
+		<Quesito>Come si chiama l'oggetto celeste che orbita attorno ad un pianeta?</Quesito>
+		<Risposte>Satellite</Risposte>
+		<Risposte>Stella</Risposte>
+		<Risposte>Meteorite</Risposte>
+		<Risposte>Asteroide</Risposte>
+		<RispostaCorretta>Satellite</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Astronomia</Titolo>
+		<Quesito>Come si chiama il processo attraverso il quale le stelle generano energia?</Quesito>
+		<Risposte>Fusione nucleare</Risposte>
+		<Risposte>Fissione nucleare</Risposte>
+		<Risposte>Radioattività</Risposte>
+        <Risposte>Decadimento radioattivo</Risposte>
+        <RispostaCorretta>Fusione nucleare</RispostaCorretta>
+    </Carta>
+    <Carta>
+        <Titolo>Biologia</Titolo>
+        <Quesito>Come si chiama il processo attraverso il quale le piante producono il proprio cibo?</Quesito>
+        <Risposte>Fotosintesi</Risposte>
+        <Risposte>Respirazione</Risposte>
+        <Risposte>Digestione</Risposte>
+        <Risposte>Sintesi proteica</Risposte>
+        <RispostaCorretta>Fotosintesi</RispostaCorretta>
+    </Carta>
+    <Carta>
+        <Titolo>Biologia</Titolo>
+        <Quesito>Come si chiama il processo di divisione cellulare che porta alla formazione di due cellule figlie identiche?</Quesito>
+        <Risposte>Mitosi</Risposte>
+        <Risposte>Meiosi</Risposte>
+        <Risposte>Apoptosi</Risposte>
+        <Risposte>Citocinesi</Risposte>
+        <RispostaCorretta>Mitosi</RispostaCorretta>
+    </Carta>
+    <Carta>
+        <Titolo>Biologia</Titolo>
+        <Quesito>Qual è l'organo responsabile della pompa cardiaca nel corpo umano?</Quesito>
+        <Risposte>Cuore</Risposte>
+        <Risposte>Cervello</Risposte>
+        <Risposte>Polmoni</Risposte>
+        <Risposte>Rene</Risposte>
+        <RispostaCorretta>Cuore</RispostaCorretta>
+    </Carta>
+	<Carta>
+		<Titolo>Chimica</Titolo>
+		<Quesito>Cosa indica il numero di ossidazione di un elemento in un composto chimico?</Quesito>
+		<Risposte>La sua massa atomica</Risposte>
+		<Risposte>La sua carica elettrica</Risposte>
+		<Risposte>Il suo stato di aggregazione</Risposte>
+		<Risposte>La sua reattività chimica</Risposte>
+		<RispostaCorretta>La sua carica elettrica</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Chimica</Titolo>
+		<Quesito>Cosa rappresenta il pH di una soluzione?</Quesito>
+		<Risposte>La concentrazione di ioni idrogeno (H+)</Risposte>
+		<Risposte>La concentrazione di ioni idrossido (OH-)</Risposte>
+		<Risposte>La concentrazione di ioni sodio (Na+)</Risposte>
+		<Risposte>La concentrazione di ioni cloruro (Cl-)</Risposte>
+		<RispostaCorretta>La concentrazione di ioni idrogeno (H+)</RispostaCorretta>
+	</Carta>
+	<!--<Carta>
+        <Titolo>Chimica</Titolo>
+        <Quesito>Cosa rappresenta il numero atomico di un elemento?</Quesito>
+        <Risposte>La somma di protoni e neutroni nel nucleo atomico</Risposte>
+        <Risposte>Il numero di protoni nel nucleo atomico</Risposte>
+        <Risposte>Il numero di elettroni nel nucleo atomico</Risposte>
+        <Risposte>Il peso atomico dell'elemento</Risposte>
+        <RispostaCorretta>Il numero di protoni nel nucleo atomico</RispostaCorretta>
+    </Carta>
+    <Carta>
+        <Titolo>Chimica</Titolo>
+        <Quesito>Come si chiama il processo attraverso il quale una sostanza passa dallo stato solido direttamente allo stato gassoso?</Quesito>
+        <Risposte>Sublimazione</Risposte>
+        <Risposte>Fusione</Risposte>
+        <Risposte>Condensazione</Risposte>
+        <Risposte>Evaporazione</Risposte>
+        <RispostaCorretta>Sublimazione</RispostaCorretta>
+    </Carta>
+    <Carta>
+        <Titolo>Chimica</Titolo>
+        <Quesito>Cosa rappresenta il pH di una soluzione?</Quesito>
+        <Risposte>La concentrazione di ioni idrogeno (H+)</Risposte>
+        <Risposte>La concentrazione di ioni idrossido (OH-)</Risposte>
+        <Risposte>La concentrazione di ioni sodio (Na+)</Risposte>
+        <Risposte>La concentrazione di ioni cloruro (Cl-)</Risposte>
+        <RispostaCorretta>La concentrazione di ioni idrogeno (H+)</RispostaCorretta>
+    </Carta>
+    <Carta>
+        <Titolo>Chimica</Titolo>
+        <Quesito>Cosa indica il numero di ossidazione di un elemento in un composto chimico?</Quesito>
+        <Risposte>La sua massa atomica</Risposte>
+        <Risposte>La sua carica elettrica</Risposte>
+        <Risposte>Il suo stato di aggregazione</Risposte>
+        <Risposte>La sua reattività chimica</Risposte>
+        <RispostaCorretta>La sua carica elettrica</RispostaCorretta>
+    </Carta>
+    <Carta>
+        <Titolo>Chimica</Titolo>
+        <Quesito>Cosa rappresenta la legge di conservazione della massa?</Quesito>
+        <Risposte>La massa si crea o si distrugge durante una reazione chimica</Risposte>
+        <Risposte>La massa rimane costante durante una reazione chimica</Risposte>
+        <Risposte>La massa aumenta durante una reazione chimica</Risposte>
+        <Risposte>La massa diminuisce durante una reazione chimica</Risposte>
+        <RispostaCorretta>La massa rimane costante durante una reazione chimica</RispostaCorretta>
+    </Carta>-->
+</Carte>

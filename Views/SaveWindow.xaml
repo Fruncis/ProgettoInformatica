@@ -8,7 +8,10 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <!--button background#5875d1 #6579e2-->
     <!--Aggiustare animazioni d'ingrandimento-->
-    <Grid>
+
+
+    
+    <Grid >
         
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="500">
             <StackPanel.Resources>
@@ -23,6 +26,7 @@
                     <Setter Property="BorderThickness" Value="0"/>
                     <Setter Property="Margin" Value="0 25 0 0"/>
                     <Setter Property="Height" Value="80"/>
+                    <Setter Property="Width" Value="460"/>
                     <Setter Property="Effect">
                         <Setter.Value>
                             <DropShadowEffect
@@ -59,7 +63,7 @@
                                 <BeginStoryboard>
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames  Storyboard.TargetProperty="Width" Duration="0:0:.1" >
-                                            <LinearDoubleKeyFrame KeyTime="0:0:.1" Value="460"/>
+                                            <LinearDoubleKeyFrame KeyTime="0:0:.1" Value="480"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </BeginStoryboard>
@@ -68,7 +72,7 @@
                                 <BeginStoryboard>
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames  Storyboard.TargetProperty="Width" Duration="0:0:.1" >
-                                            <LinearDoubleKeyFrame KeyTime="0:0:.1" Value="440"/>
+                                            <LinearDoubleKeyFrame KeyTime="0:0:.1" Value="460"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </BeginStoryboard>
@@ -100,6 +104,39 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Grid.Resources>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#5875d1"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="Margin" Value="0 25 0 0"/>
+                        <Setter Property="Height" Value="80"/>
+                        <Setter Property="Width" Value="460"/>
+                        <Setter Property="Effect">
+                            <Setter.Value>
+                                <DropShadowEffect
+                                  ShadowDepth="0"
+                                  Color="Gray"
+                                  Opacity=".6"
+                                 BlurRadius="10"/>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Template" >
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="ButtonBorder" BorderBrush="Transparent" BorderThickness="3" CornerRadius="10" Background="{TemplateBinding Background}">
+
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                                        </ContentPresenter>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="15"/>
+                            </Style>
+                        </Style.Resources>
+                    </Style>
                     <Style TargetType="{x:Type Grid}">
                         <Setter Property="Visibility" Value="Collapsed"/>
                         <Style.Triggers>

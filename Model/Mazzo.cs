@@ -13,7 +13,7 @@ namespace ProgettoInformatica.Model
 {
     public class Mazzo
     {
-        const int numCarte = 5;
+        const int numCarte = 2;
         const int numRisposte = 4;
         public string TipoMazzo { get; set; }
 

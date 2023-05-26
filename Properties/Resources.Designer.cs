@@ -75,7 +75,7 @@ namespace ProgettoInformatica.Properties {
         ///&lt;Carte&gt;
         ///	&lt;TipoMazzo&gt;Cinema&lt;/TipoMazzo&gt;
         ///	&lt;Immagine&gt;&lt;/Immagine&gt;
-        ///	&lt;Livello&gt;1&lt;/Livello&gt;
+        ///	&lt;Livello&gt;3&lt;/Livello&gt;
         ///	&lt;Carta&gt;
         ///		&lt;Titolo&gt;Film classici&lt;/Titolo&gt;
         ///		&lt;Quesito&gt;Qual è il film diretto da Francis Ford Coppola nel 1972 che racconta la storia della famiglia Corleone?&lt;/Quesito&gt;
@@ -125,7 +125,7 @@ namespace ProgettoInformatica.Properties {
         ///    &lt;!-- Domande di Astronomia --&gt;
         ///	&lt;TipoMazzo&gt;Scienze&lt;/TipoMazzo&gt;
         ///	&lt;Immagine&gt;&lt;/Immagine&gt;
-        ///	&lt;Livello&gt;3&lt;/Livello&gt;
+        ///	&lt;Livello&gt;2&lt;/Livello&gt;
         ///	&lt;Carta&gt;
         ///		&lt;Titolo&gt;Astronomia&lt;/Titolo&gt;
         ///		&lt;Quesito&gt;Cosa causa un&apos;eclissi solare?&lt;/Quesito&gt;
@@ -189,19 +189,6 @@ namespace ProgettoInformatica.Properties {
         public static string mazzo_storia {
             get {
                 return ResourceManager.GetString("mazzo_storia", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una stringa localizzata simile a &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
-        ///&lt;root&gt;
-        ///	
-        ///&lt;/root&gt;
-        ///.
-        /// </summary>
-        public static string saves {
-            get {
-                return ResourceManager.GetString("saves", resourceCulture);
             }
         }
     }

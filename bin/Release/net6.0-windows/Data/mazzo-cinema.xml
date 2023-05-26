@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Carte>
+	<TipoMazzo>Cinema</TipoMazzo>
+	<Immagine></Immagine>
+	<Livello>3</Livello>
+	<Carta>
+		<Titolo>Film classici</Titolo>
+		<Quesito>Qual è il film diretto da Francis Ford Coppola nel 1972 che racconta la storia della famiglia Corleone?</Quesito>
+		<Risposte>Il padrino</Risposte>
+		<Risposte>Apocalypse Now</Risposte>
+		<Risposte>Taxi Driver</Risposte>
+		<Risposte>Casablanca</Risposte>
+		<RispostaCorretta>Il padrino</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Attori e attrici famosi</Titolo>
+		<Quesito>Chi è l'attore protagonista del film "Fight Club" del 1999?</Quesito>
+		<Risposte>Brad Pitt</Risposte>
+		<Risposte>Leonardo DiCaprio</Risposte>
+		<Risposte>Johnny Depp</Risposte>
+		<Risposte>Tom Hanks</Risposte>
+		<RispostaCorretta>Brad Pitt</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Registi di successo</Titolo>
+		<Quesito>Chi ha diretto il film "Pulp Fiction" del 1994?</Quesito>
+		<Risposte>Martin Scorsese</Risposte>
+		<Risposte>Steven Spielberg</Risposte>
+		<Risposte>Quentin Tarantino</Risposte>
+		<Risposte>Stanley Kubrick</Risposte>
+		<RispostaCorretta>Quentin Tarantino</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Film classici</Titolo>
+		<Quesito>In quale film del 1977 compare per la prima volta il personaggio di Luke Skywalker?</Quesito>
+		<Risposte>Star Wars: Episodio IV - Una nuova speranza</Risposte>
+		<Risposte>Alien</Risposte>
+		<Risposte>Rocky</Risposte>
+		<Risposte>Il Padrino</Risposte>
+		<RispostaCorretta>Star Wars: Episodio IV - Una nuova speranza</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Attori e attrici famosi</Titolo>
+		<Quesito>Chi è l'attrice protagonista del film "La La Land" del 2016?</Quesito>
+		<Risposte>Emma Watson</Risposte>
+		<Risposte>Emma Stone</Risposte>
+		<Risposte>Scarlett Johansson</Risposte>
+		<Risposte>Meryl Streep</Risposte>
+		<RispostaCorretta>Emma Stone</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Registi di successo</Titolo>
+		<Quesito>Chi ha diretto il film "Il Signore degli Anelli"?</Quesito>
+		<Risposte>Peter Jackson</Risposte>
+		<Risposte>Christopher Nolan</Risposte>
+		<Risposte>James Cameron</Risposte>
+		<Risposte>Tim Burton</Risposte>
+		<RispostaCorretta>Peter Jackson</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Film classici</Titolo>
+		<Quesito>Qual è il film del 1942 diretto da Michael Curtiz e interpretato da Humphrey Bogart e Ingrid Bergman?</Quesito>
+		<Risposte>Citizen Kane</Risposte>
+		<Risposte>Casablanca</Risposte>
+		<Risposte>Psycho</Risposte>
+		<Risposte>Gone with the Wind</Risposte>
+		<RispostaCorretta>Casablanca</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Attori e attrici famosi</Titolo>
+		<Quesito>Chi è l'attore protagonista del film "The Shawshank Redemption" del 1994?</Quesito>
+		<Risposte>Al Pacino</Risposte>
+		<Risposte>Morgan Freeman</Risposte>
+		<Risposte>Robert De Niro</Risposte>
+		<Risposte>Tom Cruise</Risposte>
+		<RispostaCorretta>Morgan Freeman</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Registi di successo</Titolo>
+		<Quesito>Chi ha diretto il film "Inception" del 2010?</Quesito>
+		<Risposte>Steven Spielberg</Risposte>
+		<Risposte>David Fincher</Risposte>
+		<Risposte>Christopher Nolan</Risposte>
+		<Risposte>Martin Scorsese</Risposte>
+		<RispostaCorretta>Christopher Nolan</RispostaCorretta>
+	</Carta>
+	<Carta>
+		<Titolo>Film classici</Titolo>
+		<Quesito>In quale film del 1975 lo squalo diventa protagonista?</Quesito>
+		<Risposte>Jaws</Risposte>
+		<Risposte>Rocky</Risposte>
+		<Risposte>Star Wars: Episodio IV - Una nuova speranza</Risposte>
+		<Risposte>Il Padrino</Risposte>
+		<RispostaCorretta>Jaws</RispostaCorretta>
+	</Carta>
+</Carte>

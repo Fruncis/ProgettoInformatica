@@ -1,3 +1,4 @@
+using ProgettoInformatica.Properties;
 using ProgettoInformatica.Store;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,8 @@ namespace ProgettoInformatica.Model
         }
         public void Salva()
         {
-            string formattazione = "<giocatore>" +
+            string formattazione = "<root>" +
+                "<giocatore>" +
                 "<livello>" + Giocatore.Livello + "</livello>" +
                 "<esperienza>" + Giocatore.Esperienza + "</esperienza>" +
                 "<mazzi-posseduti>";
@@ -34,11 +36,13 @@ namespace ProgettoInformatica.Model
                 formattazione += "<mazzo>" + Giocatore.MazziPosseduti[i].TipoMazzo + "</mazzo>";
             }
 
-            formattazione += "<mazzi-posseduti>" +
+            formattazione += "</mazzi-posseduti>" +
                 "<gettoni>" + Giocatore.Gettoni + "</gettoni>" +
-                "</giocatore>";
+                "</giocatore>" +
+                "</root>";
 
-            File.WriteAllText("saves.xml", formattazione);
+            File.WriteAllText("./Model/saves.xml", formattazione);
+            System.Diagnostics.Debug.WriteLine("ww");
         }
 
         public void CaricaSalvataggio()
@@ -46,7 +50,7 @@ namespace ProgettoInformatica.Model
             
 
             int giocatore = 1;
-            doc.Load("saves.xml");
+            doc.Load("./Model/saves.xml");
 
             this.Giocatore.Livello = int.Parse(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/livello").InnerText);
             this.Giocatore.Esperienza = int.Parse(doc.DocumentElement.SelectSingleNode("/root/giocatore[" + giocatore + "]/esperienza").InnerText);
@@ -61,7 +65,7 @@ namespace ProgettoInformatica.Model
         
         public bool isXMLEmpty()
         {
-            doc.Load("saves.xml");
+            doc.Load("./Model/saves.xml");
             if (doc.GetElementById("root") == null || doc.GetElementById("root").HasChildNodes)
             {
                 // The XML file is empty

@@ -45,6 +45,14 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <Style TargetType="{x:Type Canvas}" x:Key="TriggerCanvasBase">
+            <Setter Property="Visibility" Value="Visible"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsNewSavePressed}" Value="true">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
     </UserControl.Resources>
 
     
@@ -77,7 +85,7 @@
                     </BeginStoryboard>
                 </EventTrigger>
             </Grid.Triggers>
-            <Canvas Panel.ZIndex="100"  Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <Canvas Panel.ZIndex="100"  Grid.ColumnSpan="3" Grid.RowSpan="2" Style="{StaticResource TriggerCanvasBase}">
                 <Border BorderBrush="LightGray" Width="1280" Height="720" BorderThickness="1" HorizontalAlignment="Center"  VerticalAlignment="Top" ClipToBounds="True" Background="Black" Opacity="0.15"/>
                 <local:SaveWindow Width="1280" Height="720"/>
             </Canvas>

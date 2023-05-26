@@ -94,7 +94,7 @@ namespace ProgettoInformatica.ViewModels
         }
 
 
-
+        public GestioneGiocatore GestioneGiocatore { get; set; }
         public ICommand NavigateMenuCommand { get; }
         public GameWindowViewModel(NavigationStore navigationStore, Giocatore giocatore)
         {
@@ -110,6 +110,7 @@ namespace ProgettoInformatica.ViewModels
             CartaCorrente = GestioneGioco.PescaCarta();
             //VolumePopUp = new VolumePopUpCommand(this.IsVolumePressed);
             ChangeButtonColor = new ChangeBackgroundCommand(this);
+            GestioneGiocatore = new GestioneGiocatore(Giocatore);
             timer.Interval = 30000; // In milliseconds
             timer.AutoReset = false; // Stops it from repeating
             timer.Elapsed += new ElapsedEventHandler(TimerElapsed);
@@ -181,6 +182,7 @@ namespace ProgettoInformatica.ViewModels
                 int tmp = Giocatore.Livello;
                 GestioneGioco.ConvertPuntiEsperienzaGettoni(Punteggio);
                 GestioneGioco.SaliDiLivello();
+                GestioneGiocatore.Salva();
                 /*if(tmp < Giocatore.Livello)
                 {
 

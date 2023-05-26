@@ -33,6 +33,20 @@ namespace ProgettoInformatica.ViewModels
         public ICommand ButtonSaveCommand { get; }
 
 
+        private bool _isNewSavePressed;
+        public bool IsNewSavePressed
+        {
+            get
+            {
+                return _isNewSavePressed;
+            }
+            set
+            {
+                _isNewSavePressed = value;
+                OnPropertyChanged(nameof(IsNewSavePressed));
+            }
+        }
+
         private bool _isLoadSavePressed;
         public bool IsLoadSavePressed
         {
@@ -84,12 +98,17 @@ namespace ProgettoInformatica.ViewModels
         public RelayCommand ClickCommandEvent { get; set; }
         public MenuWindowViewModel(NavigationStore navigationStore, Giocatore giocatore)
         {
+            IsNewSavePressed = true;
             Giocatore = giocatore;
             GestioneGiocatore = new GestioneGiocatore(Giocatore);
             ButtonSaveCommand = new ButtonSaveCommand(this);
             NavigateGameCommand = new NavigateCommand<GameWindowViewModel>(navigationStore, () => IstanziaViewModel<GameWindowViewModel>.Istanzia(navigationStore, giocatore));
             NavigateShopCommand = new NavigateCommand<ShopWindowViewModel>(navigationStore, () => IstanziaViewModel<ShopWindowViewModel>.Istanzia(navigationStore, giocatore));
-            MyName = "Menu";
+            if (!GestioneGiocatore.isXMLEmpty())
+            {
+                System.Diagnostics.Debug.WriteLine("disadi");
+                IsNewSavePressed = false;
+            }
             ClickCommandEvent = new RelayCommand(ClickExecute);
         }
 
@@ -101,10 +120,14 @@ namespace ProgettoInformatica.ViewModels
         private void NewSaveFunc(object context)
         {
             GestioneGiocatore.Salva();
+            IsNewSavePressed = true;
+
         }
 
         private void LoadSaveFunc(object context)
         {
+
+
             GestioneGiocatore.CaricaSalvataggio();
         }
 
