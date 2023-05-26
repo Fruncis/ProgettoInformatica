@@ -73,13 +73,24 @@ namespace ProgettoInformatica.ViewModels
             {
                 _isVolumePressed = value;
                 OnPropertyChanged(nameof(IsVolumePressed));
-                System.Diagnostics.Debug.WriteLine("pressed: " + IsVolumePressed);
             }
         }
 
         public Timer timer = new Timer();//Da spostare in Gestione Gioco
 
-
+        private int _time;
+        public int Time
+        {
+            get
+            {
+                return _time;
+            }
+            set
+            {
+                _time = value;
+                OnPropertyChanged(nameof(Time));
+            }
+        }
         public ICommand ChangeButtonColor { get; set; }
 
 
@@ -94,12 +105,14 @@ namespace ProgettoInformatica.ViewModels
         }
 
 
+
         public GestioneGiocatore GestioneGiocatore { get; set; }
         public ICommand NavigateMenuCommand { get; }
         public GameWindowViewModel(NavigationStore navigationStore, Giocatore giocatore)
         {
             //System.Diagnostics.Debug.WriteLine(IstanziaViewModel.Istanza);
             //System.Diagnostics.Debug.WriteLine(Giocatore.Gettoni);
+            Time = 30;
             Giocatore = giocatore;
             Giocatore.PropertyChanged += OnGiocatoreChanged;
             Punteggio = 0;
@@ -115,12 +128,13 @@ namespace ProgettoInformatica.ViewModels
             timer.AutoReset = false; // Stops it from repeating
             timer.Elapsed += new ElapsedEventHandler(TimerElapsed);
             timer.Start();
+            Timer();
         }
 
         
         void TimerElapsed(object sender, ElapsedEventArgs e)
         {
-            GestioneGioco.PescaCarta();
+            
             timer.Stop();
             timer.Start();
         }
@@ -159,7 +173,25 @@ namespace ProgettoInformatica.ViewModels
             }
         }
 
-
+        public async void Timer()
+        {
+            while (true)
+            {
+                if(Time == 0)
+                {
+                    CartaCorrente = GestioneGioco.PescaCarta();
+                    Time = 30;
+                }
+                else
+                {
+                    await Task.Delay(TimeSpan.FromSeconds(1));
+                    Time -= 1;
+                    
+                }
+                
+            }
+            
+        }
 
         public async void DelayedCodeExecution(int animationTime)
         {
@@ -174,6 +206,7 @@ namespace ProgettoInformatica.ViewModels
             if (CartaCorrente != null)
             {
                 IsAnswered = false;
+                Time = 30;
                 return;
             }
             else//Quando Finisce il Livello
@@ -187,6 +220,7 @@ namespace ProgettoInformatica.ViewModels
                 {
 
                 }*/
+                Time = 30;
                 GestioneGioco.mazzoCorrente = Giocatore.MazziPosseduti[Giocatore.MazziPosseduti.Count() - 1].Carte.ToList();
                 CartaCorrente = GestioneGioco.PescaCarta();
                 

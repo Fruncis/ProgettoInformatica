@@ -121,11 +121,23 @@
   <data name="coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Views\Img\coin.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="mazzo_arte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Data\mazzo-arte.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="mazzo_cinema" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Data\mazzo-cinema.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="mazzo_cucina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Data\mazzo-cucina.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="mazzo_geografia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Data\mazzo-geografia.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="mazzo_musica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Data\mazzo-musica.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="mazzo_religione" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Data\mazzo-religione.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="mazzo_scienze" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Data\mazzo-scienze.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
@@ -135,5 +147,8 @@
   </data>
   <data name="mazzo_storia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Data\mazzo-storia.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="mazzo_tecnologia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Data\mazzo-tecnologia.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>

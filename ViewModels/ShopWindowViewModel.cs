@@ -53,19 +53,31 @@ namespace ProgettoInformatica.ViewModels
 
         void ChangeShop()
         {
+            List<Mazzo> duplicato = new List<Mazzo>();
+
+            duplicato.Add(new Mazzo(Resources.mazzo_arte));
+            duplicato.Add(new Mazzo(Resources.mazzo_cinema));
+            duplicato.Add(new Mazzo(Resources.mazzo_cucina));
+            duplicato.Add(new Mazzo(Resources.mazzo_geografia));
+            duplicato.Add(new Mazzo(Resources.mazzo_musica));
+            duplicato.Add(new Mazzo(Resources.mazzo_religione));
+            duplicato.Add(new Mazzo(Resources.mazzo_scienze));
+            duplicato.Add(new Mazzo(Resources.mazzo_sport));
+            duplicato.Add(new Mazzo(Resources.mazzo_storia));
+            duplicato.Add(new Mazzo(Resources.mazzo_tecnologia));
+
             DateTime currentDateTime = DateTime.Now;
 
-            string text = File.ReadAllText("C:\\Users\\Simone\\Downloads\\ProgettoInformatica-main\\Data\\change-shop.txt");//da caricare nel resource 00/00/0000 00:00:00
+            string text = File.ReadAllText("change-shop.txt");//da caricare nel resource 00/00/0000 00:00:00
 
 
-            ;
 
-            DateTime dateValue = new DateTime(Convert.ToInt32(text.Substring(0, 2)),
-                                              Convert.ToInt32(text.Substring(3, 5)),
-                                              Convert.ToInt32(text.Substring(6, 8)),
-                                              Convert.ToInt32(text.Substring(9, 10)),
-                                              Convert.ToInt32(text.Substring(11, 13)),
-                                              Convert.ToInt32(text.Substring(14, 16)));
+            DateTime dateValue = new DateTime(Convert.ToInt32(text.Substring(6, 4)),
+                                              Convert.ToInt32(text.Substring(3, 2)),
+                                              Convert.ToInt32(text.Substring(0, 2)),
+                                              Convert.ToInt32(text.Substring(11, 2)),
+                                              Convert.ToInt32(text.Substring(14, 2)),
+                                              Convert.ToInt32(text.Substring(17, 2)));
 
             dateValue.AddHours(24);
 
@@ -73,7 +85,31 @@ namespace ProgettoInformatica.ViewModels
 
             if (result >= 0)
             {
-                //aggiungi carte allo shop
+                mazzi = new List<Mazzo>();
+
+                for(int i = 0; i < 10; i++)
+                {
+                    
+                    if (Giocatore.Livello == Convert.ToInt32(duplicato[i].Livello))
+                    {
+                        System.Diagnostics.Debug.WriteLine(i);
+                        mazzi.Add(duplicato[i]);
+                        duplicato.Remove(duplicato[i]);
+                        break;
+                    }
+                }
+                
+                Random rnd = new Random();
+                
+                int r = rnd.Next(0, 8);
+                mazzi.Add(duplicato[r]);
+                duplicato.Remove(duplicato[r]);
+
+                r = rnd.Next(0, 7);
+                mazzi.Add(duplicato[r]);
+                duplicato.Remove(duplicato[r]);
+
+                File.WriteAllText("change-shop.txt", currentDateTime.ToString());
             }
         }
 
@@ -161,9 +197,10 @@ namespace ProgettoInformatica.ViewModels
             }
             
             this.Giocatore = giocatore;
-            mazzi.Add(new Mazzo(Resources.mazzo_sport));
+            ChangeShop();
+            /*mazzi.Add(new Mazzo(Resources.mazzo_sport));
             mazzi.Add(new Mazzo(Resources.mazzo_storia));
-            mazzi.Add(new Mazzo(Resources.mazzo_scienze));
+            mazzi.Add(new Mazzo(Resources.mazzo_scienze));*/
             FillIsDeckLoacked();
             //new VolumePopUpCommand<ShopWindowViewModel>(this);
             /*mazzi.Add(new Mazzo("C:\\Users\\francesco.santamaria\\source\\repos\\ProgettoInformatica\\Data\\mazzo-scienze.xml"));

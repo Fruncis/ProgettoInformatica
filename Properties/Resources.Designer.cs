@@ -73,6 +73,31 @@ namespace ProgettoInformatica.Properties {
         /// <summary>
         ///   Cerca una stringa localizzata simile a &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;Carte&gt;
+        ///	&lt;TipoMazzo&gt;Arte&lt;/TipoMazzo&gt;
+        ///	&lt;Immagine&gt;&lt;/Immagine&gt;
+        ///	&lt;Livello&gt;10&lt;/Livello&gt;
+        ///	&lt;Carta&gt;
+        ///		&lt;Titolo&gt;Pittura&lt;/Titolo&gt;
+        ///		&lt;Quesito&gt;Chi ha dipinto &quot;La Gioconda&quot;?&lt;/Quesito&gt;
+        ///		&lt;Risposte&gt;Leonardo da Vinci&lt;/Risposte&gt;
+        ///		&lt;Risposte&gt;Pablo Picasso&lt;/Risposte&gt;
+        ///		&lt;Risposte&gt;Vincent van Gogh&lt;/Risposte&gt;
+        ///		&lt;Risposte&gt;Michelangelo Buonarroti&lt;/Risposte&gt;
+        ///		&lt;RispostaCorretta&gt;Leonardo da Vinci&lt;/RispostaCorretta&gt;
+        ///	&lt;/Carta&gt;
+        ///	&lt;Carta&gt;
+        ///		&lt;Titolo&gt;Pittura&lt;/Titolo&gt;
+        ///		&lt;Quesito&gt;A quale [stringa troncata]&quot;;.
+        /// </summary>
+        public static string mazzo_arte {
+            get {
+                return ResourceManager.GetString("mazzo_arte", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;Carte&gt;
         ///	&lt;TipoMazzo&gt;Cinema&lt;/TipoMazzo&gt;
         ///	&lt;Immagine&gt;&lt;/Immagine&gt;
         ///	&lt;Livello&gt;3&lt;/Livello&gt;
@@ -90,6 +115,27 @@ namespace ProgettoInformatica.Properties {
         public static string mazzo_cinema {
             get {
                 return ResourceManager.GetString("mazzo_cinema", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;Carte&gt;
+        ///	&lt;TipoMazzo&gt;Cucina&lt;/TipoMazzo&gt;
+        ///	&lt;Immagine&gt;&lt;/Immagine&gt;
+        ///	&lt;Livello&gt;6&lt;/Livello&gt;
+        ///	&lt;Carta&gt;
+        ///		&lt;Titolo&gt;Cibi e piatti tipici&lt;/Titolo&gt;
+        ///		&lt;Quesito&gt;Cosa è il sushi?&lt;/Quesito&gt;
+        ///		&lt;Risposte&gt;Una zuppa giapponese&lt;/Risposte&gt;
+        ///		&lt;Risposte&gt;Un dolce messicano&lt;/Risposte&gt;
+        ///		&lt;Risposte&gt;Un piatto di pasta italiana&lt;/Risposte&gt;
+        ///		&lt;Risposte&gt;Un&apos;arte culinaria giapponese a base di pesce crudo e riso&lt;/Risposte&gt;
+        ///		&lt;RispostaCorretta&gt;Un&apos;arte culinaria giapponese a base di pesce crudo  [stringa troncata]&quot;;.
+        /// </summary>
+        public static string mazzo_cucina {
+            get {
+                return ResourceManager.GetString("mazzo_cucina", resourceCulture);
             }
         }
         
@@ -116,6 +162,52 @@ namespace ProgettoInformatica.Properties {
         public static string mazzo_geografia {
             get {
                 return ResourceManager.GetString("mazzo_geografia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;Carte&gt;
+        ///	&lt;TipoMazzo&gt;Musica&lt;/TipoMazzo&gt;
+        ///	&lt;Immagine&gt;&lt;/Immagine&gt;
+        ///	&lt;Livello&gt;7&lt;/Livello&gt;
+        ///	&lt;Carta&gt;
+        ///		&lt;Titolo&gt;Generi musicali&lt;/Titolo&gt;
+        ///		&lt;Quesito&gt;Quale genere musicale è caratterizzato dal sound dei sintetizzatori e delle drum machine?&lt;/Quesito&gt;
+        ///		&lt;Risposte&gt;Rock&lt;/Risposte&gt;
+        ///		&lt;Risposte&gt;Country&lt;/Risposte&gt;
+        ///		&lt;Risposte&gt;Reggae&lt;/Risposte&gt;
+        ///		&lt;Risposte&gt;Electronic Dance Music (EDM)&lt;/Risposte&gt;
+        ///		&lt;RispostaCorretta&gt;Electronic Dance Music (EDM)&lt;/RispostaCorretta&gt;
+        ///	&lt;/Carta&gt;
+        /// [stringa troncata]&quot;;.
+        /// </summary>
+        public static string mazzo_musica {
+            get {
+                return ResourceManager.GetString("mazzo_musica", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;Carte&gt;
+        ///	&lt;TipoMazzo&gt;Religione&lt;/TipoMazzo&gt;
+        ///	&lt;Immagine&gt;&lt;/Immagine&gt;
+        ///	&lt;Livello&gt;8&lt;/Livello&gt;
+        ///	&lt;!-- Principali religioni del mondo --&gt;
+        ///	&lt;Carta&gt;
+        ///		&lt;Titolo&gt;Principali religioni del mondo&lt;/Titolo&gt;
+        ///		&lt;Quesito&gt;Qual è la religione con il maggior numero di fedeli nel mondo?&lt;/Quesito&gt;
+        ///		&lt;Risposte&gt;Cristianesimo&lt;/Risposte&gt;
+        ///		&lt;Risposte&gt;Islam&lt;/Risposte&gt;
+        ///		&lt;Risposte&gt;Ebraismo&lt;/Risposte&gt;
+        ///		&lt;Risposte&gt;Induismo&lt;/Risposte&gt;
+        ///		&lt;RispostaCorretta&gt;Cristianesimo&lt;/RispostaCorretta&gt;
+        ///	&lt;/C [stringa troncata]&quot;;.
+        /// </summary>
+        public static string mazzo_religione {
+            get {
+                return ResourceManager.GetString("mazzo_religione", resourceCulture);
             }
         }
         
@@ -189,6 +281,31 @@ namespace ProgettoInformatica.Properties {
         public static string mazzo_storia {
             get {
                 return ResourceManager.GetString("mazzo_storia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;Carte&gt;
+        ///	&lt;TipoMazzo&gt;Tecnologia&lt;/TipoMazzo&gt;
+        ///	&lt;Immagine&gt;&lt;/Immagine&gt;
+        ///	&lt;Livello&gt;9&lt;/Livello&gt;
+        ///	&lt;Carta&gt;
+        ///		&lt;Titolo&gt;Internet&lt;/Titolo&gt;
+        ///		&lt;Quesito&gt;Cosa significa l&apos;acronimo &quot;www&quot;?&lt;/Quesito&gt;
+        ///		&lt;Risposte&gt;World Wide Web&lt;/Risposte&gt;
+        ///		&lt;Risposte&gt;Web Wide World&lt;/Risposte&gt;
+        ///		&lt;Risposte&gt;Wide World Web&lt;/Risposte&gt;
+        ///		&lt;Risposte&gt;World Web Wide&lt;/Risposte&gt;
+        ///		&lt;RispostaCorretta&gt;World Wide Web&lt;/RispostaCorretta&gt;
+        ///	&lt;/Carta&gt;
+        ///	&lt;Carta&gt;
+        ///		&lt;Titolo&gt;Internet&lt;/Titolo&gt;
+        ///		&lt;Quesito&gt;Che cosa rapp [stringa troncata]&quot;;.
+        /// </summary>
+        public static string mazzo_tecnologia {
+            get {
+                return ResourceManager.GetString("mazzo_tecnologia", resourceCulture);
             }
         }
     }

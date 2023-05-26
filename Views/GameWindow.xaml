@@ -190,7 +190,7 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width=".2*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock FontSize="30" Foreground="white" Grid.Column="1" Text="0:0:40"/>
+            <TextBlock FontSize="30" Foreground="white" Grid.Column="1" Text="{Binding Time, StringFormat='0:0:{0}'}"/>
             <StackPanel Orientation="Horizontal">
                 <Button Background="Transparent" Command="{Binding NavigateMenuCommand}"  BorderThickness="0" Style="{StaticResource UIButtonStyle}">
 
