@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\francesco\\Source\\Repos\\ProgettoInformatica\\ProgettoInformatica.csproj": {}
+    "C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\ProgettoInformatica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\francesco\\Source\\Repos\\ProgettoInformatica\\ProgettoInformatica.csproj": {
+    "C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\ProgettoInformatica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\francesco\\Source\\Repos\\ProgettoInformatica\\ProgettoInformatica.csproj",
+        "projectUniqueName": "C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\ProgettoInformatica.csproj",
         "projectName": "ProgettoInformatica",
-        "projectPath": "C:\\Users\\francesco\\Source\\Repos\\ProgettoInformatica\\ProgettoInformatica.csproj",
+        "projectPath": "C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\ProgettoInformatica.csproj",
         "packagesPath": "C:\\Users\\francesco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\francesco\\Source\\Repos\\ProgettoInformatica\\obj\\",
+        "outputPath": "C:\\Users\\francesco\\source\\repos\\ProgettoInformatica\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\francesco\\AppData\\Roaming\\NuGet\\NuGet.Config",
