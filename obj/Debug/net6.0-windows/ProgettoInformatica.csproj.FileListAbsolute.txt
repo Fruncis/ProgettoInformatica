@@ -122,3 +122,5 @@ C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\ProgettoInformatica.csproj.GenerateResource.cache
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\SchermataFinale.g.cs
 C:\Users\francesco.santamaria\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\SchermataFinale.baml
+C:\Users\francesco\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\SchermataFinale.g.cs
+C:\Users\francesco\Source\Repos\ProgettoInformatica\obj\Debug\net6.0-windows\Views\SchermataFinale.baml

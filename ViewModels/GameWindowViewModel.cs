@@ -180,7 +180,28 @@ namespace ProgettoInformatica.ViewModels
                 if(Time == 0)
                 {
                     CartaCorrente = GestioneGioco.PescaCarta();
-                    Time = 30;
+                    if (CartaCorrente != null)
+                    {
+                        IsAnswered = false;
+                        Time = 30;
+                    }
+                    else//Quando Finisce il Livello
+                    {
+                        IsGameTerminated = true;
+                        int tmp = Giocatore.Livello;
+                        GestioneGioco.ConvertPuntiEsperienzaGettoni(Punteggio);
+                        GestioneGioco.SaliDiLivello();
+                        GestioneGiocatore.Salva();
+                        /*if(tmp < Giocatore.Livello)
+                        {
+
+                        }*/
+                        Time = 30;
+                        GestioneGioco.mazzoCorrente = Giocatore.MazziPosseduti[Giocatore.MazziPosseduti.Count() - 1].Carte.ToList();
+                        CartaCorrente = GestioneGioco.PescaCarta();
+
+                        IsAnswered = false;
+                    }
                 }
                 else
                 {
