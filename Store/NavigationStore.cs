@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace ProgettoInformatica.Store
 {
+    /// <summary>
+    ///     
+    /// </summary>
     public class NavigationStore
     {
         public event Action CurrentViewModelChanged;
